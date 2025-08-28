@@ -13,7 +13,11 @@ class GenerateData(Connection):
     
     # Função auxiliar para gerar um cpf aleatório (sem verificar as regras do cpf)
     def gerar_cpf():
-        return int("".join([str(random.randint(0,9)) for _ in range(11)]))
+        return str("".join([str(random.randint(0,9)) for _ in range(11)]))
+    
+    # Função auxiliar para gerar um cnpj aleatório (sem verificar as regras do cnpj)
+    def gerar_cnpj():
+        return str("".join([str(random.randint(0,9)) for _ in range(14)]))
 
     # Função para popular a tabela ITEM
     def generate_item(self, n):

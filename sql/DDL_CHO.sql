@@ -1,4 +1,4 @@
-set search_path=cho; 
+SET search_path=cho; 
 
 CREATE TABLE Item
 (
@@ -19,7 +19,7 @@ CREATE TABLE Cliente
   ClienteBairro VARCHAR(100) NOT NULL,
   ClienteMunicipio VARCHAR(100) NOT NULL,
   ClienteEstado VARCHAR(2) NOT NULL,
-  ClienteCPF INT NOT NULL,
+  ClienteCPF VARCHAR(11) NOT NULL,
   ClienteDataNasc DATE NOT NULL,
   PRIMARY KEY (ClienteID),
   UNIQUE (ClienteCPF)
@@ -117,9 +117,11 @@ CREATE TABLE PedidoItem
   Quantidade INT NOT NULL,
   PedidoID INT NOT NULL,
   ItemID INT NOT NULL,
+  FilialID INT NOT NULL,
   PRIMARY KEY (PedidoID, ItemID),
   FOREIGN KEY (PedidoID) REFERENCES Pedido(PedidoID),
-  FOREIGN KEY (ItemID) REFERENCES Item(ItemID)
+  FOREIGN KEY (ItemID) REFERENCES Item(ItemID),
+  FOREIGN KEY (FilialID) REFERENCES Filial(FilialID)
 );
 
 CREATE TABLE ClienteClienteTelefone
