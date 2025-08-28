@@ -8,13 +8,12 @@ def main():
     dados.initialize()
     
     # Gera os dados
-    dados.generate_clientes()
-    dados.generate_filial()
-    dados.generate_funcionarios()
-    dados.generate_ingredientes()
-    dados.generate_item()
-    dados.generate_pedido_pedidoitem()
-    dados.generate_telefones_enfermidades()
+    dados.generate_item(N_ITENS)
+    dados.generate_clientes(N_CLIENTES)
+    dados.generate_filial(N_FILIAIS)
+    dados.generate_fornecedores(N_FORNECEDORES)
+    dados.generate_ingredientes(N_INGREDIENTES)
+    dados.generate_funcionarios(N_FUNCIONARIOS)
     
     # Finaliza as operações
     dados.commit()

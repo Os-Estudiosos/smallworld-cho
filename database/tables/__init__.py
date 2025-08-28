@@ -20,8 +20,8 @@ class GenerateData(Connection):
         return str("".join([str(random.randint(0,9)) for _ in range(14)]))
 
     # Função para popular a tabela ITEM
-    def generate_item(self, n):
-        for i in range(1, n+1): 
+    def generate_item(self, num_itens):
+        for i in range(1, num_itens+1): 
             categorias = ["Prato Padrão", "Prato Especial", "Bebida"]
             nome = self.fake.word().capitalize() + " " + self.fake.word().capitalize()
             categoria = random.choice(categorias)
@@ -33,8 +33,8 @@ class GenerateData(Connection):
         self.commit()
 
     # Função para popular a tabela CLIENTES
-    def generate_clientes(self, n):
-        for i in range(1, n+1):
+    def generate_clientes(self, num_clientes):
+        for i in range(1, num_clientes+1):
             nome = self.fake.first_name()
             sobrenome = self.fake.last_name()
             tipos_sangue = ["A", "B", "AB", "O"]
@@ -54,8 +54,8 @@ class GenerateData(Connection):
         self.commit()
 
     # Função para popular a tabela INGREDIENTES
-    def generate_ingredientes(self, n):
-        for i in range(1, n+1): 
+    def generate_ingredientes(self, num_ingredientes):
+        for i in range(1, num_ingredientes+1): 
             nome = self.fake.word().capitalize()
             preco = round(random.uniform(1, 30), 2)
             cal = random.randint(10, 500)
@@ -66,8 +66,8 @@ class GenerateData(Connection):
         self.commit()
 
     # Função para popular a tabela FILIAL
-    def generate_filial(self, n):
-        for i in range(1, n+1):
+    def generate_filial(self, num_filiais):
+        for i in range(1, num_filiais+1):
             rua = self.fake.street_address()
             bairro = self.fake.bairro()
             cidade = self.fake.city()
@@ -79,9 +79,9 @@ class GenerateData(Connection):
         self.commit()
 
     # Função para popular a tabela FUNCIONÁRIOS
-    def generate_funcionarios(self, n):
-        for i in range(1, n+1):
-            cargos = ["Cozinheiro", "Garçom", "Gerente", "Atendente"]
+    def generate_funcionarios(self, num_funcionarios):
+        for i in range(1, num_funcionarios+1):
+            cargos = ["Chef", "Administrador", "Atendente"]
             cargo = random.choice(cargos)
             salario = round(random.uniform(1500, 6000), 2)
             nascimento = self.fake.date_of_birth(minimum_age=20, maximum_age=60)
@@ -93,41 +93,53 @@ class GenerateData(Connection):
                 VALUES (%s,%s,%s,%s,%s,%s,%s)
             """, (i, cargo, salario, nascimento, nome, cpf, filial))
         self.commit()
+        
+    # Função para popular a tabela FORNECEDORES    
+    def generate_fornecedores(self, num_funcionarios):
+        for _ in range(1, num_funcionarios+1):
+            fornecedor_cnpj = self.gerar_cnpj()
+            fornecedor_nome = self.faker.name()
+            fornecedor_regiao = self.faker.region()
+            Connection.cur.execute("""
+                INSERT INTO Fornecedores (FornecedorCNPJ, FornecedorNome, FornecedorRegiao)
+                VALUES (%s,%s,%s)
+            """, (fornecedor_cnpj, fornecedor_nome, fornecedor_regiao))
+        self.commit()
 
     # Função para popular as tabelas PEDIDO e PEDIDOITEM
-    def generate_pedido_pedidoitem(self, n, m):
-        pedido_id = 1
-        for cliente_id in range(1, n+1):
-            for _ in range(random.randint(1, m)):
-                filial = random.randint(1, 5)
-                data_pedido = self.fake.date_between(start_date="-1y", end_date="today")
-                Connection.cur.execute("""
-                    INSERT INTO Pedido (PedidoData, PedidoID, ClienteID, FilialID)
-                    VALUES (%s,%s,%s,%s)
-                """, (data_pedido, pedido_id, cliente_id, filial))
-                for _ in range(random.randint(1, 5)):
-                    item_id = random.randint(1, 50)
-                    qtd = random.randint(1, 3)
-                    Connection.cur.execute("""
-                        INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID)
-                        VALUES (%s,%s,%s)
-                    """, (qtd, pedido_id, item_id))
-                pedido_id += 1
-        self.commit()
+    # def generate_pedido_pedidoitem(self, n, m):
+    #     pedido_id = 1
+    #     for cliente_id in range(1, n+1):
+    #         for _ in range(random.randint(1, m)):
+    #             filial = random.randint(1, 5)
+    #             data_pedido = self.fake.date_between(start_date="-1y", end_date="today")
+    #             Connection.cur.execute("""
+    #                 INSERT INTO Pedido (PedidoData, PedidoID, ClienteID, FilialID)
+    #                 VALUES (%s,%s,%s,%s)
+    #             """, (data_pedido, pedido_id, cliente_id, filial))
+    #             for _ in range(random.randint(1, 5)):
+    #                 item_id = random.randint(1, 50)
+    #                 qtd = random.randint(1, 3)
+    #                 Connection.cur.execute("""
+    #                     INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID)
+    #                     VALUES (%s,%s,%s)
+    #                 """, (qtd, pedido_id, item_id))
+    #             pedido_id += 1
+    #     self.commit()
 
-    # Função para popular as tabelas CLIENTECLIENTETELEFONE e CLIENTECLIENTEENFERMIDADE
-    def generate_telefones_enfermidades(self, n, m, p):
-        for cliente_id in range(1, n+1):
-            for _ in range(random.randint(1, 2)):
-                telefone = int(self.fake.msisdn()[:11])
-                Connection.cur.execute("""
-                    INSERT INTO ClienteClienteTelefone (ClienteTelefone, ClienteID)
-                    VALUES (%s,%s)
-                """, (telefone, cliente_id))
-            if random.random() < p:
-                enfermidade_id = random.randint(1, m)
-                Connection.cur.execute("""
-                    INSERT INTO ClienteClienteEnfermidade (ClienteEnfermidade, ClienteID)
-                    VALUES (%s,%s)
-                """, (enfermidade_id, cliente_id))
-        self.commit()
+    # # Função para popular as tabelas CLIENTECLIENTETELEFONE e CLIENTECLIENTEENFERMIDADE
+    # def generate_telefones_enfermidades(self, n, m, p):
+    #     for cliente_id in range(1, n+1):
+    #         for _ in range(random.randint(1, 2)):
+    #             telefone = int(self.fake.msisdn()[:11])
+    #             Connection.cur.execute("""
+    #                 INSERT INTO ClienteClienteTelefone (ClienteTelefone, ClienteID)
+    #                 VALUES (%s,%s)
+    #             """, (telefone, cliente_id))
+    #         if random.random() < p:
+    #             enfermidade_id = random.randint(1, m)
+    #             Connection.cur.execute("""
+    #                 INSERT INTO ClienteClienteEnfermidade (ClienteEnfermidade, ClienteID)
+    #                 VALUES (%s,%s)
+    #             """, (enfermidade_id, cliente_id))
+    #     self.commit()
