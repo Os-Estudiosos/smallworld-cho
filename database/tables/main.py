@@ -1,9 +1,10 @@
 from tables import GenerateData
+from config.database import *
 
 
 def main():
     # Inicia a conexão
-    dados = GenerateData()
+    dados = GenerateData(DB_NAME, DB_PATH, DB_OWNER, DB_HOST, DB_PASSWORD)
     dados.initialize()
     
     # Gera os dados

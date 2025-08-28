@@ -95,9 +95,11 @@ CREATE TABLE ItemIngrediente
 (
   IngredID INT NOT NULL,
   ItemID INT NOT NULL,
-  PRIMARY KEY (IngredID, ItemID),
+  FornecedorCNPJ VARCHAR(14) NOT NULL,
+  PRIMARY KEY (IngredID, ItemID, FornecedorCNPJ),
   FOREIGN KEY (IngredID) REFERENCES Ingredientes(IngredID),
   FOREIGN KEY (ItemID) REFERENCES Item(ItemID)
+  FOREIGN KEY (FornecedorCNPJ) REFERENCES Fornecedor(FornecedorCNPJ)
 );
 
 CREATE TABLE PedidoItem
@@ -132,4 +134,12 @@ CREATE TABLE FuncionarioFuncTelefone
   FuncID INT NOT NULL,
   PRIMARY KEY (FuncTelefone, FuncID),
   FOREIGN KEY (FuncID) REFERENCES Funcionario(FuncID)
+);
+
+CREATE TABLE Fornecedor
+(
+  FornecedorCNPJ VARCHAR(14) NOT NULL,
+  FornecedorNome VARCHAR(100) NOT NULL,
+  FornecedorRegiao VARCHAR(50) NOT NULL,
+  PRIMARY KEY (FornecedorCNPJ),
 );
