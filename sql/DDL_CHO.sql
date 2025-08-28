@@ -1,3 +1,5 @@
+set search_path=cho; 
+
 CREATE TABLE Item
 (
   ItemID INT NOT NULL,
@@ -42,18 +44,6 @@ CREATE TABLE Filial
   PRIMARY KEY (FilialID)
 );
 
-
-CREATE TABLE Pedido
-(
-  PedidoData DATE NOT NULL,
-  PedidoID INT NOT NULL,
-  ClienteID INT NOT NULL,
-  FilialID INT NOT NULL,
-  PRIMARY KEY (PedidoID),
-  FOREIGN KEY (ClienteID) REFERENCES Cliente(ClienteID),
-  FOREIGN KEY (FilialID) REFERENCES Filial(FilialID)
-);
-
 CREATE TABLE Funcionario
 (
   FuncID INT NOT NULL,
@@ -66,6 +56,25 @@ CREATE TABLE Funcionario
   PRIMARY KEY (FuncID),
   FOREIGN KEY (FilialID) REFERENCES Filial(FilialID),
   UNIQUE (FuncCPF)
+);
+
+CREATE TABLE Pedido
+(
+  PedidoData DATE NOT NULL,
+  PedidoID INT NOT NULL,
+  ClienteID INT NOT NULL,
+  FilialID INT NOT NULL,
+  PRIMARY KEY (PedidoID),
+  FOREIGN KEY (ClienteID) REFERENCES Cliente(ClienteID),
+  FOREIGN KEY (FilialID) REFERENCES Filial(FilialID)
+);
+
+CREATE TABLE Fornecedor
+(
+  FornecedorCNPJ VARCHAR(14) NOT NULL,
+  FornecedorNome VARCHAR(100) NOT NULL,
+  FornecedorRegiao VARCHAR(50) NOT NULL,
+  PRIMARY KEY (FornecedorCNPJ)
 );
 
 CREATE TABLE PratoPadrao
@@ -90,14 +99,6 @@ CREATE TABLE Bebida
   ItemID INT NOT NULL,
   PRIMARY KEY (ItemID),
   FOREIGN KEY (ItemID) REFERENCES Item(ItemID)
-);
-
-CREATE TABLE Fornecedor
-(
-  FornecedorCNPJ VARCHAR(14) NOT NULL,
-  FornecedorNome VARCHAR(100) NOT NULL,
-  FornecedorRegiao VARCHAR(50) NOT NULL,
-  PRIMARY KEY (FornecedorCNPJ)
 );
 
 CREATE TABLE ItemIngrediente
@@ -144,4 +145,3 @@ CREATE TABLE FuncionarioFuncTelefone
   PRIMARY KEY (FuncTelefone, FuncID),
   FOREIGN KEY (FuncID) REFERENCES Funcionario(FuncID)
 );
-
