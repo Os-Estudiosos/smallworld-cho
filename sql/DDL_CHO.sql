@@ -42,6 +42,18 @@ CREATE TABLE Filial
   PRIMARY KEY (FilialID)
 );
 
+
+CREATE TABLE Pedido
+(
+  PedidoData DATE NOT NULL,
+  PedidoID INT NOT NULL,
+  ClienteID INT NOT NULL,
+  FilialID INT NOT NULL,
+  PRIMARY KEY (PedidoID),
+  FOREIGN KEY (ClienteID) REFERENCES Cliente(ClienteID),
+  FOREIGN KEY (FilialID) REFERENCES Filial(FilialID)
+);
+
 CREATE TABLE Funcionario
 (
   FuncID INT NOT NULL,
@@ -54,17 +66,6 @@ CREATE TABLE Funcionario
   PRIMARY KEY (FuncID),
   FOREIGN KEY (FilialID) REFERENCES Filial(FilialID),
   UNIQUE (FuncCPF)
-);
-
-CREATE TABLE Pedido
-(
-  PedidoData DATE NOT NULL,
-  PedidoID INT NOT NULL,
-  ClienteID INT NOT NULL,
-  FilialID INT NOT NULL,
-  PRIMARY KEY (PedidoID),
-  FOREIGN KEY (ClienteID) REFERENCES Cliente(ClienteID),
-  FOREIGN KEY (FilialID) REFERENCES Filial(FilialID)
 );
 
 CREATE TABLE PratoPadrao
@@ -91,6 +92,14 @@ CREATE TABLE Bebida
   FOREIGN KEY (ItemID) REFERENCES Item(ItemID)
 );
 
+CREATE TABLE Fornecedor
+(
+  FornecedorCNPJ VARCHAR(14) NOT NULL,
+  FornecedorNome VARCHAR(100) NOT NULL,
+  FornecedorRegiao VARCHAR(50) NOT NULL,
+  PRIMARY KEY (FornecedorCNPJ)
+);
+
 CREATE TABLE ItemIngrediente
 (
   IngredID INT NOT NULL,
@@ -98,7 +107,7 @@ CREATE TABLE ItemIngrediente
   FornecedorCNPJ VARCHAR(14) NOT NULL,
   PRIMARY KEY (IngredID, ItemID, FornecedorCNPJ),
   FOREIGN KEY (IngredID) REFERENCES Ingredientes(IngredID),
-  FOREIGN KEY (ItemID) REFERENCES Item(ItemID)
+  FOREIGN KEY (ItemID) REFERENCES Item(ItemID),
   FOREIGN KEY (FornecedorCNPJ) REFERENCES Fornecedor(FornecedorCNPJ)
 );
 
@@ -136,10 +145,3 @@ CREATE TABLE FuncionarioFuncTelefone
   FOREIGN KEY (FuncID) REFERENCES Funcionario(FuncID)
 );
 
-CREATE TABLE Fornecedor
-(
-  FornecedorCNPJ VARCHAR(14) NOT NULL,
-  FornecedorNome VARCHAR(100) NOT NULL,
-  FornecedorRegiao VARCHAR(50) NOT NULL,
-  PRIMARY KEY (FornecedorCNPJ)
-);
