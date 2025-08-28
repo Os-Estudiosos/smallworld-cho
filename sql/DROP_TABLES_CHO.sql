@@ -1,3 +1,4 @@
+DROP TABLE Fornecedor;
 DROP TABLE FuncionarioFuncTelefone;
 DROP TABLE ClienteClienteEnfermidade;
 DROP TABLE ClienteClienteTelefone;
