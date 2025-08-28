@@ -1,4 +1,4 @@
-from tables import GenerateData
+from database.tables import GenerateData
 from config.database import *
 
 
