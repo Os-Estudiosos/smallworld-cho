@@ -1,0 +1,14 @@
+DROP TABLE FuncionarioFuncTelefone;
+DROP TABLE ClienteClienteEnfermidade;
+DROP TABLE ClienteClienteTelefone;
+DROP TABLE PedidoItem;
+DROP TABLE ItemIngrediente;
+DROP TABLE Bebida;
+DROP TABLE PratoEspecial;
+DROP TABLE PratoPadrao;
+DROP TABLE Pedido;
+DROP TABLE Funcionario;
+DROP TABLE Filial;
+DROP TABLE Ingredientes;
+DROP TABLE Cliente;
+DROP TABLE Item;
