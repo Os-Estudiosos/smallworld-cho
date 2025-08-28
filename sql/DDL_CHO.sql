@@ -141,5 +141,5 @@ CREATE TABLE Fornecedor
   FornecedorCNPJ VARCHAR(14) NOT NULL,
   FornecedorNome VARCHAR(100) NOT NULL,
   FornecedorRegiao VARCHAR(50) NOT NULL,
-  PRIMARY KEY (FornecedorCNPJ),
+  PRIMARY KEY (FornecedorCNPJ)
 );
