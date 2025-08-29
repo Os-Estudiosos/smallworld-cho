@@ -50,7 +50,7 @@ CREATE TABLE Clientes
 CREATE TABLE ClienteClienteTelefone
 (
   ClienteTelefone VARCHAR(255) NOT NULL,
-  ClienteCPF INT NOT NULL,
+  ClienteCPF VARCHAR(11) NOT NULL,
   PRIMARY KEY (ClienteTelefone, ClienteCPF),
   FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF)
 );
@@ -58,7 +58,7 @@ CREATE TABLE ClienteClienteTelefone
 CREATE TABLE ClienteClienteEnfermidade
 (
   ClienteEnfermidade INT NOT NULL,
-  ClienteCPF INT NOT NULL,
+  ClienteCPF VARCHAR(11) NOT NULL,
   PRIMARY KEY (ClienteEnfermidade, ClienteCPF),
   FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF)
 );

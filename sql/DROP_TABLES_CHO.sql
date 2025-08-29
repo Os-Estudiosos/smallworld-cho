@@ -13,4 +13,4 @@ DROP TABLE Clientes;
 DROP TABLE Bebida;
 DROP TABLE PratoEspecial;
 DROP TABLE PratoPadrao;
-DROP TABLE Item;
+DROP TABLE Itens;
