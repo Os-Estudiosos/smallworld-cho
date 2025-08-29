@@ -131,7 +131,7 @@ CREATE TABLE Reservas
   ClienteNome VARCHAR(255) NOT NULL,
   PRIMARY KEY (ReservaID),
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID),
-  PRIMARY KEY (ClienteCPF),
+  FOREIGN KEY (ClienteCPF),
   UNIQUE (ClienteCPF, ClienteNome)
 );
 
