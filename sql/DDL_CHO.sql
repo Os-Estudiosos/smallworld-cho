@@ -1,6 +1,6 @@
 SET search_path=cho; 
 
-CREATE TABLE Itens
+CREATE TABLE Itens -- OK
 (
   ItemID INT NOT NULL,
   ItemNome VARCHAR(255) NOT NULL,
@@ -9,7 +9,31 @@ CREATE TABLE Itens
   PRIMARY KEY (ItemID)
 );
 
-CREATE TABLE Clientes
+CREATE TABLE PratoPadrao -- OK
+(
+  PratoTipoSang VARCHAR(50) NOT NULL,
+  ItemID INT NOT NULL,
+  PRIMARY KEY (ItemID),
+  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
+);
+
+CREATE TABLE PratoEspecial -- OK
+(
+  PratoEnfermidade VARCHAR(255) NOT NULL,
+  ItemID INT NOT NULL,
+  PRIMARY KEY (ItemID),
+  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
+);
+
+CREATE TABLE Bebida -- OK
+(
+  BebTipoSangue VARCHAR(50) NOT NULL,
+  ItemID INT NOT NULL,
+  PRIMARY KEY (ItemID),
+  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
+);
+
+CREATE TABLE Clientes -- OK
 (
   ClienteNome VARCHAR(255) NOT NULL,
   ClienteSobrenome VARCHAR(255) NOT NULL,
@@ -23,7 +47,23 @@ CREATE TABLE Clientes
   PRIMARY KEY (ClienteCPF)
 );
 
-CREATE TABLE Ingredientes
+CREATE TABLE ClienteClienteTelefone  -- OK
+(
+  ClienteTelefone VARCHAR(255) NOT NULL,
+  ClienteCPF INT NOT NULL,
+  PRIMARY KEY (ClienteTelefone, ClienteCPF),
+  FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF)
+);
+
+CREATE TABLE ClienteClienteEnfermidade  -- OK
+(
+  ClienteEnfermidade INT NOT NULL,
+  ClienteCPF INT NOT NULL,
+  PRIMARY KEY (ClienteEnfermidade, ClienteCPF),
+  FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF)
+);
+
+CREATE TABLE Ingredientes -- OK
 (
   IngredNome VARCHAR(255) NOT NULL,
   IngredID INT NOT NULL,
@@ -32,7 +72,7 @@ CREATE TABLE Ingredientes
   PRIMARY KEY (IngredID)
 );
 
-CREATE TABLE Filiais
+CREATE TABLE Filiais -- OK
 (
   FilialID INT NOT NULL,
   FilialRua VARCHAR(255) NOT NULL,
@@ -42,7 +82,26 @@ CREATE TABLE Filiais
   PRIMARY KEY (FilialID)
 );
 
-CREATE TABLE Funcionarios
+CREATE TABLE Fornecedores -- OK
+(
+  FornecedorCNPJ VARCHAR(14) NOT NULL,
+  FornecedorNome VARCHAR(255) NOT NULL,
+  FornecedorRegiao VARCHAR(50) NOT NULL,
+  PRIMARY KEY (FornecedorCNPJ)
+);
+
+CREATE TABLE ItemIngrediente
+(
+  IngredID INT NOT NULL,
+  ItemID INT NOT NULL,
+  FornecedorCNPJ VARCHAR(14) NOT NULL,
+  PRIMARY KEY (IngredID, ItemID, FornecedorCNPJ),
+  FOREIGN KEY (IngredID) REFERENCES Ingredientes(IngredID),
+  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID),
+  FOREIGN KEY (FornecedorCNPJ) REFERENCES Fornecedores(FornecedorCNPJ)
+);
+
+CREATE TABLE Funcionarios -- OK
 (
   FuncCargo VARCHAR(255) NOT NULL,
   FuncSalario FLOAT NOT NULL,
@@ -54,23 +113,12 @@ CREATE TABLE Funcionarios
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID)
 );
 
-CREATE TABLE Pedidos
+CREATE TABLE FuncionarioFuncTelefone  -- OK
 (
-  PedidoData DATE NOT NULL,
-  PedidoID INT NOT NULL,
-  ClienteCPF INT NOT NULL,
-  FilialID INT NOT NULL,
-  PRIMARY KEY (PedidoID),
-  FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF),
-  FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID)
-);
-
-CREATE TABLE Fornecedores
-(
-  FornecedorCNPJ VARCHAR(14) NOT NULL,
-  FornecedorNome VARCHAR(255) NOT NULL,
-  FornecedorRegiao VARCHAR(50) NOT NULL,
-  PRIMARY KEY (FornecedorCNPJ)
+  FuncTelefone VARCHAR(255) NOT NULL,
+  FuncCPF INT NOT NULL,
+  PRIMARY KEY (FuncTelefone, FuncCPF),
+  FOREIGN KEY (FuncCPF) REFERENCES Funcionarios(FuncCPF)
 );
 
 CREATE TABLE Reservas
@@ -87,39 +135,15 @@ CREATE TABLE Reservas
   UNIQUE (ClienteCPF, ClienteNome)
 )
 
-CREATE TABLE PratoPadrao
+CREATE TABLE Pedidos
 (
-  PratoTipoSang VARCHAR(50) NOT NULL,
-  ItemID INT NOT NULL,
-  PRIMARY KEY (ItemID),
-  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
-);
-
-CREATE TABLE PratoEspecial
-(
-  PratoEnfermidade VARCHAR(255) NOT NULL,
-  ItemID INT NOT NULL,
-  PRIMARY KEY (ItemID),
-  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
-);
-
-CREATE TABLE Bebida
-(
-  BebTipoSangue VARCHAR(50) NOT NULL,
-  ItemID INT NOT NULL,
-  PRIMARY KEY (ItemID),
-  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
-);
-
-CREATE TABLE ItemIngrediente
-(
-  IngredID INT NOT NULL,
-  ItemID INT NOT NULL,
-  FornecedorCNPJ VARCHAR(14) NOT NULL,
-  PRIMARY KEY (IngredID, ItemID, FornecedorCNPJ),
-  FOREIGN KEY (IngredID) REFERENCES Ingredientes(IngredID),
-  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID),
-  FOREIGN KEY (FornecedorCNPJ) REFERENCES Fornecedores(FornecedorCNPJ)
+  PedidoData DATE NOT NULL,
+  PedidoID INT NOT NULL,
+  ClienteCPF INT NOT NULL,
+  FilialID INT NOT NULL,
+  PRIMARY KEY (PedidoID),
+  FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF),
+  FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID)
 );
 
 CREATE TABLE PedidoItem
@@ -132,28 +156,4 @@ CREATE TABLE PedidoItem
   FOREIGN KEY (PedidoID) REFERENCES Pedidos(PedidoID),
   FOREIGN KEY (ItemID) REFERENCES Itens(ItemID),
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID)
-);
-
-CREATE TABLE ClienteClienteTelefone
-(
-  ClienteTelefone INT NOT NULL,
-  ClienteCPF INT NOT NULL,
-  PRIMARY KEY (ClienteTelefone, ClienteCPF),
-  FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF)
-);
-
-CREATE TABLE ClienteClienteEnfermidade
-(
-  ClienteEnfermidade INT NOT NULL,
-  ClienteCPF INT NOT NULL,
-  PRIMARY KEY (ClienteEnfermidade, ClienteCPF),
-  FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF)
-);
-
-CREATE TABLE FuncionarioFuncTelefone
-(
-  FuncTelefone INT NOT NULL,
-  FuncCPF INT NOT NULL,
-  PRIMARY KEY (FuncTelefone, FuncCPF),
-  FOREIGN KEY (FuncCPF) REFERENCES Funcionarios(FuncCPF)
 );
