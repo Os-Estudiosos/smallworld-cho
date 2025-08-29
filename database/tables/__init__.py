@@ -230,7 +230,7 @@ class GenerateData(Connection):
             cpf, nome = random.choice(self.cliente_cpf_nome)
             self.reserva_datas.append(data)
             Connection.cur.execute("""
-                INSERT INTO Reservas (ResevaID, ReservaData, FilialID, NumeroMesa, ClienteCPF, ClienteNome)
+                INSERT INTO Reservas (ReservaID, ReservaData, FilialID, NumeroMesa, ClienteCPF, ClienteNome)
                 VALUES (%s, %s, %s, %s, %s, %s)
             """, (i, data, filial, mesa, cpf, nome))
             self.commit()

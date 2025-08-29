@@ -124,7 +124,7 @@ CREATE TABLE FuncionarioFuncTelefone
 CREATE TABLE Reservas
 (
   ReservaID INT NOT NULL,
-  ResevaData DATE NOT NULL,
+  ReservaData DATE NOT NULL,
   FilialID INT NOT NULL,
   NumeroMesa INT NOT NULL,
   ClienteCPF INT NULL,
@@ -133,7 +133,7 @@ CREATE TABLE Reservas
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID),
   PRIMARY KEY (ClienteCPF),
   UNIQUE (ClienteCPF, ClienteNome)
-)
+);
 
 CREATE TABLE Pedidos
 (
