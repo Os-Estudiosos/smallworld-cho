@@ -11,7 +11,7 @@ CREATE TABLE Itens
 
 CREATE TABLE PratoPadrao
 (
-  PratoTipoSang VARCHAR(50) NOT NULL,
+  PratoTipoSang VARCHAR(255) NOT NULL,
   ItemID INT NOT NULL,
   PRIMARY KEY (ItemID),
   FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
@@ -27,7 +27,7 @@ CREATE TABLE PratoEspecial
 
 CREATE TABLE Bebida
 (
-  BebTipoSangue VARCHAR(50) NOT NULL,
+  BebTipoSangue VARCHAR(255) NOT NULL,
   ItemID INT NOT NULL,
   PRIMARY KEY (ItemID),
   FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
@@ -57,7 +57,7 @@ CREATE TABLE ClienteClienteTelefone
 
 CREATE TABLE ClienteClienteEnfermidade
 (
-  ClienteEnfermidade INT NOT NULL,
+  ClienteEnfermidade VARCHAR(255) NOT NULL,
   ClienteCPF VARCHAR(11) NOT NULL,
   PRIMARY KEY (ClienteEnfermidade, ClienteCPF),
   FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF)
@@ -107,7 +107,7 @@ CREATE TABLE Funcionarios
   FuncSalario FLOAT NOT NULL,
   FuncDataNasc DATE NOT NULL,
   FuncNome VARCHAR(255) NOT NULL,
-  FuncCPF INT NOT NULL,
+  FuncCPF VARCHAR(11) NOT NULL,
   FilialID INT NOT NULL,
   PRIMARY KEY (FuncCPF),
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID)
@@ -116,7 +116,7 @@ CREATE TABLE Funcionarios
 CREATE TABLE FuncionarioFuncTelefone
 (
   FuncTelefone VARCHAR(255) NOT NULL,
-  FuncCPF INT NOT NULL,
+  FuncCPF VARCHAR(11) NOT NULL,
   PRIMARY KEY (FuncTelefone, FuncCPF),
   FOREIGN KEY (FuncCPF) REFERENCES Funcionarios(FuncCPF)
 );
@@ -127,9 +127,9 @@ CREATE TABLE Reservas
   ReservaData DATE NOT NULL,
   FilialID INT NOT NULL,
   NumeroMesa INT NOT NULL,
-  ClienteCPF INT NULL,
+  ClienteCPF VARCHAR(11) NULL,
   ClienteNome VARCHAR(255) NOT NULL,
-  PRIMARY KEY (ResevaID),
+  PRIMARY KEY (ReservaID),
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID),
   PRIMARY KEY (ClienteCPF),
   UNIQUE (ClienteCPF, ClienteNome)
@@ -139,7 +139,7 @@ CREATE TABLE Pedidos
 (
   PedidoData DATE NOT NULL,
   PedidoID INT NOT NULL,
-  ClienteCPF INT NOT NULL,
+  ClienteCPF VARCHAR(11) NOT NULL,
   FilialID INT NOT NULL,
   PRIMARY KEY (PedidoID),
   FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF),
