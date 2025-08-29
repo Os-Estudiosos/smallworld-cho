@@ -13,7 +13,6 @@ class GenerateData(Connection):
         self.tipos_sangue = ["A", "B", "AB", "O"]
         self.categorias = ["Prato Padrão", "Prato Especial", "Bebida"]
 
-    
     # Função auxiliar para gerar um cpf aleatório (sem verificar as regras do cpf)
     def gerar_cpf():
         return str("".join([str(random.randint(0,9)) for _ in range(11)]))
@@ -237,7 +236,7 @@ class GenerateData(Connection):
             self.commit()
         self.commit()
         
-    # Função para popular a tabela PEDIDOS
+    # Função para popular as tabelas PEDIDOS e PEDIDOITEM
     def generate_pedidos(self, num_pedidos, max_qtd, max_itens):
         for i in range(num_pedidos):
             data = random.choice(self.reserva_datas)

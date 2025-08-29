@@ -8,12 +8,16 @@ def main():
     dados.initialize()
     
     # Gera os dados
-    dados.generate_item(N_ITENS)
-    dados.generate_clientes(N_CLIENTES)
-    dados.generate_filial(N_FILIAIS)
-    dados.generate_fornecedores(N_FORNECEDORES)
+    dados.generate_itens(N_ITENS)
+    dados.generate_clientes(N_CLIENTES, MAX_NUM_TELEFONE, PROB_ENFERMIDADE)
     dados.generate_ingredientes(N_INGREDIENTES)
+    dados.generate_filiais(N_FILIAIS)
+    dados.generate_fornecedores(N_FORNECEDORES)
     dados.generate_funcionarios(N_FUNCIONARIOS)
+    dados.generate_pedido_pedidoitem(N_PEDIDOS, MAX_QTD)
+    dados.generate_itemingrediente(MAX_INGREDIENTES)
+    dados.generate_reservas(N_RESERVAS, MAX_MESAS)
+    dados.generate_pedidos(N_PEDIDOS, MAX_QTD, MAX_ITENS)
     
     # Finaliza as operações
     dados.commit()
