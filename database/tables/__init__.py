@@ -79,7 +79,6 @@ class GenerateData(Connection):
     def generate_clientes(self, num_clientes, max_num_telefone, prob_enfermidade):
         self.cliente_cpf_nome = []
         self.cliente_cpf = []
-        self.cliente_nome = []
         for _ in range(num_clientes):
             nome = self.fake.first_name()
             sobrenome = self.fake.last_name()
@@ -91,7 +90,6 @@ class GenerateData(Connection):
             cpf = self.gerar_cpf()
             self.cliente_cpf_nome.append((cpf, nome))
             self.cliente_cpf.append(cpf)
-            self.cliente_nome.append(nome)
             nascimento = self.fake.date_of_birth(minimum_age=18, maximum_age=80)
             Connection.cur.execute("""
                 INSERT INTO Clientes (ClienteNome, ClienteSobrenome, ClienteTipoSang,
@@ -212,25 +210,51 @@ class GenerateData(Connection):
     def generate_itemingrediente(self, max_ingredientes):
         for i in range(1, self.num_itens + 1):
             ingredientes = random.randint(3, max_ingredientes)
-            ingrediente_id = random.randint(1, self.num_ingredientes)
-                
+            for _ in range(ingredientes):
+                ingrediente_id = random.randint(1, self.num_ingredientes)
+                fornecedor_cnpj = random.choice(self.fornecedores_cnpjs)
+                Connection.cur.execute("""
+                INSERT INTO ItemIngrediente (IngredID, ItemID, FornecedorCNPJ)
+                VALUES (%s,%s,%s)
+            """, (ingrediente_id, i, fornecedor_cnpj))
+                self.commit()
+            self.commit()
+        self.commit()
+
+    # Função para popular a tabela RESERVAS
+    def generate_reservas(self, num_reservas, max_mesas):
+        self.reserva_datas = []
+        for i in range(1, num_reservas + 1):
+            data = self.fake.date_between(start_date="-3y", end_date="today")
+            filial = random.randint(1, self.num_filiais)
+            mesa = random.randint(1, max_mesas)
+            cpf, nome = random.choice(self.cliente_cpf_nome)
+            self.reserva_datas.append(data)
+            Connection.cur.execute("""
+                INSERT INTO Reservas (ResevaID, ReservaData, FilialID, NumeroMesa, ClienteCPF, ClienteNome)
+                VALUES (%s, %s, %s, %s, %s, %s)
+            """, (i, data, filial, mesa, cpf, nome))
+            self.commit()
         self.commit()
         
     # Função para popular a tabela PEDIDOS
-    def generate_pedidos(self, num_pedidos):
+    def generate_pedidos(self, num_pedidos, max_qtd, max_itens):
+        for i in range(num_pedidos):
+            data = random.choice(self.reserva_datas)
+            cpf = random.choice(self.cliente_cpf)
+            filial = random.random(1, self.num_filiais + 1)
+            Connection.cur.execute("""
+                INSERT INTO Pedidos (PedidoData, PedidoID, ClienteCPF, FilialID)
+                VALUES (%s, %s, %s, %s)
+            """, (data, i, cpf, filial))
+            self.commit()
+            itens = random.random(1, max_itens)
+            for _ in range(itens):
+                item_id = random.randint(1, self.num_itens)
+                qtd = random.randint(1, max_qtd)
+                Connection.cur.execute("""
+                INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID)
+                VALUES (%s, %s, %s, %s)
+            """, (qtd, i, item_id, filial))
+            self.commit()
         self.commit()
-        
-
-    # def generate_reservas(self, num_reservas, max_mesas):
-    #     self.reserva_datas = []
-    #     for i in range(1, num_reservas + 1):
-    #         data = self.fake.date_between(start_date="-3y", end_date="today")
-    #         filial = random.randint(1, self.num_filiais)
-    #         mesa = random.randint(1, max_mesas)
-    #         cpf, nome = random.choice(self.cliente_cpf_nome)
-    #         self.reserva_datas.append(data)
-    #         Connection.cur.execute("""
-    #             INSERT INTO Reservas (ResevaID, ReservaData, FilialID, NumeroMesa, ClienteCPF, ClienteNome)
-    #             VALUES (%s, %s, %s, %s, %s, %s)
-    #         """, (i, data, filial, mesa, cpf, nome))
-    #     self.commit()

@@ -90,7 +90,7 @@ CREATE TABLE Fornecedores -- OK
   PRIMARY KEY (FornecedorCNPJ)
 );
 
-CREATE TABLE ItemIngrediente
+CREATE TABLE ItemIngrediente -- OK
 (
   IngredID INT NOT NULL,
   ItemID INT NOT NULL,
@@ -121,7 +121,7 @@ CREATE TABLE FuncionarioFuncTelefone  -- OK
   FOREIGN KEY (FuncCPF) REFERENCES Funcionarios(FuncCPF)
 );
 
-CREATE TABLE Reservas
+CREATE TABLE Reservas -- OK
 (
   ReservaID INT NOT NULL,
   ResevaData DATE NOT NULL,
