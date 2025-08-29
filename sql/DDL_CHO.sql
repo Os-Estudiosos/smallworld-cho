@@ -1,6 +1,6 @@
 SET search_path=cho; 
 
-CREATE TABLE Itens -- OK
+CREATE TABLE Itens
 (
   ItemID INT NOT NULL,
   ItemNome VARCHAR(255) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE Itens -- OK
   PRIMARY KEY (ItemID)
 );
 
-CREATE TABLE PratoPadrao -- OK
+CREATE TABLE PratoPadrao
 (
   PratoTipoSang VARCHAR(50) NOT NULL,
   ItemID INT NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE PratoPadrao -- OK
   FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
 );
 
-CREATE TABLE PratoEspecial -- OK
+CREATE TABLE PratoEspecial
 (
   PratoEnfermidade VARCHAR(255) NOT NULL,
   ItemID INT NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE PratoEspecial -- OK
   FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
 );
 
-CREATE TABLE Bebida -- OK
+CREATE TABLE Bebida
 (
   BebTipoSangue VARCHAR(50) NOT NULL,
   ItemID INT NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE Bebida -- OK
   FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
 );
 
-CREATE TABLE Clientes -- OK
+CREATE TABLE Clientes
 (
   ClienteNome VARCHAR(255) NOT NULL,
   ClienteSobrenome VARCHAR(255) NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE Clientes -- OK
   PRIMARY KEY (ClienteCPF)
 );
 
-CREATE TABLE ClienteClienteTelefone  -- OK
+CREATE TABLE ClienteClienteTelefone
 (
   ClienteTelefone VARCHAR(255) NOT NULL,
   ClienteCPF INT NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE ClienteClienteTelefone  -- OK
   FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF)
 );
 
-CREATE TABLE ClienteClienteEnfermidade  -- OK
+CREATE TABLE ClienteClienteEnfermidade
 (
   ClienteEnfermidade INT NOT NULL,
   ClienteCPF INT NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE ClienteClienteEnfermidade  -- OK
   FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF)
 );
 
-CREATE TABLE Ingredientes -- OK
+CREATE TABLE Ingredientes
 (
   IngredNome VARCHAR(255) NOT NULL,
   IngredID INT NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE Ingredientes -- OK
   PRIMARY KEY (IngredID)
 );
 
-CREATE TABLE Filiais -- OK
+CREATE TABLE Filiais
 (
   FilialID INT NOT NULL,
   FilialRua VARCHAR(255) NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE Filiais -- OK
   PRIMARY KEY (FilialID)
 );
 
-CREATE TABLE Fornecedores -- OK
+CREATE TABLE Fornecedores
 (
   FornecedorCNPJ VARCHAR(14) NOT NULL,
   FornecedorNome VARCHAR(255) NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE Fornecedores -- OK
   PRIMARY KEY (FornecedorCNPJ)
 );
 
-CREATE TABLE ItemIngrediente -- OK
+CREATE TABLE ItemIngrediente
 (
   IngredID INT NOT NULL,
   ItemID INT NOT NULL,
@@ -101,7 +101,7 @@ CREATE TABLE ItemIngrediente -- OK
   FOREIGN KEY (FornecedorCNPJ) REFERENCES Fornecedores(FornecedorCNPJ)
 );
 
-CREATE TABLE Funcionarios -- OK
+CREATE TABLE Funcionarios
 (
   FuncCargo VARCHAR(255) NOT NULL,
   FuncSalario FLOAT NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE Funcionarios -- OK
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID)
 );
 
-CREATE TABLE FuncionarioFuncTelefone  -- OK
+CREATE TABLE FuncionarioFuncTelefone
 (
   FuncTelefone VARCHAR(255) NOT NULL,
   FuncCPF INT NOT NULL,
@@ -121,7 +121,7 @@ CREATE TABLE FuncionarioFuncTelefone  -- OK
   FOREIGN KEY (FuncCPF) REFERENCES Funcionarios(FuncCPF)
 );
 
-CREATE TABLE Reservas -- OK
+CREATE TABLE Reservas
 (
   ReservaID INT NOT NULL,
   ResevaData DATE NOT NULL,
