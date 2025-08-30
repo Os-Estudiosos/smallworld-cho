@@ -7,8 +7,8 @@ from database import Connection
 class GenerateData(Connection):
     
     # Super init com a classe de conexão
-    def __init__(self, db_name, path, user, host, password):
-        super().__init__(db_name, path, user, host, password)
+    def __init__(self, db_name, path, user, host, password, port):
+        super().__init__(db_name, path, user, host, password, port)
         self.fake = Faker("pt_BR")
         self.tipos_sangue = ["A", "B", "AB", "O"]
         self.categorias = ["Prato Padrão", "Prato Especial", "Bebida"]

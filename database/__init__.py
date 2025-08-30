@@ -1,12 +1,13 @@
 import psycopg2
 
 class Connection:
-    def __init__(self, db_name, path, user, host, password):
+    def __init__(self, db_name, path, user, host, password, port):
         self.db_name = db_name
         self.path = path
         self.user = user
         self.host = host
         self.password = password
+        self.port = port
         self.conn = None
     
     def initialize(self):
@@ -14,19 +15,17 @@ class Connection:
             self.conn = psycopg2.connect(
                 dbname=self.db_name,
                 user=self.user,
-                password=self.password,
+                password=self.password,  
                 host=self.host,
-                port=5432
+                port=self.port
             )
-            with self.conn.cursor() as cur:
-                cur.execute(f'SET search_path TO {self.path};')
-            self.conn.commit()
+            self.conn.cursor().execute(f"SET search_path={self.path};")
+            self.conn.commit() 
             return self.conn
-
+        
         except Exception as e:
             print("Erro ao conectar ao banco de dados:", e)
             self.conn = None
-            return None
     
     def cursor(self):
         if not self.conn:

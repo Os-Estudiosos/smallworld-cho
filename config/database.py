@@ -1,9 +1,9 @@
 DB_NAME="cho"
 DB_PATH="cho"
-DB_USER = "alex"
-DB_HOST="10.61.49.147"
-DB_PASSWORD="alex"
-DB_PORT="5432"
+DB_USER = "adm"
+DB_HOST="localhost"
+DB_PASSWORD="adm"
+DB_PORT="3389"
 
 N_ITENS = 40
 N_CLIENTES = 50
