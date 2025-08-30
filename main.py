@@ -5,7 +5,7 @@ from config.database import *
 def main():
     try:
         # Inicia a conexão
-        dados = GenerateData(DB_NAME, DB_PATH, DB_OWNER, DB_HOST, DB_PASSWORD)
+        dados = GenerateData(DB_NAME, DB_PATH, DB_USER, DB_HOST, DB_PASSWORD)
         dados.initialize()
         
         # Gera os dados

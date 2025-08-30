@@ -9,24 +9,24 @@ class GenerateData(Connection):
     # Super init com a classe de conexão
     def __init__(self, db_name, path, user, host, password):
         super().__init__(db_name, path, user, host, password)
-        self.faker = Faker("pt_BR")
+        self.fake = Faker("pt_BR")
         self.tipos_sangue = ["A", "B", "AB", "O"]
         self.categorias = ["Prato Padrão", "Prato Especial", "Bebida"]
 
     # Função auxiliar para gerar um cpf aleatório (sem verificar as regras do cpf)
-    def gerar_cpf():
+    def gerar_cpf(self):
         return str("".join([str(random.randint(0,9)) for _ in range(11)]))
     
     # Função auxiliar para gerar um cnpj aleatório (sem verificar as regras do cnpj)
-    def gerar_cnpj():
+    def gerar_cnpj(self):
         return str("".join([str(random.randint(0,9)) for _ in range(14)]))
     
     # Função auxiliar para gerar um telefone aleatório (sem verificar as regras do telefone)
-    def gerar_telefone():
+    def gerar_telefone(self):
         return str("".join([str(random.randint(0,9)) for _ in range(9)]))
     
     # Função auxiliar para gerar uma doença aleatória
-    def gerar_doenca_falsa():
+    def gerar_doenca_falsa(self):
         prefixos = [
             "neuro", "cardio", "hepato", "dermato", "gastro",
             "osteo", "pneumo", "nefr", "psico", "oto", "lipo", "angio"
@@ -49,25 +49,29 @@ class GenerateData(Connection):
             sangue = random.choice(self.tipos_sangue)
             enfermidade = self.gerar_doenca_falsa()
             preco = round(random.uniform(5, 80), 2)
-            Connection.cur.execute("""
+            with self.conn.cursor() as cur:
+                cur.execute("""
                 INSERT INTO Itens (ItemID, ItemNome, ItemCategoria, ItemPrecoVenda)
                 VALUES (%s, %s, %s, %s)
             """, (i, nome, categoria, preco))
             self.commit()
             if categoria == "Prato Padrão":
-                Connection.cur.execute("""
+                with self.conn.cursor() as cur:
+                    cur.execute("""
                     INSERT INTO PratoPadrao (PratoTipoSang, ItemID)
                     VALUES (%s, %s)
                 """, (sangue, i))
                 self.commit()
             elif categoria == "Prato Especial":
-                Connection.cur.execute("""
+                with self.conn.cursor() as cur:
+                    cur.execute("""
                     INSERT INTO PratoEspecial (PratoEnfermidade, ItemID)
                     VALUES (%s, %s)
                 """, (enfermidade, i))
                 self.commit()
             else:
-                Connection.cur.execute("""
+                with self.conn.cursor() as cur:
+                    cur.execute("""
                     INSERT INTO Bebida (BebTipoSang, ItemID)
                     VALUES (%s, %s)
                 """, (sangue, i))
@@ -90,7 +94,8 @@ class GenerateData(Connection):
             self.cliente_cpf_nome.append((cpf, nome))
             self.cliente_cpf.append(cpf)
             nascimento = self.fake.date_of_birth(minimum_age=18, maximum_age=80)
-            Connection.cur.execute("""
+            with self.conn.cursor() as cur:
+                cur.execute("""
                 INSERT INTO Clientes (ClienteNome, ClienteSobrenome, ClienteTipoSang,
                                     ClienteRua, ClienteBairro, ClienteMunicipio, ClienteEstado,
                                     ClienteCPF, ClienteDataNasc)
@@ -99,15 +104,16 @@ class GenerateData(Connection):
             self.commit()
             for _ in range(random.randint(1, max_num_telefone)):
                 telefone = int(self.fake.msisdn()[:11])
-                Connection.cur.execute("""
+                with self.conn.cursor() as cur:
+                    cur.execute("""
                     INSERT INTO ClienteClienteTelefone (ClienteTelefone, ClienteCPF)
                     VALUES (%s,%s)
                 """, (telefone, cpf))
             self.commit()
             if random.random() < prob_enfermidade:
                 cliente_enfermidade = self.gerar_doenca_falsa()
-                self.faker.s
-                Connection.cur.execute("""
+                with self.conn.cursor() as cur:
+                    cur.execute("""
                     INSERT INTO ClienteClienteEnfermidade (ClienteEnfermidade, ClienteCPF)
                     VALUES (%s,%s)
                 """, (cliente_enfermidade, cpf))
@@ -121,7 +127,8 @@ class GenerateData(Connection):
             nome = self.fake.word().capitalize()
             preco = round(random.uniform(1, 30), 2)
             cal = random.randint(1, 1000)
-            Connection.cur.execute("""
+            with self.conn.cursor() as cur:
+                cur.execute("""
                 INSERT INTO Ingredientes (IngredNome, IngredID, IngredPrecoCompra, IngredCal)
                 VALUES (%s, %s, %s, %s)
             """, (nome, i, preco, cal))
@@ -136,7 +143,8 @@ class GenerateData(Connection):
             bairro = self.fake.bairro()
             cidade = self.fake.city()
             estado = self.fake.estado_sigla()
-            Connection.cur.execute("""
+            with self.conn.cursor() as cur:
+                cur.execute("""
                 INSERT INTO Filiais (FilialID, FilialRua, FilialBairro, FilialMunicipio, FilialEstado)
                 VALUES (%s,%s,%s,%s,%s)
             """, (i, rua, bairro, cidade, estado))
@@ -148,10 +156,11 @@ class GenerateData(Connection):
         self.fornecedores_cnpjs = []
         for _ in range(num_fornecedores):
             fornecedor_cnpj = self.gerar_cnpj()
-            fornecedor_nome = self.faker.name()
-            fornecedor_regiao = self.faker.region()
+            fornecedor_nome = self.fake.name()
+            fornecedor_regiao = self.fake.region()
             self.fornecedores_cnpjs.append(fornecedor_cnpj)
-            Connection.cur.execute("""
+            with self.conn.cursor() as cur:
+                cur.execute("""
                 INSERT INTO Fornecedores (FornecedorCNPJ, FornecedorNome, FornecedorRegiao)
                 VALUES (%s,%s,%s)
             """, (fornecedor_cnpj, fornecedor_nome, fornecedor_regiao))
@@ -174,12 +183,14 @@ class GenerateData(Connection):
             cpf = self.gerar_cpf()
             filial = random.randint(1, self.num_filiais)
             telefone = self.gerar_telefone()
-            Connection.cur.execute("""
-                INSERT INTO Funcionario (FuncCargo, FuncSalario, FuncDataNasc, FuncNome, FuncCPF, FilialID)
+            with self.conn.cursor() as cur:
+                cur.execute("""
+                INSERT INTO Funcionarios (FuncCargo, FuncSalario, FuncDataNasc, FuncNome, FuncCPF, FilialID)
                 VALUES (%s,%s,%s,%s,%s,%s)
             """, (cargo, salario, nascimento, nome, cpf, filial))
             self.commit()
-            Connection.cur.execute("""
+            with self.conn.cursor() as cur:
+                cur.execute("""
                 INSERT INTO FuncionarioFuncTelefone (FuncTelefone, FuncCPF)
                 VALUES (%s,%s)
             """, (telefone, cpf))
@@ -192,13 +203,15 @@ class GenerateData(Connection):
             cliente_cpf = random.choice(self.cliente_cpf)            
             filial = random.randint(1, self.num_filiais)
             data_pedido = self.fake.date_between(start_date="-3y", end_date="today")
-            Connection.cur.execute("""
+            with self.conn.cursor() as cur:
+                cur.execute("""
                 INSERT INTO Pedidos (PedidoData, PedidoID, ClienteCPF, FilialID)
                 VALUES (%s,%s,%s,%s)
             """, (data_pedido, pedido_id, cliente_cpf, filial))
             item_id = random.randint(1, self.num_itens)
             qtd = random.randint(1, max_qtd)
-            Connection.cur.execute("""
+            with self.conn.cursor() as cur:
+                cur.execute("""
                 INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID)
                 VALUES (%s,%s,%s)
             """, (qtd, pedido_id, item_id, filial))
@@ -212,7 +225,8 @@ class GenerateData(Connection):
             for _ in range(ingredientes):
                 ingrediente_id = random.randint(1, self.num_ingredientes)
                 fornecedor_cnpj = random.choice(self.fornecedores_cnpjs)
-                Connection.cur.execute("""
+                with self.conn.cursor() as cur:
+                    cur.execute("""
                 INSERT INTO ItemIngrediente (IngredID, ItemID, FornecedorCNPJ)
                 VALUES (%s,%s,%s)
             """, (ingrediente_id, i, fornecedor_cnpj))
@@ -229,7 +243,8 @@ class GenerateData(Connection):
             mesa = random.randint(1, max_mesas)
             cpf, nome = random.choice(self.cliente_cpf_nome)
             self.reserva_datas.append(data)
-            Connection.cur.execute("""
+            with self.conn.cursor() as cur:
+                cur.execute("""
                 INSERT INTO Reservas (ReservaID, ReservaData, FilialID, NumeroMesa, ClienteCPF, ClienteNome)
                 VALUES (%s, %s, %s, %s, %s, %s)
             """, (i, data, filial, mesa, cpf, nome))
@@ -241,17 +256,19 @@ class GenerateData(Connection):
         for i in range(num_pedidos):
             data = random.choice(self.reserva_datas)
             cpf = random.choice(self.cliente_cpf)
-            filial = random.random(1, self.num_filiais + 1)
-            Connection.cur.execute("""
+            filial = random.randint(1, self.num_filiais)
+            with self.conn.cursor() as cur:
+                cur.execute("""
                 INSERT INTO Pedidos (PedidoData, PedidoID, ClienteCPF, FilialID)
                 VALUES (%s, %s, %s, %s)
             """, (data, i, cpf, filial))
             self.commit()
-            itens = random.random(1, max_itens)
+            itens = random.randint(1, max_itens)            
             for _ in range(itens):
                 item_id = random.randint(1, self.num_itens)
                 qtd = random.randint(1, max_qtd)
-                Connection.cur.execute("""
+                with self.conn.cursor() as cur:
+                    cur.execute("""
                 INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID)
                 VALUES (%s, %s, %s, %s)
             """, (qtd, i, item_id, filial))
