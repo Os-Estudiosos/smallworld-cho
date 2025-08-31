@@ -1,3 +1,5 @@
+\c cho
+
 DROP TABLE PedidoItem;
 DROP TABLE Pedidos;
 DROP TABLE Reservas;
