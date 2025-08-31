@@ -1,3 +1,7 @@
+\c cho
+
+SET search_path=cho; 
+
 DROP TABLE PedidoItem;
 DROP TABLE Pedidos;
 DROP TABLE Reservas;
@@ -14,3 +18,7 @@ DROP TABLE Bebida;
 DROP TABLE PratoEspecial;
 DROP TABLE PratoPadrao;
 DROP TABLE Itens;
+
+\c postgres
+
+DROP DATABASE cho;
