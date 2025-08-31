@@ -17,4 +17,6 @@ DROP TABLE PratoEspecial;
 DROP TABLE PratoPadrao;
 DROP TABLE Itens;
 
+\c postgres
+
 DROP DATABASE cho;
