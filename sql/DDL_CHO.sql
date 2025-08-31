@@ -1,3 +1,4 @@
+CREATE SCHEMA cho;
 SET search_path=cho; 
 
 CREATE TABLE Itens
