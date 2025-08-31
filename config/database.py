@@ -1,7 +1,7 @@
 DB_NAME="cho"
 DB_PATH="cho"
 DB_USER = "adm"
-DB_HOST="10.61.49.149"
+DB_HOST="localhost"
 DB_PASSWORD="adm"
 DB_PORT="5432"
 
