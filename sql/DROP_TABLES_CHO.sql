@@ -1,5 +1,7 @@
 \c cho
 
+SET search_path=cho; 
+
 DROP TABLE PedidoItem;
 DROP TABLE Pedidos;
 DROP TABLE Reservas;
