@@ -136,7 +136,6 @@ CREATE TABLE Reservas
   PRIMARY KEY (ReservaID),
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID),
   FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF),
-  UNIQUE (ClienteCPF, ClienteNome)
 );
 
 CREATE TABLE Pedidos
