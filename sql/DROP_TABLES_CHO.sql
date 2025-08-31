@@ -14,3 +14,5 @@ DROP TABLE Bebida;
 DROP TABLE PratoEspecial;
 DROP TABLE PratoPadrao;
 DROP TABLE Itens;
+
+DROP DATABASE cho;
