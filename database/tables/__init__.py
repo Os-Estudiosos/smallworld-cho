@@ -183,7 +183,7 @@ class GenerateData(Connection):
     def generate_funcionarios(self, num_funcionarios):
         for _ in range(num_funcionarios):
             cargos = ["Chef", "Administrador", "Atendente"]
-            cargo = random.choice(cargos)
+            cargo = str(random.choice(cargos))
             if cargo == "Chef":
                 salario = round(random.uniform(6000, 12000), 2)
             elif cargo == "Administrador":
@@ -212,7 +212,7 @@ class GenerateData(Connection):
     # Função para popular as tabelas PEDIDOS e PEDIDOPEDIDOITEM
     def generate_pedido_pedidoitem(self, num_pedidos, max_qtd):
         for pedido_id in range(1, num_pedidos+1):
-            cliente_cpf = random.choice(self.cliente_cpf)            
+            cliente_cpf = str(random.choice(self.cliente_cpf))           
             filial = random.randint(1, self.num_filiais)
             data_pedido = self.fake.date_between(start_date="-3y", end_date="today")
             with self.conn.cursor() as cur:
@@ -236,7 +236,7 @@ class GenerateData(Connection):
             ingredientes = random.randint(3, max_ingredientes)
             for _ in range(ingredientes):
                 ingrediente_id = random.randint(1, self.num_ingredientes)
-                fornecedor_cnpj = random.choice(self.fornecedores_cnpjs)
+                fornecedor_cnpj = str(random.choice(self.fornecedores_cnpjs))
                 with self.conn.cursor() as cur:
                     cur.execute("""
                 INSERT INTO ItemIngrediente (IngredID, ItemID, FornecedorCNPJ)
@@ -254,6 +254,8 @@ class GenerateData(Connection):
             filial = random.randint(1, self.num_filiais)
             mesa = random.randint(1, max_mesas)
             cpf, nome = random.choice(self.cliente_cpf_nome)
+            cpf = str(cpf)
+            nome = str(nome)
             self.reserva_datas.append(data)
             with self.conn.cursor() as cur:
                 cur.execute("""
@@ -267,7 +269,7 @@ class GenerateData(Connection):
     def generate_pedidos(self, num_pedidos, max_qtd, max_itens):
         for i in range(num_pedidos):
             data = random.choice(self.reserva_datas)
-            cpf = random.choice(self.cliente_cpf)
+            cpf = str(random.choice(self.cliente_cpf))
             filial = random.randint(1, self.num_filiais)
             with self.conn.cursor() as cur:
                 cur.execute("""
