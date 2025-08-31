@@ -1,4 +1,4 @@
-CREATE DATABASE cho OWNER 'joao.pedro';
+CREATE DATABASE cho;
 \c cho
 
 CREATE SCHEMA cho;
