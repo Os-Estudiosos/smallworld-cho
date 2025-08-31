@@ -38,13 +38,25 @@ class GenerateData(Connection):
         sufixos = [
             "ite", "ose", "oma", "emia", "ite crônica", "opatia", "algia", "plasia"
         ]
-        return random.choice(prefixos) + random.choice(raizes) + random.choice(sufixos)
+        return str(random.choice(prefixos) + random.choice(raizes) + random.choice(sufixos))
+    
+    # Função para gerar um nome de um prato aleatório
+    def gerar_prato(self):
+        adjetivos = [
+            "Delicioso", "Crocante", "Apimentado", "Defumado", "Saboroso", 
+            "Exótico", "Cremoso", "Tradicional", "Recheado", "Especial"
+        ]
+        preparos = [
+            "Risoto", "Sopa", "Assado", "Estufado", "Tartar", 
+            "Moqueca", "Grelhado", "Ensopado", "Feijoada", "Carpaccio"
+        ]
+        return str(random.choice(adjetivos) + " " + random.choice(preparos))
 
     # Função para popular as tabelas ITENS, PRATOPADRAO, PRATOESPECIAL e BEBIDA
     def generate_itens(self, num_itens):
         self.num_itens = num_itens
         for i in range(1, num_itens+1): 
-            nome = self.fake.word().capitalize() + " " + self.fake.word().capitalize()
+            nome = self.gerar_prato()
             categoria = random.choice(self.categorias)
             sangue = random.choice(self.tipos_sangue)
             enfermidade = self.gerar_doenca_falsa()
@@ -72,7 +84,7 @@ class GenerateData(Connection):
             else:
                 with self.conn.cursor() as cur:
                     cur.execute("""
-                    INSERT INTO Bebida (BebTipoSang, ItemID)
+                    INSERT INTO Bebida (BebTipoSangue, ItemID)
                     VALUES (%s, %s)
                 """, (sangue, i))
                 self.commit()
@@ -103,7 +115,7 @@ class GenerateData(Connection):
             """, (nome, sobrenome, sangue, rua, bairro, municipio, estado, cpf, nascimento))
             self.commit()
             for _ in range(random.randint(1, max_num_telefone)):
-                telefone = int(self.fake.msisdn()[:11])
+                telefone = self.gerar_telefone()
                 with self.conn.cursor() as cur:
                     cur.execute("""
                     INSERT INTO ClienteClienteTelefone (ClienteTelefone, ClienteCPF)
@@ -157,7 +169,7 @@ class GenerateData(Connection):
         for _ in range(num_fornecedores):
             fornecedor_cnpj = self.gerar_cnpj()
             fornecedor_nome = self.fake.name()
-            fornecedor_regiao = self.fake.region()
+            fornecedor_regiao = self.fake.neighborhood()
             self.fornecedores_cnpjs.append(fornecedor_cnpj)
             with self.conn.cursor() as cur:
                 cur.execute("""
