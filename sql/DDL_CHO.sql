@@ -1,3 +1,6 @@
+CREATE DATABASE cho OWNER cho;
+\c cho
+
 CREATE SCHEMA cho;
 SET search_path=cho; 
 
