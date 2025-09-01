@@ -195,24 +195,27 @@ class GenerateData(Connection):
             item_id = random.randint(1, self.num_itens)
             qtd = random.randint(1, max_qtd)
             with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID) VALUES (%s, %s, %s)", 
+                cur.execute("INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID) VALUES (%s, %s, %s, %s)", 
                             (qtd, pedido_id, item_id, filial))
             self.commit()
         self.commit()
             
-    # Função para popular a tabela ITEMINGREDIENTE
     def generate_itemingrediente(self, max_ingredientes):
+        inseridos = set()  # guarda tuplas únicas
         for i in range(1, self.num_itens + 1):
             ingredientes = random.randint(3, max_ingredientes)
-            for ingrediente_id in range(1, self.num_itens):
+            for ingrediente_id in range(1, self.num_ingredientes):
                 for _ in range(ingredientes):
                     fornecedor_cnpj = str(random.choice(self.fornecedores_cnpjs))
-                    with self.conn.cursor() as cur:
-                        cur.execute("INSERT INTO ItemIngrediente (IngredID, ItemID, FornecedorCNPJ) VALUES (%s, %s, %s)", 
-                                    (ingrediente_id, i, fornecedor_cnpj))
-                    self.commit()
+                    chave = (ingrediente_id, i, fornecedor_cnpj)
+                    if chave not in inseridos:
+                        with self.conn.cursor() as cur:
+                            cur.execute("""
+                                INSERT INTO ItemIngrediente (IngredID, ItemID, FornecedorCNPJ)
+                                VALUES (%s, %s, %s)
+                            """, chave)
+                        inseridos.add(chave)
             self.commit()
-        self.commit()
 
     # Função para popular a tabela RESERVAS
     def generate_reservas(self, num_reservas, max_mesas):
