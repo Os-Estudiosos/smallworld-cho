@@ -2,6 +2,7 @@ import random
 from faker import Faker
 from datetime import date
 from database import Connection
+import pandas as pd
 
 
 class GenerateData(Connection):
@@ -12,6 +13,24 @@ class GenerateData(Connection):
         self.fake = Faker("pt_BR")
         self.tipos_sangue = ["A", "B", "AB", "O"]
         self.categorias = ["Prato Padrão", "Prato Especial", "Bebida"]
+        self.tabelas =  [
+                        "Itens",
+                        "PratoPadrao",
+                        "PratoEspecial",
+                        "Bebida",
+                        "Clientes",
+                        "ClienteClienteTelefone",
+                        "ClienteClienteEnfermidade",
+                        "Ingredientes",
+                        "Filiais",
+                        "Fornecedores",
+                        "ItemIngrediente",
+                        "Funcionarios",
+                        "FuncionarioFuncTelefone",
+                        "Reservas",
+                        "Pedidos",
+                        "PedidoItem"
+                    ]
 
     # Função auxiliar para gerar um cpf aleatório (sem verificar as regras do cpf)
     def gerar_cpf(self):
@@ -64,22 +83,18 @@ class GenerateData(Connection):
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO Itens (ItemID, ItemNome, ItemCategoria, ItemPrecoVenda) VALUES (%s, %s, %s, %s)",
                             (i, nome, categoria, preco))
-            self.commit()
             if categoria == "Prato Padrão":
                 with self.conn.cursor() as cur:
                     cur.execute("INSERT INTO PratoPadrao (PratoTipoSang, ItemID) VALUES (%s, %s)", 
                                 (sangue, i))
-                self.commit()
             elif categoria == "Prato Especial":
                 with self.conn.cursor() as cur:
                     cur.execute("INSERT INTO PratoEspecial (PratoEnfermidade, ItemID) VALUES (%s, %s)", 
                                 (enfermidade, i))
-                self.commit()
             else:
                 with self.conn.cursor() as cur:
                     cur.execute("INSERT INTO Bebida (BebTipoSangue, ItemID) VALUES (%s, %s)",
                                 (sangue, i))
-                self.commit()
         self.commit()
         
     # Função para popular as tabelas CLIENTES, CLIENTECLIENTETELEFONE CLIENTECLIENTEENFERMIDADE
@@ -101,19 +116,16 @@ class GenerateData(Connection):
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO Clientes (ClienteNome, ClienteSobrenome, ClienteTipoSang, ClienteRua, ClienteBairro, ClienteMunicipio, ClienteEstado, ClienteCPF, ClienteDataNasc) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
                 (nome, sobrenome, sangue, rua, bairro, municipio, estado, cpf, nascimento))
-            self.commit()
             for _ in range(random.randint(1, max_num_telefone)):
                 telefone = self.gerar_telefone()
                 with self.conn.cursor() as cur:
                     cur.execute("INSERT INTO ClienteClienteTelefone (ClienteTelefone, ClienteCPF) VALUES (%s, %s)", 
                                 (telefone, cpf))
-            self.commit()
             if random.random() < prob_enfermidade:
                 cliente_enfermidade = self.gerar_doenca_falsa()
                 with self.conn.cursor() as cur:
                     cur.execute("INSERT INTO ClienteClienteEnfermidade (ClienteEnfermidade, ClienteCPF) VALUES (%s, %s)", 
                                 (cliente_enfermidade, cpf))
-            self.commit()
         self.commit()
         
     # Função para popular a tabela INGREDIENTES
@@ -126,7 +138,6 @@ class GenerateData(Connection):
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO Ingredientes (IngredNome, IngredID, IngredPrecoCompra, IngredCal) VALUES (%s, %s, %s, %s)", 
                             (nome, i, preco, cal))
-            self.commit()
         self.commit()
 
     # Função para popular a tabela FILIAIS
@@ -140,7 +151,6 @@ class GenerateData(Connection):
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO Filiais (FilialID, FilialRua, FilialBairro, FilialMunicipio, FilialEstado) VALUES (%s, %s, %s, %s, %s)", 
                             (i, rua, bairro, cidade, estado))
-            self.commit()
         self.commit()
         
     # Função para popular a tabela FORNECEDORES    
@@ -154,7 +164,6 @@ class GenerateData(Connection):
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO Fornecedores (FornecedorCNPJ, FornecedorNome, FornecedorRegiao) VALUES (%s, %s, %s)", 
                             (fornecedor_cnpj, fornecedor_nome, fornecedor_regiao))
-            self.commit()
         self.commit()
         
     # Função para popular a tabelaS FUNCIONARIOS e FUNCIONARIOFUNCTELEFONE
@@ -176,30 +185,12 @@ class GenerateData(Connection):
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO Funcionarios (FuncCargo, FuncSalario, FuncDataNasc, FuncNome, FuncCPF, FilialID) VALUES (%s, %s, %s, %s, %s, %s)", 
                             (cargo, salario, nascimento, nome, cpf, filial))
-            self.commit()
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO FuncionarioFuncTelefone (FuncTelefone, FuncCPF) VALUES (%s, %s)", 
                             (telefone, cpf))
-            self.commit()
         self.commit()
         
-    # Função para popular as tabelas PEDIDOS e PEDIDOPEDIDOITEM
-    def generate_pedido_pedidoitem(self, num_pedidos, max_qtd):
-        for pedido_id in range(1, num_pedidos+1):
-            cliente_cpf = str(random.choice(self.cliente_cpf))           
-            filial = random.randint(1, self.num_filiais)
-            data_pedido = self.fake.date_between(start_date="-3y", end_date="today")
-            with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO Pedidos (PedidoData, PedidoID, ClienteCPF, FilialID) VALUES (%s, %s, %s, %s)", 
-                            (data_pedido, pedido_id, cliente_cpf, filial))
-            item_id = random.randint(1, self.num_itens)
-            qtd = random.randint(1, max_qtd)
-            with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID) VALUES (%s, %s, %s, %s)", 
-                            (qtd, pedido_id, item_id, filial))
-            self.commit()
-        self.commit()
-            
+    # Função para popular a tabela ITEMINGREDIENTE    
     def generate_itemingrediente(self, max_ingredientes):
         inseridos = set()  # guarda tuplas únicas
         for i in range(1, self.num_itens + 1):
@@ -231,26 +222,34 @@ class GenerateData(Connection):
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO Reservas (ReservaID, ReservaData, FilialID, NumeroMesa, ClienteCPF, ClienteNome) VALUES (%s, %s, %s, %s, %s, %s)", 
                             (i, data, filial, mesa, cpf, nome))
-            self.commit()
         self.commit()
         
     # Função para popular as tabelas PEDIDOS e PEDIDOITEM
     def generate_pedidos(self, num_pedidos, max_qtd, max_itens):
-        for i in range(1, num_pedidos + 1):
+        for i in range(1, num_pedidos+1):
             data = random.choice(self.reserva_datas)
             cpf = str(random.choice(self.cliente_cpf))
             filial = random.randint(1, self.num_filiais)
             with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO Pedidos (PedidoData, PedidoID, ClienteCPF, FilialID) VALUES (%s, %s, %s, %s)", 
-                            (data, i, cpf, filial))
-            self.commit()
-            itens = random.randint(1, max_itens)            
-            for _ in range(itens):
-                item_id = random.randint(1, self.num_itens)
+                cur.execute("""
+                    INSERT INTO Pedidos (PedidoID, PedidoData, ClienteCPF, FilialID)
+                    VALUES (%s, %s, %s, %s)
+                    RETURNING PedidoID
+                """, (i, data, cpf, filial))
+            itens = random.randint(1, max_itens)
+            itens_unicos = random.sample(range(1, self.num_itens + 1), itens)
+            for item_id in itens_unicos:
                 qtd = random.randint(1, max_qtd)
                 with self.conn.cursor() as cur:
-                    cur.execute("INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID) VALUES (%s, %s, %s, %s)", 
-                                (qtd, i, item_id, filial))
-                self.commit()
-            self.commit()
-        self.commit()
+                    cur.execute("""
+                        INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID)
+                        VALUES (%s, %s, %s, %s)
+                    """, (qtd, i, item_id, filial))
+            self.conn.commit()
+            
+    def generate_excel(self, nome_arquivo="sql/DML_CHO"):
+        with pd.ExcelWriter(f"{nome_arquivo}.xlsx", engine="openpyxl") as writer:
+            for tabela in self.tabelas:
+                query = f"SELECT * FROM {tabela};"
+                df = pd.read_sql(query, self.conn)
+                df.to_excel(writer, sheet_name=tabela, index=False)

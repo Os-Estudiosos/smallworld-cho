@@ -1,9 +1,9 @@
-DB_NAME="cho"
-DB_PATH="cho"
-DB_USER = "remote_access"
-DB_HOST="10.61.49.160"
-DB_PASSWORD="123456"
-DB_PORT="3389"
+DB_NAME=""
+DB_PATH=""
+DB_USER = ""
+DB_HOST=""
+DB_PASSWORD=""
+DB_PORT=""
 
 N_ITENS = 40
 N_CLIENTES = 50
