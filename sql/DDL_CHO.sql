@@ -144,7 +144,6 @@ CREATE TABLE Pedidos
   PedidoID SERIAL PRIMARY KEY,
   ClienteCPF VARCHAR(11) NOT NULL,
   FilialID INT NOT NULL,
-  PRIMARY KEY (PedidoID),
   FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF),
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID)
 );
