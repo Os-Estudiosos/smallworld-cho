@@ -236,24 +236,21 @@ class GenerateData(Connection):
         
     # Função para popular as tabelas PEDIDOS e PEDIDOITEM
     def generate_pedidos(self, num_pedidos, max_qtd, max_itens):
-        for _ in range(num_pedidos):
+        for i in range(1, num_pedidos + 1):
             data = random.choice(self.reserva_datas)
             cpf = str(random.choice(self.cliente_cpf))
             filial = random.randint(1, self.num_filiais)
             with self.conn.cursor() as cur:
-                cur.execute("""
-                    INSERT INTO Pedidos (PedidoData, ClienteCPF, FilialID)
-                    VALUES (%s, %s, %s)
-                    RETURNING PedidoID
-                """, (data, cpf, filial))
-                pedido_id = cur.fetchone()[0]
-            itens = random.randint(1, max_itens)
-            itens_unicos = random.sample(range(1, self.num_itens + 1), itens)
-            for item_id in itens_unicos:
+                cur.execute("INSERT INTO Pedidos (PedidoData, PedidoID, ClienteCPF, FilialID) VALUES (%s, %s, %s, %s)", 
+                            (data, i, cpf, filial))
+            self.commit()
+            itens = random.randint(1, max_itens)            
+            for _ in range(itens):
+                item_id = random.randint(1, self.num_itens)
                 qtd = random.randint(1, max_qtd)
                 with self.conn.cursor() as cur:
-                    cur.execute("""
-                        INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID)
-                        VALUES (%s, %s, %s, %s)
-                    """, (qtd, pedido_id, item_id, filial))
+                    cur.execute("INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID) VALUES (%s, %s, %s, %s)", 
+                                (qtd, i, item_id, filial))
+                self.commit()
             self.commit()
+        self.commit()
