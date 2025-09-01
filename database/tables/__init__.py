@@ -195,7 +195,7 @@ class GenerateData(Connection):
             item_id = random.randint(1, self.num_itens)
             qtd = random.randint(1, max_qtd)
             with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID) VALUES (%s, %s, %s)", 
+                cur.execute("INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID) VALUES (%s, %s, %s, %s)", 
                             (qtd, pedido_id, item_id, filial))
             self.commit()
         self.commit()
