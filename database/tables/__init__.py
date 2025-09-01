@@ -118,10 +118,12 @@ class GenerateData(Connection):
         
     # Função para popular a tabela INGREDIENTES
     def generate_ingredientes(self, num_ingredientes):
+        self.ingredientes = []
         self.num_ingredientes = num_ingredientes
         for i in range(1, num_ingredientes+1): 
             nome = self.fake.word().capitalize()
             preco = round(random.uniform(1, 30), 2)
+            self.ingredientes.append(i)
             cal = random.randint(1, 1000)
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO Ingredientes (IngredNome, IngredID, IngredPrecoCompra, IngredCal) VALUES (%s, %s, %s, %s)", 
@@ -205,7 +207,7 @@ class GenerateData(Connection):
         for i in range(1, self.num_itens + 1):
             ingredientes = random.randint(3, max_ingredientes)
             for _ in range(ingredientes):
-                ingrediente_id = random.randint(1, self.num_ingredientes)
+                ingrediente_id = random.choice(self.ingredientes)
                 fornecedor_cnpj = str(random.choice(self.fornecedores_cnpjs))
                 with self.conn.cursor() as cur:
                     cur.execute("INSERT INTO ItemIngrediente (IngredID, ItemID, FornecedorCNPJ) VALUES (%s, %s, %s)", 
