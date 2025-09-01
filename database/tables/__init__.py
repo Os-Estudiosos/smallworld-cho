@@ -118,12 +118,10 @@ class GenerateData(Connection):
         
     # Função para popular a tabela INGREDIENTES
     def generate_ingredientes(self, num_ingredientes):
-        self.ingredientes = []
         self.num_ingredientes = num_ingredientes
         for i in range(1, num_ingredientes+1): 
             nome = self.fake.word().capitalize()
             preco = round(random.uniform(1, 30), 2)
-            self.ingredientes.append(i)
             cal = random.randint(1, 1000)
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO Ingredientes (IngredNome, IngredID, IngredPrecoCompra, IngredCal) VALUES (%s, %s, %s, %s)", 
@@ -197,7 +195,7 @@ class GenerateData(Connection):
             item_id = random.randint(1, self.num_itens)
             qtd = random.randint(1, max_qtd)
             with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID) VALUES (%s, %s, %s, %s)", 
+                cur.execute("INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID) VALUES (%s, %s, %s)", 
                             (qtd, pedido_id, item_id, filial))
             self.commit()
         self.commit()
@@ -206,13 +204,13 @@ class GenerateData(Connection):
     def generate_itemingrediente(self, max_ingredientes):
         for i in range(1, self.num_itens + 1):
             ingredientes = random.randint(3, max_ingredientes)
-            for _ in range(ingredientes):
-                ingrediente_id = random.choice(self.ingredientes)
-                fornecedor_cnpj = str(random.choice(self.fornecedores_cnpjs))
-                with self.conn.cursor() as cur:
-                    cur.execute("INSERT INTO ItemIngrediente (IngredID, ItemID, FornecedorCNPJ) VALUES (%s, %s, %s)", 
-                                (ingrediente_id, i, fornecedor_cnpj))
-                self.commit()
+            for ingrediente_id in range(1, self.num_itens):
+                for _ in range(ingredientes):
+                    fornecedor_cnpj = str(random.choice(self.fornecedores_cnpjs))
+                    with self.conn.cursor() as cur:
+                        cur.execute("INSERT INTO ItemIngrediente (IngredID, ItemID, FornecedorCNPJ) VALUES (%s, %s, %s)", 
+                                    (ingrediente_id, i, fornecedor_cnpj))
+                    self.commit()
             self.commit()
         self.commit()
 
