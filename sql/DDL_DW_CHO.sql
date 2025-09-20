@@ -8,7 +8,7 @@ CREATE TABLE dw_cho.CalendarDimension
   CalendarKey TEXT NOT NULL,
   Dia INT NOT NULL CHECK (Dia BETWEEN 1 AND 31),
   DataCompleta DATE NOT NULL,
-  DiaSemana WEEKDAY NOT NULL,
+  DiaSemana dw_cho.WEEKDAY NOT NULL,
   Mes INT NOT NULL CHECK (Mes BETWEEN 1 AND 12),
   Trimestre INT NOT NULL CHECK (Trimestre BETWEEN 1 AND 4),
   Ano INT NOT NULL,
