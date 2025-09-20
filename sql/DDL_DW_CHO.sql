@@ -1,4 +1,4 @@
-\c dw_cho
+\c cho
 
 CREATE SCHEMA dw_cho;
 
