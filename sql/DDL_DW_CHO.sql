@@ -54,7 +54,7 @@ CREATE TABLE ClienteDimension
 CREATE TABLE ReceitaFato
 (
   IDPedido INT NOT NULL,
-  ItemPreçoVenda INT NOT NULL,
+  ItemPrecoVenda INT NOT NULL,
   Quantidade INT NOT NULL,
   PedidoHora INT NOT NULL,
   CalendarKey TEXT NOT NULL,
