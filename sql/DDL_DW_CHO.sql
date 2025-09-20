@@ -37,7 +37,7 @@ CREATE TABLE FilialDimension
 CREATE TABLE ClienteDimension
 (
   ClienteKey TEXT NOT NULL,
-  ClienteID INT NOT NULL,
+  ClienteCPF VARCHAR(11) NOT NULL,
   ClienteNome VARCHAR(255) NOT NULL,
   ClienteSobrenome VARCHAR(255) NOT NULL,
   ClienteTipoSang VARCHAR(100) NOT NULL,
