@@ -46,7 +46,7 @@ FROM (
     SELECT
         EXTRACT(DAY FROM p.PedidoData) AS Dia,
         CAST(p.PedidoData AS DATE) AS DataCompleta,
-        CAST(TO_CHAR(p.PedidoData, 'DY') AS WEEKDAY) AS DiaSemana,
+        CAST(TO_CHAR(p.PedidoData, 'DY') AS dw_cho.WEEKDAY) AS DiaSemana,
         EXTRACT(MONTH FROM p.PedidoData) AS Mes,
         CAST(TO_CHAR(p.PedidoData, 'Q') AS INT) AS Trimestre,
         EXTRACT(YEAR FROM p.PedidoData) AS Ano

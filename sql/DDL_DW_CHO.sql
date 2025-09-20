@@ -1,9 +1,9 @@
+\c dw_cho
+
 CREATE SCHEMA dw_cho;
 
-SET search_path TO dw_cho;
-
-CREATE TYPE WEEKDAY AS ENUM('SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT');
-CREATE TABLE CalendarDimension
+CREATE TYPE dw_cho.WEEKDAY AS ENUM('SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT');
+CREATE TABLE dw_cho.CalendarDimension
 (
   CalendarKey TEXT NOT NULL,
   Dia INT NOT NULL CHECK (Dia BETWEEN 1 AND 31),
@@ -15,7 +15,7 @@ CREATE TABLE CalendarDimension
   PRIMARY KEY (CalendarKey)
 );
 
-CREATE TABLE ItemDimension
+CREATE TABLE dw_cho.ItemDimension
 (
   ItemKey TEXT NOT NULL,
   ItemID INT NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE ItemDimension
   PRIMARY KEY (ItemKey)
 );
 
-CREATE TABLE FilialDimension
+CREATE TABLE dw_cho.FilialDimension
 (
   FilialKey TEXT NOT NULL,
   FilialID INT NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE FilialDimension
   PRIMARY KEY (FilialKey)
 );
 
-CREATE TABLE ClienteDimension
+CREATE TABLE dw_cho.ClienteDimension
 (
   ClienteKey TEXT NOT NULL,
   ClienteCPF VARCHAR(11) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE ClienteDimension
   UNIQUE (ClienteCPF)
 );
 
-CREATE TABLE ReceitaFato
+CREATE TABLE dw_cho.ReceitaFato
 (
   IDPedido INT NOT NULL,
   ItemPrecoVenda INT NOT NULL,
