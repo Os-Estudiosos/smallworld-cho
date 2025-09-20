@@ -135,14 +135,13 @@ CREATE TABLE Reservas
   ClienteNome VARCHAR(255) NOT NULL,
   PRIMARY KEY (ReservaID),
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID),
-  FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF),
-  UNIQUE (ClienteCPF, ClienteNome)
+  FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF)
 );
 
 CREATE TABLE Pedidos
 (
-  PedidoData DATE NOT NULL,
   PedidoID INT NOT NULL,
+  PedidoData DATE NOT NULL,
   ClienteCPF VARCHAR(11) NOT NULL,
   FilialID INT NOT NULL,
   PRIMARY KEY (PedidoID),
@@ -152,9 +151,9 @@ CREATE TABLE Pedidos
 
 CREATE TABLE PedidoItem
 (
-  Quantidade INT NOT NULL,
   PedidoID INT NOT NULL,
   ItemID INT NOT NULL,
+  Quantidade INT NOT NULL,
   FilialID INT NOT NULL,
   PRIMARY KEY (PedidoID, ItemID),
   FOREIGN KEY (PedidoID) REFERENCES Pedidos(PedidoID),

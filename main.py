@@ -15,10 +15,12 @@ def main():
         dados.generate_filiais(N_FILIAIS)
         dados.generate_fornecedores(N_FORNECEDORES)
         dados.generate_funcionarios(N_FUNCIONARIOS)
-        dados.generate_pedido_pedidoitem(N_PEDIDOS, MAX_QTD)
         dados.generate_itemingrediente(MAX_INGREDIENTES)
         dados.generate_reservas(N_RESERVAS, MAX_MESAS)
         dados.generate_pedidos(N_PEDIDOS, MAX_QTD, MAX_ITENS)
+        
+        # Gero um arquivo .xlsx
+        dados.generate_excel()
         
         # Finaliza as operações
         dados.commit()
