@@ -10,3 +10,16 @@ INSERT INTO dw_cho.FilialDimension SELECT
     f.FilialEstado
 FROM cho.Filiais f;
 
+INSERT INTO dw.ClienteDimension SELECT
+    gen_random_uuid(),
+    c.ClienteCPF,
+    c.ClienteNome,
+    c.ClienteSobrenome,
+    c.ClienteTipoSang,
+    c.ClienteRua,
+    c.ClienteBairro,
+    c.ClienteMunicipio,
+    c.ClienteEstado,
+    c.ClienteDataNasc,
+    cce.ClienteEnfermidade
+FROM cho.Clientes c LEFT JOIN cho.ClienteClienteEnfermidade cce ON c.ClienteCPF=cce.ClienteCPF;

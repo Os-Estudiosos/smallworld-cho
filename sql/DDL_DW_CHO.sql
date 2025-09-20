@@ -45,7 +45,6 @@ CREATE TABLE ClienteDimension
   ClienteBairro VARCHAR(100) NOT NULL,
   ClienteMunicipio VARCHAR(100) NOT NULL,
   ClienteEstado CHAR(2) NOT NULL,
-  ClienteCPF VARCHAR(11) NOT NULL,
   ClienteDataNasc DATE NOT NULL,
   ClienteEnfermidade VARCHAR(100) NOT NULL,
   PRIMARY KEY (ClienteKey),
