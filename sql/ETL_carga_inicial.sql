@@ -53,11 +53,24 @@ FROM (
 ) d
 WHERE CAST(d.DataCompleta AS DATE) NOT IN (SELECT DataCompleta FROM dw_cho.CalendarDimension);
 
---   CalendarKey TEXT NOT NULL,
---   Dia INT NOT NULL CHECK (Dia BETWEEN 1 AND 31),
---   DataCompleta DATE NOT NULL,
---   DiaSemana WEEKDAY NOT NULL,
---   Mes INT NOT NULL CHECK (Mes BETWEEN 1 AND 12),
---   Trimestre INT NOT NULL CHECK (Trimestre BETWEEN 1 AND 4),
---   Ano INT NOT NULL,
---   PRIMARY KEY (CalendarKey)
+-- Inserindo os fatos na tabela ReceitaFato
+SELECT
+    PedidoID,
+    i.ItemPrecoVenda,
+    p.PedidoHora,
+    dwf.FilialKey,
+    dwc.ClienteKey,
+    dwi.ItemKey,
+    dwcal.CalendarKey
+FROM
+    cho.Pedidos p INNER JOIN cho.PedidoItem pi ON p.PedidoID = pi.PedidoID
+    INNER JOIN cho.Itens i ON pi.ItemID = i.ItemID
+
+    INNER JOIN cho.Filiais f ON p.FilialID = f.FilialID
+    INNER JOIN cho.Clientes c ON c.ClienteCPF = p.ClienteCPF
+
+    INNER JOIN dw_cho.ClienteDimension dwc ON dwc.ClienteCPF = c.ClienteCPF
+    INNER JOIN dw_cho.FilialDimension dwf ON dwf.FilialID = f.FilialID
+    INNER JOIN dw_cho.ItemDimension dwi ON dwi.ItemID = i.ItemID
+    INNER JOIN dw_cho.CalendarDimension dwcal ON dwcal.DataCompleta = CAST(p.PedidoData AS DATE)
+;

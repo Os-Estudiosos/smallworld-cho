@@ -18,6 +18,7 @@ CREATE TABLE CalendarDimension
 CREATE TABLE ItemDimension
 (
   ItemKey TEXT NOT NULL,
+  ItemID INT NOT NULL,
   ItemCategoria VARCHAR(100) NOT NULL,
   ItemNome VARCHAR(100) NOT NULL,
   PRIMARY KEY (ItemKey)
