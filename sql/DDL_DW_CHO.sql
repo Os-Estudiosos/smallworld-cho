@@ -62,8 +62,8 @@ CREATE TABLE dw_cho.ReceitaFato
   FilialKey TEXT NOT NULL,
   ClienteKey TEXT NOT NULL,
   PRIMARY KEY (IDPedido, CalendarKey, ItemKey, FilialKey, ClienteKey),
-  FOREIGN KEY (CalendarKey) REFERENCES CalendarDimension(CalendarKey),
-  FOREIGN KEY (ItemKey) REFERENCES ItemDimension(ItemKey),
-  FOREIGN KEY (FilialKey) REFERENCES FilialDimension(FilialKey),
-  FOREIGN KEY (ClienteKey) REFERENCES ClienteDimension(ClienteKey)
+  FOREIGN KEY (CalendarKey) REFERENCES dw_cho.CalendarDimension(CalendarKey),
+  FOREIGN KEY (ItemKey) REFERENCES dw_cho.ItemDimension(ItemKey),
+  FOREIGN KEY (FilialKey) REFERENCES dw_cho.FilialDimension(FilialKey),
+  FOREIGN KEY (ClienteKey) REFERENCES dw_cho.ClienteDimension(ClienteKey)
 );
