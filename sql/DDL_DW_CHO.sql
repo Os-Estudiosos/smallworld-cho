@@ -56,8 +56,7 @@ CREATE TABLE ReceitaFato
 (
   IDPedido INT NOT NULL,
   ItemPrecoVenda INT NOT NULL,
-  Quantidade INT NOT NULL,
-  PedidoHora INT NOT NULL,
+  PedidoHora TIME NOT NULL,
   CalendarKey TEXT NOT NULL,
   ItemKey TEXT NOT NULL,
   FilialKey TEXT NOT NULL,

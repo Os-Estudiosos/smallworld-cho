@@ -28,6 +28,7 @@ FROM cho.Clientes c LEFT JOIN cho.ClienteClienteEnfermidade cce ON c.ClienteCPF=
 -- Inserindo os Itens
 INSERT INTO dw_cho.ItemDimension SELECT
     gen_random_uuid(),
+    i.ItemID,
     i.ItemCategoria,
     i.ItemNome
 FROM cho.Itens i;
@@ -55,13 +56,13 @@ WHERE CAST(d.DataCompleta AS DATE) NOT IN (SELECT DataCompleta FROM dw_cho.Calen
 
 -- Inserindo os fatos na tabela ReceitaFato
 SELECT
-    PedidoID,
+    p.PedidoID,
     i.ItemPrecoVenda,
-    p.PedidoHora,
-    dwf.FilialKey,
-    dwc.ClienteKey,
+    p.PedidoHorario,
+    dwcal.CalendarKey,
     dwi.ItemKey,
-    dwcal.CalendarKey
+    dwf.FilialKey,
+    dwc.ClienteKey
 FROM
     cho.Pedidos p INNER JOIN cho.PedidoItem pi ON p.PedidoID = pi.PedidoID
     INNER JOIN cho.Itens i ON pi.ItemID = i.ItemID
@@ -73,4 +74,12 @@ FROM
     INNER JOIN dw_cho.FilialDimension dwf ON dwf.FilialID = f.FilialID
     INNER JOIN dw_cho.ItemDimension dwi ON dwi.ItemID = i.ItemID
     INNER JOIN dw_cho.CalendarDimension dwcal ON dwcal.DataCompleta = CAST(p.PedidoData AS DATE)
-;
+EXCEPT SELECT
+    IDPedido,
+    ItemPrecoVenda,
+    PedidoHora,
+    CalendarKey,
+    ItemKey,
+    FilialKey,
+    ClienteKey
+FROM dw_cho.ReceitaFato;
