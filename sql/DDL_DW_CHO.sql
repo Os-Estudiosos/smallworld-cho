@@ -5,7 +5,7 @@ SET search_path TO dw_cho;
 CREATE TYPE WEEKDAY AS ENUM('SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT');
 CREATE TABLE CalendarDimension
 (
-  CalendarKey INT NOT NULL,
+  CalendarKey TEXT NOT NULL,
   Dia INT NOT NULL CHECK Dia BETWEEN 1 AND 31,
   DataCompleta DATE NOT NULL,
   DiaSemana WEEKDAY NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE CalendarDimension
 
 CREATE TABLE ItemDimension
 (
-  ItemKey INT NOT NULL,
+  ItemKey TEXT NOT NULL,
   ItemCategoria VARCHAR(100) NOT NULL,
   ItemNome VARCHAR(100) NOT NULL,
   PRIMARY KEY (ItemKey)
@@ -25,7 +25,7 @@ CREATE TABLE ItemDimension
 
 CREATE TABLE FilialDimension
 (
-  FilialKey INT NOT NULL,
+  FilialKey TEXT NOT NULL,
   FilialID INT NOT NULL,
   FilialRua VARCHAR(100) NOT NULL,
   FilialBairro VARCHAR(100) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE FilialDimension
 
 CREATE TABLE ClienteDimension
 (
-  ClienteKey INT NOT NULL,
+  ClienteKey TEXT NOT NULL,
   ClienteID INT NOT NULL,
   ClienteNome VARCHAR(255) NOT NULL,
   ClienteSobrenome VARCHAR(255) NOT NULL,
@@ -58,10 +58,10 @@ CREATE TABLE ReceitaFato
   ItemPreçoVenda INT NOT NULL,
   Quantidade INT NOT NULL,
   PedidoHora INT NOT NULL,
-  CalendarKey INT NOT NULL,
-  ItemKey INT NOT NULL,
-  FilialKey INT NOT NULL,
-  ClienteKey INT NOT NULL,
+  CalendarKey TEXT NOT NULL,
+  ItemKey TEXT NOT NULL,
+  FilialKey TEXT NOT NULL,
+  ClienteKey TEXT NOT NULL,
   PRIMARY KEY (IDPedido, CalendarKey, ItemKey, FilialKey, ClienteKey),
   FOREIGN KEY (CalendarKey) REFERENCES CalendarDimension(CalendarKey),
   FOREIGN KEY (ItemKey) REFERENCES ItemDimension(ItemKey),
