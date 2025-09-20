@@ -2,14 +2,15 @@ CREATE SCHEMA dw_cho;
 
 SET search_path TO dw_cho;
 
+CREATE TYPE WEEKDAY AS ENUM('SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT');
 CREATE TABLE CalendarDimension
 (
   CalendarKey INT NOT NULL,
-  Dia INT NOT NULL,
+  Dia INT NOT NULL CHECK Dia BETWEEN 1 AND 31,
   DataCompleta DATE NOT NULL,
-  DiaSemana INT NOT NULL,
-  Mês INT NOT NULL,
-  Trimestre INT NOT NULL,
+  DiaSemana WEEKDAY NOT NULL,
+  Mês INT NOT NULL CHECK Dia BETWEEN 1 AND 12,
+  Trimestre INT NOT NULL CHECK Trimestre BETWEEN 1 AND 4,
   Ano INT NOT NULL,
   PRIMARY KEY (CalendarKey)
 );
