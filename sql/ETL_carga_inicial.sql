@@ -55,7 +55,7 @@ FROM (
 WHERE CAST(d.DataCompleta AS DATE) NOT IN (SELECT DataCompleta FROM dw_cho.CalendarDimension);
 
 -- Inserindo os fatos na tabela ReceitaFato
-SELECT
+INSERT INTO dw_cho.ReceitaFato SELECT
     p.PedidoID,
     i.ItemPrecoVenda,
     p.PedidoHorario,
