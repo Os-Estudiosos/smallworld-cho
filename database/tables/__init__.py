@@ -247,7 +247,7 @@ class GenerateData(Connection):
                     """, (qtd, i, item_id, filial))
             self.conn.commit()
             
-    def generate_excel(self, nome_arquivo="sql/DML_CHO"):
+    def generate_excel(self, nome_arquivo="database/DML_CHO"):
         with pd.ExcelWriter(f"{nome_arquivo}.xlsx", engine="openpyxl") as writer:
             for tabela in self.tabelas:
                 query = f"SELECT * FROM {tabela};"
