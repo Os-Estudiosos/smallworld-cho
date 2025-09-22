@@ -58,7 +58,7 @@ WHERE CAST(d.DataCompleta AS DATE) NOT IN (SELECT DataCompleta FROM dw_cho.Calen
 INSERT INTO dw_cho.ReceitaFato SELECT
     p.PedidoID,
     i.ItemPrecoVenda,
-    p.PedidoHorario,
+    p.PedidoHora,
     dwcal.CalendarKey,
     dwi.ItemKey,
     dwf.FilialKey,
