@@ -3,6 +3,7 @@ from faker import Faker
 from datetime import date
 from database import Connection
 import pandas as pd
+import time
 
 
 class GenerateData(Connection):
@@ -70,6 +71,20 @@ class GenerateData(Connection):
             "Moqueca", "Grelhado", "Ensopado", "Feijoada", "Carpaccio"
         ]
         return str(random.choice(adjetivos) + " " + random.choice(preparos))
+    
+    # Função para gerar horário aleatório entre low:30 e high:30
+    def gerar_horario(self, low=10, high=15):
+        if not (0 <= low < high <= 23):
+            return "Intervalo inválido"
+        hora = random.randint(low, high)
+        if hora == 10:
+            minuto = random.randint(30, 59)
+        elif hora == 15:
+            minuto = random.randint(0, 30)
+        else:
+            minuto = random.randint(0, 59)
+        segundo = random.randint(0, 59)
+        return time(hora, minuto, segundo)
 
     # Função para popular as tabelas ITENS, PRATOPADRAO, PRATOESPECIAL e BEBIDA
     def generate_itens(self, num_itens):
@@ -230,10 +245,11 @@ class GenerateData(Connection):
             data = random.choice(self.reserva_datas)
             cpf = str(random.choice(self.cliente_cpf))
             filial = random.randint(1, self.num_filiais)
+            horario = self.gerar_horario()
             with self.conn.cursor() as cur:
                 cur.execute("""
-                    INSERT INTO Pedidos (PedidoID, PedidoData, ClienteCPF, FilialID)
-                    VALUES (%s, %s, %s, %s)
+                    INSERT INTO Pedidos (PedidoID, PedidoData, ClienteCPF, FilialID, PedidoHorario)
+                    VALUES (%s, %s, %s, %s, %s)
                     RETURNING PedidoID
                 """, (i, data, cpf, filial))
             itens = random.randint(1, max_itens)
@@ -246,7 +262,8 @@ class GenerateData(Connection):
                         VALUES (%s, %s, %s, %s)
                     """, (qtd, i, item_id, filial))
             self.conn.commit()
-            
+
+    # Função par gerar um excel com o DML
     def generate_excel(self, nome_arquivo="database/DML_CHO"):
         with pd.ExcelWriter(f"{nome_arquivo}.xlsx", engine="openpyxl") as writer:
             for tabela in self.tabelas:

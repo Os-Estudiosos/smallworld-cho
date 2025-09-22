@@ -144,6 +144,7 @@ CREATE TABLE Pedidos
   PedidoData DATE NOT NULL,
   ClienteCPF VARCHAR(11) NOT NULL,
   FilialID INT NOT NULL,
+  PedidoHorario TIME NOT NULL,
   PRIMARY KEY (PedidoID),
   FOREIGN KEY (ClienteCPF) REFERENCES Clientes(ClienteCPF),
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID)
