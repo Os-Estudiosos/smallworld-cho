@@ -61,7 +61,7 @@ INSERT INTO dw_cho.ReceitaFato (IDPedido, ItemPrecoVenda, PedidoHorario, Calenda
 SELECT
     (pi_log.dados->>'pedidoid')::int,
     (i_log.dados->>'itemprecovenda')::numeric,
-    (pi_log.dados->>'pedido_hora')::time,
+    (pi_log.dados->>'pedidohorario')::time,
     dwcal.CalendarKey,
     dwi.ItemKey,
     dwf.FilialKey,
