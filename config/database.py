@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
-load_dotenv()
 
+load_dotenv()
 
 DB_NAME="cho"
 DB_PATH="cho"
