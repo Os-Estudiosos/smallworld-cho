@@ -21,4 +21,4 @@ DROP TABLE Itens;
 
 \c postgres
 
-DROP DATABASE cho;
+-- DROP DATABASE cho;

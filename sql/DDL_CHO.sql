@@ -1,4 +1,4 @@
-CREATE DATABASE cho;
+-- CREATE DATABASE cho;
 \c cho
 
 CREATE SCHEMA cho;
