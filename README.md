@@ -15,7 +15,6 @@ python.exe -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-# Execution order
 Create your database and a user with all priveliges to this database:
 ```sql
 CREATE USER <user> WITH PASSWORD <password>;
@@ -25,9 +24,14 @@ CREATE SCHEMA cho AUTHORIZATION <user>;
 SET search_path TO cho;
 ```
 
-After, fill the blanks with your user's information in the file config/database.py.
+After, create a file named **.env** with this content:
+```bash
+DB_USER = <user>
+DB_HOST = <host>
+DB_PASSWORD = <password>
+```
 
-Finally, execute this files in the folowing order:
+# Execution order
 - sql/DDL_CHO.sql
 - sql/DDL_DW_CHO.sql
 - main.py (DML)

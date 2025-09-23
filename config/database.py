@@ -1,8 +1,10 @@
+import os
+
 DB_NAME="cho"
 DB_PATH="cho"
-DB_USER = ""
-DB_HOST=""
-DB_PASSWORD=""
+DB_USER = os.getenv("DB_USER")
+DB_HOST= os.getenv("DB_HOST")
+DB_PASSWORD= os.getenv("DB_PASSWORD")
 DB_PORT="5432"  # Default
 
 N_ITENS = 40
