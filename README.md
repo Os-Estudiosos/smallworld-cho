@@ -1,6 +1,20 @@
 # smallworld-cho
 Informational Modeling Subject small world project
 
+# Configuring your workspace
+```bash
+git clone https://github.com/Os-Estudiosos/smallworld-cho.git
+or
+git clone git@github.com:Os-Estudiosos/smallworld-cho.git
+```
+```bash
+cd smallword-cho
+python -m venv venv
+source ./venv/Scripts/activate
+python.exe -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
 # Execution order
 Create your database and a user with all priveliges to this database:
 ```sql

@@ -1,8 +1,8 @@
 DB_NAME="cho"
 DB_PATH="cho"
-DB_USER = ""
-DB_HOST=""
-DB_PASSWORD=""
+DB_USER = "adm"
+DB_HOST="10.61.49.147"
+DB_PASSWORD="chochointer"
 DB_PORT="5432"  # Default
 
 N_ITENS = 40
