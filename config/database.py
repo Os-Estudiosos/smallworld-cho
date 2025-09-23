@@ -3,7 +3,7 @@ DB_PATH=""
 DB_USER = ""
 DB_HOST=""
 DB_PASSWORD=""
-DB_PORT=""
+DB_PORT="5432"  # Default
 
 N_ITENS = 40
 N_CLIENTES = 50

@@ -57,7 +57,7 @@ ON CONFLICT (ItemID) DO UPDATE SET
 
 
 -- Receita Fato
-INSERT INTO dw_cho.ReceitaFato (IDPedido, ItemPrecoVenda, PedidoHora, CalendarKey, ItemKey, FilialKey, ClienteKey)
+INSERT INTO dw_cho.ReceitaFato (IDPedido, ItemPrecoVenda, PedidoHorario, CalendarKey, ItemKey, FilialKey, ClienteKey)
 SELECT
     (pi_log.dados->>'pedidoid')::int,
     (i_log.dados->>'itemprecovenda')::numeric,
@@ -78,7 +78,7 @@ EXCEPT
 SELECT
     IDPedido,
     ItemPrecoVenda,
-    PedidoHora,
+    PedidoHorario,
     CalendarKey,
     ItemKey,
     FilialKey,

@@ -1,8 +1,8 @@
 -- CREATE DATABASE cho;
 \c cho
 
-CREATE SCHEMA cho;
-SET search_path=cho; 
+-- CREATE SCHEMA cho;
+-- SET search_path=cho; 
 
 CREATE TABLE Itens
 (

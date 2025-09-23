@@ -20,7 +20,7 @@ def main():
         dados.generate_pedidos(N_PEDIDOS, MAX_QTD, MAX_ITENS)
         
         # Gero um arquivo .xlsx
-        dados.generate_excel()
+        # dados.generate_excel()
         
         # Finaliza as operações
         dados.commit()
