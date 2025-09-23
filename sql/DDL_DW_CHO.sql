@@ -56,7 +56,7 @@ CREATE TABLE dw_cho.ReceitaFato
 (
   IDPedido INT NOT NULL,
   ItemPrecoVenda INT NOT NULL,
-  PedidoHora TIME NOT NULL,
+  PedidoHorario TIME NOT NULL,
   CalendarKey TEXT NOT NULL,
   ItemKey TEXT NOT NULL,
   FilialKey TEXT NOT NULL,

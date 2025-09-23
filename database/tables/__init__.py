@@ -1,9 +1,8 @@
 import random
 from faker import Faker
-from datetime import date
+from datetime import timedelta, datetime
 from database import Connection
 import pandas as pd
-import time
 
 
 class GenerateData(Connection):
@@ -76,15 +75,12 @@ class GenerateData(Connection):
     def gerar_horario(self, low=10, high=15):
         if not (0 <= low < high <= 23):
             return "Intervalo inválido"
-        hora = random.randint(low, high)
-        if hora == 10:
-            minuto = random.randint(30, 59)
-        elif hora == 15:
-            minuto = random.randint(0, 30)
-        else:
-            minuto = random.randint(0, 59)
-        segundo = random.randint(0, 59)
-        return time(hora, minuto, segundo)
+        inicio = datetime(2000, 1, 1, low, 30, 0)
+        fim = datetime(2000, 1, 1, high, 30, 0)
+        delta = int((fim - inicio).total_seconds())
+        segundos_aleatorios = random.randint(0, delta)
+        horario_resultado = inicio + timedelta(seconds=segundos_aleatorios)
+        return horario_resultado.time()
 
     # Função para popular as tabelas ITENS, PRATOPADRAO, PRATOESPECIAL e BEBIDA
     def generate_itens(self, num_itens):
@@ -250,8 +246,7 @@ class GenerateData(Connection):
                 cur.execute("""
                     INSERT INTO Pedidos (PedidoID, PedidoData, ClienteCPF, FilialID, PedidoHorario)
                     VALUES (%s, %s, %s, %s, %s)
-                    RETURNING PedidoID
-                """, (i, data, cpf, filial))
+                """, (i, data, cpf, filial, horario))
             itens = random.randint(1, max_itens)
             itens_unicos = random.sample(range(1, self.num_itens + 1), itens)
             for item_id in itens_unicos:
