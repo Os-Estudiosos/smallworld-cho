@@ -1,5 +1,5 @@
-DB_NAME=""
-DB_PATH=""
+DB_NAME="cho"
+DB_PATH="cho"
 DB_USER = ""
 DB_HOST=""
 DB_PASSWORD=""
