@@ -25,13 +25,13 @@ INSERT INTO dw_cho.ClienteDimension SELECT
     cce.ClienteEnfermidade
 FROM cho.Clientes c LEFT JOIN cho.ClienteClienteEnfermidade cce ON c.ClienteCPF=cce.ClienteCPF;
 
--- Inserindo os Itens
-INSERT INTO dw_cho.ItemDimension SELECT
+-- Inserindo os ItensMenu
+INSERT INTO dw_cho.ItemMenuDimension SELECT
     gen_random_uuid(),
     i.ItemID,
     i.ItemCategoria,
     i.ItemNome
-FROM cho.Itens i;
+FROM cho.ItensMenu i;
 
 -- Inserindo o Calendário
 INSERT INTO dw_cho.CalendarDimension SELECT
@@ -64,15 +64,15 @@ INSERT INTO dw_cho.ReceitaFato SELECT
     dwf.FilialKey,
     dwc.ClienteKey
 FROM
-    cho.Pedidos p INNER JOIN cho.PedidoItem pi ON p.PedidoID = pi.PedidoID
-    INNER JOIN cho.Itens i ON pi.ItemID = i.ItemID
+    cho.Pedidos p INNER JOIN cho.PedidoItemMenu pi ON p.PedidoID = pi.PedidoID
+    INNER JOIN cho.ItensMenu i ON pi.ItemID = i.ItemID
 
     INNER JOIN cho.Filiais f ON p.FilialID = f.FilialID
     INNER JOIN cho.Clientes c ON c.ClienteCPF = p.ClienteCPF
 
     INNER JOIN dw_cho.ClienteDimension dwc ON dwc.ClienteCPF = c.ClienteCPF
     INNER JOIN dw_cho.FilialDimension dwf ON dwf.FilialID = f.FilialID
-    INNER JOIN dw_cho.ItemDimension dwi ON dwi.ItemID = i.ItemID
+    INNER JOIN dw_cho.ItemMenuDimension dwi ON dwi.ItemID = i.ItemID
     INNER JOIN dw_cho.CalendarDimension dwcal ON dwcal.DataCompleta = CAST(p.PedidoData AS DATE)
 EXCEPT SELECT
     IDPedido,

@@ -15,7 +15,7 @@ CREATE TABLE dw_cho.CalendarDimension
   PRIMARY KEY (CalendarKey)
 );
 
-CREATE TABLE dw_cho.ItemDimension
+CREATE TABLE dw_cho.ItemMenuDimension
 (
   ItemKey TEXT NOT NULL,
   ItemID INT NOT NULL,

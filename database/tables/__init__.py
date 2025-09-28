@@ -14,7 +14,7 @@ class GenerateData(Connection):
         self.tipos_sangue = ["A", "B", "AB", "O"]
         self.categorias = ["Prato Padrão", "Prato Especial", "Bebida"]
         self.tabelas =  [
-                        "Itens",
+                        "ItensMenu",
                         "PratoPadrao",
                         "PratoEspecial",
                         "Bebida",
@@ -24,12 +24,12 @@ class GenerateData(Connection):
                         "Ingredientes",
                         "Filiais",
                         "Fornecedores",
-                        "ItemIngrediente",
+                        "ItemMenuIngrediente",
                         "Funcionarios",
                         "FuncionarioFuncTelefone",
                         "Reservas",
                         "Pedidos",
-                        "PedidoItem"
+                        "PedidoItemMenu"
                     ]
 
     # Função auxiliar para gerar um cpf aleatório (sem verificar as regras do cpf)
@@ -82,8 +82,8 @@ class GenerateData(Connection):
         horario_resultado = inicio + timedelta(seconds=segundos_aleatorios)
         return horario_resultado.time()
 
-    # Função para popular as tabelas ITENS, PRATOPADRAO, PRATOESPECIAL e BEBIDA
-    def generate_itens(self, num_itens):
+    # Função para popular as tabelas Menu, PRATOPADRAO, PRATOESPECIAL e BEBIDA
+    def generate_Menu(self, num_itens):
         self.num_itens = num_itens
         for i in range(1, num_itens+1): 
             nome = self.gerar_prato()
@@ -92,7 +92,7 @@ class GenerateData(Connection):
             enfermidade = self.gerar_doenca_falsa()
             preco = round(random.uniform(5, 80), 2)
             with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO Itens (ItemID, ItemNome, ItemCategoria, ItemPrecoVenda) VALUES (%s, %s, %s, %s)",
+                cur.execute("INSERT INTO ItensMenu (ItemID, ItemNome, ItemCategoria, ItemPrecoVenda) VALUES (%s, %s, %s, %s)",
                             (i, nome, categoria, preco))
             if categoria == "Prato Padrão":
                 with self.conn.cursor() as cur:
@@ -201,7 +201,7 @@ class GenerateData(Connection):
                             (telefone, cpf))
         self.commit()
         
-    # Função para popular a tabela ITEMINGREDIENTE    
+    # Função para popular a tabela ITEMMENUINGREDIENTE    
     def generate_itemingrediente(self, max_ingredientes):
         inseridos = set()  # guarda tuplas únicas
         for i in range(1, self.num_itens + 1):
@@ -213,7 +213,7 @@ class GenerateData(Connection):
                     if chave not in inseridos:
                         with self.conn.cursor() as cur:
                             cur.execute("""
-                                INSERT INTO ItemIngrediente (IngredID, ItemID, FornecedorCNPJ)
+                                INSERT INTO ItemMenuIngrediente (IngredID, ItemID, FornecedorCNPJ)
                                 VALUES (%s, %s, %s)
                             """, chave)
                         inseridos.add(chave)
@@ -235,7 +235,7 @@ class GenerateData(Connection):
                             (i, data, filial, mesa, cpf, nome))
         self.commit()
         
-    # Função para popular as tabelas PEDIDOS e PEDIDOITEM
+    # Função para popular as tabelas PEDIDOS e PEDIDOITEMMENU
     def generate_pedidos(self, num_pedidos, max_qtd, max_itens):
         for i in range(1, num_pedidos+1):
             data = random.choice(self.reserva_datas)
@@ -253,7 +253,7 @@ class GenerateData(Connection):
                 qtd = random.randint(1, max_qtd)
                 with self.conn.cursor() as cur:
                     cur.execute("""
-                        INSERT INTO PedidoItem (Quantidade, PedidoID, ItemID, FilialID)
+                        INSERT INTO PedidoItemMenu (Quantidade, PedidoID, ItemID, FilialID)
                         VALUES (%s, %s, %s, %s)
                     """, (qtd, i, item_id, filial))
             self.conn.commit()

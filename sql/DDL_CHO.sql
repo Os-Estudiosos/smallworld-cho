@@ -4,7 +4,7 @@ CREATE DATABASE cho;
 CREATE SCHEMA cho;
 SET search_path=cho; 
 
-CREATE TABLE Itens
+CREATE TABLE ItensMenu
 (
   ItemID INT NOT NULL,
   ItemNome VARCHAR(255) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE PratoPadrao
   PratoTipoSang VARCHAR(255) NOT NULL,
   ItemID INT NOT NULL,
   PRIMARY KEY (ItemID),
-  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
+  FOREIGN KEY (ItemID) REFERENCES ItensMenu(ItemID)
 );
 
 CREATE TABLE PratoEspecial
@@ -26,7 +26,7 @@ CREATE TABLE PratoEspecial
   PratoEnfermidade VARCHAR(255) NOT NULL,
   ItemID INT NOT NULL,
   PRIMARY KEY (ItemID),
-  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
+  FOREIGN KEY (ItemID) REFERENCES ItensMenu(ItemID)
 );
 
 CREATE TABLE Bebida
@@ -34,7 +34,7 @@ CREATE TABLE Bebida
   BebTipoSangue VARCHAR(255) NOT NULL,
   ItemID INT NOT NULL,
   PRIMARY KEY (ItemID),
-  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID)
+  FOREIGN KEY (ItemID) REFERENCES ItensMenu(ItemID)
 );
 
 CREATE TABLE Clientes
@@ -94,14 +94,14 @@ CREATE TABLE Fornecedores
   PRIMARY KEY (FornecedorCNPJ)
 );
 
-CREATE TABLE ItemIngrediente
+CREATE TABLE ItemMenuIngrediente
 (
   IngredID INT NOT NULL,
   ItemID INT NOT NULL,
   FornecedorCNPJ VARCHAR(14) NOT NULL,
   PRIMARY KEY (IngredID, ItemID, FornecedorCNPJ),
   FOREIGN KEY (IngredID) REFERENCES Ingredientes(IngredID),
-  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID),
+  FOREIGN KEY (ItemID) REFERENCES ItensMenu(ItemID),
   FOREIGN KEY (FornecedorCNPJ) REFERENCES Fornecedores(FornecedorCNPJ)
 );
 
@@ -150,7 +150,7 @@ CREATE TABLE Pedidos
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID)
 );
 
-CREATE TABLE PedidoItem
+CREATE TABLE PedidoItemMenu
 (
   PedidoID INT NOT NULL,
   ItemID INT NOT NULL,
@@ -158,6 +158,6 @@ CREATE TABLE PedidoItem
   FilialID INT NOT NULL,
   PRIMARY KEY (PedidoID, ItemID),
   FOREIGN KEY (PedidoID) REFERENCES Pedidos(PedidoID),
-  FOREIGN KEY (ItemID) REFERENCES Itens(ItemID),
+  FOREIGN KEY (ItemID) REFERENCES ItensMenu(ItemID),
   FOREIGN KEY (FilialID) REFERENCES Filiais(FilialID)
 );

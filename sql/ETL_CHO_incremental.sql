@@ -43,14 +43,14 @@ ON CONFLICT (ClienteCPF) DO UPDATE SET
     ClienteEstado = EXCLUDED.ClienteEstado,
     ClienteDataNasc = EXCLUDED.ClienteDataNasc,
     ClienteEnfermidade = EXCLUDED.ClienteEnfermidade;
-INSERT INTO dw_cho.ItemDimension (ItemKey, ItemID, ItemCategoria, ItemNome)
+INSERT INTO dw_cho.ItemMenuDimension (ItemKey, ItemID, ItemCategoria, ItemNome)
 SELECT
     gen_random_uuid(),
     (dados->>'itemid')::int,
     dados->>'itemcategoria',
     dados->>'itemnome'
 FROM log_cdc
-WHERE tabela = 'cho.Itens' AND operacao IN ('INSERT', 'UPDATE')
+WHERE tabela = 'cho.ItensMenu' AND operacao IN ('INSERT', 'UPDATE')
 ON CONFLICT (ItemID) DO UPDATE SET
     ItemCategoria = EXCLUDED.ItemCategoria,
     ItemNome = EXCLUDED.ItemNome;
@@ -73,7 +73,7 @@ INNER JOIN dw_cho.ClienteDimension dwc ON dwc.ClienteCPF = p_log.dados->>'client
 INNER JOIN dw_cho.FilialDimension dwf ON dwf.FilialID = (p_log.dados->>'filialid')::uuid
 INNER JOIN dw_cho.ItemDimension dwi ON dwi.ItemID = (i_log.dados->>'itemid')::int
 INNER JOIN dw_cho.CalendarDimension dwcal ON dwcal.DataCompleta = (p_log.dados->>'pedidodata')::date
-WHERE pi_log.tabela = 'cho.PedidoItem' AND pi_log.operacao = 'INSERT'
+WHERE pi_log.tabela = 'cho.PedidoItemMenu' AND pi_log.operacao = 'INSERT'
 EXCEPT
 SELECT
     IDPedido,
