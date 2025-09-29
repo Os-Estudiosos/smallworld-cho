@@ -369,7 +369,7 @@
           "y": -42.70917069414824
         },
         "data": {
-          "label": "ItemDimension",
+          "label": "ItemMenuDimension",
           "isConnectable": false,
           "columns": [
             {
@@ -404,13 +404,13 @@
             }
           ],
           "numberOfGroups": 0,
-          "isSelected": false
+          "isSelected": true
         },
         "measured": {
           "width": 240,
           "height": 126
         },
-        "selected": false,
+        "selected": true,
         "dragging": false
       }
     ],
@@ -509,9 +509,9 @@
       }
     ],
     "viewport": {
-      "x": 1056.3138594297127,
-      "y": 317.40129374530676,
-      "zoom": 0.7660851719529778
+      "x": 1476.987550703794,
+      "y": 482.004602173445,
+      "zoom": 1
     }
   },
   "name": "CHO Datawarehouse",
@@ -519,8 +519,8 @@
     "name": "Diagrams",
     "folderType": 1,
     "depth": 0,
-    "id": 13153
+    "id": 13143
   },
-  "id": 47851,
-  "updatedAtTimestamp": 1758406018
+  "id": 69237,
+  "updatedAtTimestamp": 1759149210
 }

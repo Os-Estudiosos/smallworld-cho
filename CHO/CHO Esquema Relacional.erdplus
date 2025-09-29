@@ -10,7 +10,7 @@
           "y": 276.71656111864365
         },
         "data": {
-          "label": "Item",
+          "label": "ItemMenu",
           "isConnectable": false,
           "columns": [
             {
@@ -625,7 +625,7 @@
           "y": 120.65256530081854
         },
         "data": {
-          "label": "ItemIngrediente",
+          "label": "ItemMenuIngrediente",
           "isConnectable": false,
           "columns": [
             {
@@ -687,7 +687,7 @@
           "y": 93.73402709009986
         },
         "data": {
-          "label": "PedidoItem",
+          "label": "PedidoItemMenu",
           "isConnectable": false,
           "columns": [
             {
@@ -1203,9 +1203,9 @@
       }
     ],
     "viewport": {
-      "x": -252.40694503389636,
-      "y": 45.27779319762189,
-      "zoom": 0.8235910172675729
+      "x": 115.92511887260105,
+      "y": 181.83984301945216,
+      "zoom": 0.7214163001261169
     }
   },
   "name": "CHO Esquema Relacional",
@@ -1213,8 +1213,8 @@
     "name": "Diagrams",
     "folderType": 1,
     "depth": 0,
-    "id": 13153
+    "id": 13143
   },
-  "id": 48027,
-  "updatedAtTimestamp": 1758405917
+  "id": 69240,
+  "updatedAtTimestamp": 1759149177
 }
