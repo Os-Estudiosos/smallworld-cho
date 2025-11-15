@@ -4,6 +4,12 @@ CREATE DATABASE cho;
 CREATE SCHEMA cho;
 SET search_path=cho; 
 
+CREATE TABLE Pais
+(
+  PaisID INT NOT NULL,
+  PaisNome VARCHAR(38)
+);
+
 CREATE TABLE ItensMenu
 (
   ItemID INT NOT NULL,
@@ -83,7 +89,9 @@ CREATE TABLE Filiais
   FilialBairro VARCHAR(255) NOT NULL,
   FilialMunicipio VARCHAR(255) NOT NULL,
   FilialEstado VARCHAR(2) NOT NULL,
-  PRIMARY KEY (FilialID)
+  PaisID INT NOT NULL,
+  PRIMARY KEY (FilialID),
+  FOREIGN KEY (PaisID) REFERENCES Pais(PaisID)
 );
 
 CREATE TABLE Fornecedores

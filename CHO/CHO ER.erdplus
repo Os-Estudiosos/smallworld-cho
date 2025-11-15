@@ -12,7 +12,7 @@
         "data": {
           "label": "ItemMenu",
           "type": "Subtype",
-          "isConnectable": false,
+          "isConnectable": true,
           "isSelected": false,
           "totalSpecialization": true
         },
@@ -36,7 +36,8 @@
           "types": {
             "Unique": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -56,7 +57,8 @@
         "data": {
           "label": "ItemNome",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -76,7 +78,8 @@
         "data": {
           "label": "ItemCategoria",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -96,7 +99,8 @@
         "data": {
           "label": "ItemPreçoVenda",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -115,7 +119,7 @@
         "data": {
           "label": "Cliente",
           "type": "Regular",
-          "isConnectable": false,
+          "isConnectable": true,
           "isSelected": false,
           "totalSpecialization": true
         },
@@ -139,7 +143,8 @@
           "types": {
             "Unique": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -153,15 +158,16 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1389.0222652468537,
-          "y": 91.07365439093485
+          "x": 1387.5796960175014,
+          "y": 85.30337747352492
         },
         "data": {
           "label": "ClienteNomeCompleto",
           "types": {
             "Composite": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -175,13 +181,14 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1269.7870280735722,
-          "y": 89.40509915014164
+          "x": 1265.4593203855147,
+          "y": 85.0773914620842
         },
         "data": {
           "label": "ClienteTipoSang",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -195,15 +202,16 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1615.8857696030977,
-          "y": 91.07365439093485
+          "x": 1614.4432003737452,
+          "y": 85.30337747352492
         },
         "data": {
           "label": "ClienteEndereço",
           "types": {
             "Composite": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -225,7 +233,8 @@
           "types": {
             "Unique": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -239,15 +248,16 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1498.7608906098742,
-          "y": 137.79320113314446
+          "x": 1500.2034598392268,
+          "y": 134.90806267443952
         },
         "data": {
           "label": "ClienteIdade",
           "types": {
             "Derived": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -261,13 +271,14 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1386.9119070667957,
-          "y": 137.79320113314446
+          "x": 1389.7970455255006,
+          "y": 136.35063190379196
         },
         "data": {
           "label": "ClienteDataNasc",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -282,12 +293,13 @@
         "type": "Attribute",
         "position": {
           "x": 1617.9961277831558,
-          "y": 42.68555240793201
+          "y": 32.58756780246463
         },
         "data": {
           "label": "ClienteRua",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -301,13 +313,14 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1736.1761858664086,
-          "y": 41.01699716713881
+          "x": 1737.618755095761,
+          "y": 30.919012561671437
         },
         "data": {
           "label": "ClienteBairro",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -321,13 +334,14 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1738.2865440464666,
-          "y": 86.90226628895184
+          "x": 1736.843974817114,
+          "y": 82.57455860089438
         },
         "data": {
           "label": "ClienteMunicípio",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -347,7 +361,8 @@
         "data": {
           "label": "ClienteEstado",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -366,7 +381,7 @@
         "data": {
           "label": "Ingredientes",
           "type": "Regular",
-          "isConnectable": false,
+          "isConnectable": true,
           "isSelected": false,
           "totalSpecialization": true
         },
@@ -382,13 +397,14 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1679.1965150048402,
+          "x": 1683.5242226928976,
           "y": 414.3562322946176
         },
         "data": {
           "label": "IngredNome",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -402,15 +418,16 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1568.402710551791,
-          "y": 414.3562322946176
+          "x": 1564.0750028637335,
+          "y": 417.24137075332254
         },
         "data": {
           "label": "IngredID",
           "types": {
             "Unique": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -424,13 +441,14 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1684.4724104549855,
-          "y": 461.0757790368272
+          "x": 1681.5872719962806,
+          "y": 466.84605595423716
         },
         "data": {
           "label": "IngredPreçoCompra",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -444,13 +462,14 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1573.678606001936,
-          "y": 460.2415014164306
+          "x": 1566.4657598551735,
+          "y": 467.45434756319304
         },
         "data": {
           "label": "IngredCal",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -489,7 +508,7 @@
             }
           },
           "isSelected": false,
-          "isConnectable": true,
+          "isConnectable": false,
           "isIdentifying": false
         },
         "measured": {
@@ -509,7 +528,7 @@
         "data": {
           "label": "Filial",
           "type": "Regular",
-          "isConnectable": false,
+          "isConnectable": true,
           "isSelected": false,
           "totalSpecialization": true
         },
@@ -525,15 +544,16 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 435.1403678606002,
-          "y": 184.0956090651558
+          "x": 572.3413261898215,
+          "y": 36.042681757870085
         },
         "data": {
           "label": "FilialID",
           "types": {
             "Unique": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -555,7 +575,8 @@
           "types": {
             "Composite": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -575,7 +596,8 @@
         "data": {
           "label": "FilialRua",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -595,7 +617,8 @@
         "data": {
           "label": "FilialBairro",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -615,7 +638,8 @@
         "data": {
           "label": "FilialMunicípio",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -635,7 +659,8 @@
         "data": {
           "label": "FilialEstado",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -654,7 +679,7 @@
         "data": {
           "label": "Funcionário",
           "type": "Regular",
-          "isConnectable": false,
+          "isConnectable": true,
           "isSelected": false,
           "totalSpecialization": true
         },
@@ -678,7 +703,8 @@
           "types": {
             "Unique": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -698,7 +724,8 @@
         "data": {
           "label": "FuncCargo",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -718,7 +745,8 @@
         "data": {
           "label": "FuncSalário",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -738,7 +766,8 @@
         "data": {
           "label": "FuncDataNasc",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -760,7 +789,8 @@
           "types": {
             "Derived": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -782,7 +812,8 @@
           "types": {
             "Multivalued": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -802,7 +833,8 @@
         "data": {
           "label": "FuncNome",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -816,15 +848,16 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1505.0919651500485,
-          "y": 90.23937677053824
+          "x": 1500.764257461991,
+          "y": 84.46909985312831
         },
         "data": {
           "label": "ClienteTelefone",
           "types": {
             "Multivalued": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -843,7 +876,7 @@
         "data": {
           "label": "Pedido",
           "type": "Regular",
-          "isConnectable": false,
+          "isConnectable": true,
           "isSelected": false,
           "totalSpecialization": true
         },
@@ -865,7 +898,8 @@
         "data": {
           "label": "PedidoData",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -887,7 +921,8 @@
           "types": {
             "Unique": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -926,7 +961,7 @@
             }
           },
           "isSelected": false,
-          "isConnectable": true,
+          "isConnectable": false,
           "isIdentifying": false
         },
         "measured": {
@@ -966,7 +1001,7 @@
             }
           },
           "isSelected": false,
-          "isConnectable": true,
+          "isConnectable": false,
           "isIdentifying": false
         },
         "measured": {
@@ -1006,7 +1041,7 @@
             }
           },
           "isSelected": false,
-          "isConnectable": true,
+          "isConnectable": false,
           "isIdentifying": false
         },
         "measured": {
@@ -1046,7 +1081,7 @@
             }
           },
           "isSelected": false,
-          "isConnectable": true,
+          "isConnectable": false,
           "isIdentifying": false
         },
         "measured": {
@@ -1069,7 +1104,8 @@
           "types": {
             "Unique": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -1083,13 +1119,14 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1384.8015488867377,
-          "y": 42.68555240793201
+          "x": 1386.24411811609,
+          "y": 34.03013703181712
         },
         "data": {
           "label": "ClienteNome",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -1103,13 +1140,14 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1504.0367860600195,
-          "y": 44.35410764872521
+          "x": 1501.1516476013146,
+          "y": 34.256123043257844
         },
         "data": {
           "label": "ClienteSobrenome",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -1123,8 +1161,8 @@
         "parentId": null,
         "type": "Attribute",
         "position": {
-          "x": 1267.6766698935141,
-          "y": 44.35410764872521
+          "x": 1263.3489622054567,
+          "y": 35.69869227261032
         },
         "data": {
           "label": "ClienteEnfermidade",
@@ -1132,7 +1170,8 @@
             "Multivalued": true,
             "Optional": true
           },
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -1151,7 +1190,7 @@
         "data": {
           "label": "PratoPadrão",
           "type": "Regular",
-          "isConnectable": false,
+          "isConnectable": true,
           "isSelected": false,
           "totalSpecialization": true,
           "parentId": "b75078cf-81fa-4a84-bd05-89afa86a8952",
@@ -1175,7 +1214,7 @@
         "data": {
           "label": "PratoEspecial",
           "type": "Regular",
-          "isConnectable": false,
+          "isConnectable": true,
           "isSelected": false,
           "totalSpecialization": true,
           "parentId": "b75078cf-81fa-4a84-bd05-89afa86a8952",
@@ -1200,13 +1239,14 @@
         "data": {
           "label": "PratoTipoSang",
           "types": [],
-          "isSelected": false
+          "isSelected": true,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
           "height": 50
         },
-        "selected": false,
+        "selected": true,
         "dragging": false
       },
       {
@@ -1220,7 +1260,8 @@
         "data": {
           "label": "PratoEnfermidade",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -1240,7 +1281,8 @@
         "data": {
           "label": "Quantidade",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -1259,7 +1301,7 @@
         "data": {
           "label": "Bebida",
           "type": "Regular",
-          "isConnectable": false,
+          "isConnectable": true,
           "isSelected": false,
           "totalSpecialization": true,
           "parentId": "b75078cf-81fa-4a84-bd05-89afa86a8952",
@@ -1284,7 +1326,8 @@
         "data": {
           "label": "BebTipoSangue",
           "types": [],
-          "isSelected": false
+          "isSelected": false,
+          "isConnectable": true
         },
         "measured": {
           "width": 100,
@@ -1303,6 +1346,75 @@
         },
         "data": {
           "label": "PedidoHorario",
+          "types": [],
+          "isSelected": false,
+          "isConnectable": true
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "8f767b52-c6a1-4d47-9018-b56202745f31",
+        "type": "Entity",
+        "position": {
+          "x": 276.30512850759203,
+          "y": 183.85337500672975
+        },
+        "data": {
+          "label": "Pais",
+          "type": "Regular",
+          "isConnectable": true,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "50e1cedf-3c73-4e6a-989c-93906edf80ad",
+        "type": "Relationship",
+        "position": {
+          "x": 425.36456812601284,
+          "y": 184.8087696563394
+        },
+        "data": {
+          "label": "PertenceA",
+          "sourceEntityDetails": {
+            "id": "8f767b52-c6a1-4d47-9018-b56202745f31",
+            "minCardinality": "Mandatory",
+            "maxCardinality": "One"
+          },
+          "targetEntityDetails": {
+            "id": "b75b5483-adfe-467d-8469-eb11259cdc51",
+            "minCardinality": "Optional",
+            "maxCardinality": "Many"
+          },
+          "isSelected": false,
+          "isIdentifying": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false
+      },
+      {
+        "id": "e1c3f2a0-8148-4918-b06b-45dbc138e175",
+        "parentId": "8f767b52-c6a1-4d47-9018-b56202745f31",
+        "type": "Attribute",
+        "position": {
+          "x": -0.8151205976053575,
+          "y": -60.16836713170291
+        },
+        "data": {
+          "label": "PaisNome",
           "types": [],
           "isSelected": false
         },
@@ -1783,12 +1895,40 @@
         "type": "Attribute",
         "source": "c870405f-fcad-4ea8-907e-982cdbe7c394",
         "target": "1f89b4c8-9919-4a15-aada-547449d855a0"
+      },
+      {
+        "id": "50e1cedf-3c73-4e6a-989c-93906edf80ad->8f767b52-c6a1-4d47-9018-b56202745f31;8f767b52-c6a1-4d47-9018-b56202745f31->b75b5483-adfe-467d-8469-eb11259cdc51",
+        "type": "Relationship",
+        "source": "50e1cedf-3c73-4e6a-989c-93906edf80ad",
+        "target": "8f767b52-c6a1-4d47-9018-b56202745f31",
+        "data": {
+          "id": "50e1cedf-3c73-4e6a-989c-93906edf80ad->8f767b52-c6a1-4d47-9018-b56202745f31",
+          "minCardinality": "Mandatory",
+          "maxCardinality": "One"
+        }
+      },
+      {
+        "id": "50e1cedf-3c73-4e6a-989c-93906edf80ad->b75b5483-adfe-467d-8469-eb11259cdc51;8f767b52-c6a1-4d47-9018-b56202745f31->b75b5483-adfe-467d-8469-eb11259cdc51",
+        "type": "Relationship",
+        "source": "50e1cedf-3c73-4e6a-989c-93906edf80ad",
+        "target": "b75b5483-adfe-467d-8469-eb11259cdc51",
+        "data": {
+          "id": "50e1cedf-3c73-4e6a-989c-93906edf80ad->b75b5483-adfe-467d-8469-eb11259cdc51",
+          "minCardinality": "Optional",
+          "maxCardinality": "Many"
+        }
+      },
+      {
+        "id": "5360f7f3-76f5-484d-853a-6e7b005b1e20",
+        "type": "Attribute",
+        "source": "8f767b52-c6a1-4d47-9018-b56202745f31",
+        "target": "e1c3f2a0-8148-4918-b06b-45dbc138e175"
       }
     ],
     "viewport": {
-      "x": -232.570319299007,
-      "y": 53.859472978391125,
-      "zoom": 1.0000000000000002
+      "x": -72.21003406101454,
+      "y": 39.55899120123203,
+      "zoom": 0.7169002297126816
     }
   },
   "name": "CHO ER",
@@ -1796,8 +1936,8 @@
     "name": "Diagrams",
     "folderType": 1,
     "depth": 0,
-    "id": 13143
+    "id": 13153
   },
-  "id": 69239,
-  "updatedAtTimestamp": 1759149245
+  "id": 163478,
+  "updatedAtTimestamp": 1763228257
 }
