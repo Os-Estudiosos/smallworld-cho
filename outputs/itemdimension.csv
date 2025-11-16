@@ -1,404 +1,404 @@
                itemkey                | itemid | itemcategoria  |       itemnome        | tipsang 
 --------------------------------------+--------+----------------+-----------------------+---------
- 979b302c-0359-4924-9088-506da3b4cd9f |      1 | Bebida         | Cremoso Tartar        | O
- 1889e750-c236-492a-a839-3ec9f52ac1de |      2 | Bebida         | Crocante Grelhado     | O
- 82a8d72b-1a5c-40fb-8b2d-200ed5a82c05 |      3 | Prato Padrão   | Delicioso Moqueca     | O
- 0db17644-b04e-4d24-9895-51e76c018128 |      4 | Prato Especial | Defumado Moqueca      | 
- 37b6477b-0bf2-4cbb-b368-52d559cd62cb |      5 | Prato Especial | Defumado Sopa         | 
- 07583d5f-c301-4e16-9588-7c325ce4ce33 |      6 | Prato Especial | Crocante Risoto       | 
- 452da72f-7053-4b40-bb3b-3a59a3e387bd |      7 | Prato Especial | Defumado Carpaccio    | 
- 73aa031b-c5b2-490d-8c15-15b4c33322c0 |      8 | Prato Especial | Recheado Sopa         | 
- 77b39d45-0acd-49ab-b1f2-f9cf4ee353a4 |      9 | Prato Especial | Cremoso Assado        | 
- 485eeab3-df6f-49d7-a25c-1b50d999f2d2 |     10 | Prato Especial | Apimentado Ensopado   | 
- 0578c29d-d6b6-4f31-9c20-1378d9b30a52 |     11 | Prato Padrão   | Recheado Tartar       | AB
- 0aeaa720-11a0-4f81-9a17-a3095e63ec7e |     12 | Bebida         | Apimentado Estufado   | A
- 07ed57e8-e1ae-4775-b4ef-a5404ca82895 |     13 | Bebida         | Crocante Grelhado     | B
- d5643700-51a3-42c8-be71-ac334ee2cf36 |     14 | Prato Especial | Apimentado Feijoada   | 
- 08535d6d-ffd7-44f6-8806-207a4de5ae96 |     15 | Prato Padrão   | Cremoso Sopa          | A
- 969d6e52-71f1-4452-bdd1-f5677e55c27e |     16 | Prato Padrão   | Cremoso Moqueca       | B
- 57d85ff4-49df-4099-a3ea-f05651122744 |     17 | Prato Padrão   | Tradicional Tartar    | A
- c8e50327-688e-4d8b-aa9d-8626bd952545 |     18 | Prato Especial | Cremoso Feijoada      | 
- b7361d92-48f8-40fb-86bc-d8354bd8472e |     19 | Prato Padrão   | Especial Grelhado     | A
- 949c920b-32a3-4f75-875d-4ac22ad8147f |     20 | Bebida         | Defumado Tartar       | A
- 6db154c0-e678-44d2-9e22-43353370e7f6 |     21 | Prato Padrão   | Saboroso Moqueca      | O
- 17c731c9-7390-4535-b2c1-4bf2a8fc081d |     22 | Prato Especial | Exótico Moqueca       | 
- f0ddf164-437f-471d-8fbf-033a39245dde |     23 | Prato Padrão   | Defumado Risoto       | AB
- 5f03bcaf-fa23-45c7-8186-b82d016393c5 |     24 | Prato Especial | Crocante Tartar       | 
- 13301677-baf2-48f3-ba5a-faa08cac8d79 |     25 | Prato Especial | Crocante Carpaccio    | 
- 1e076429-a90e-44bd-b649-5d3e279e1f2f |     26 | Prato Especial | Cremoso Ensopado      | 
- c66845d0-c884-4d37-9e83-73f14cbb7735 |     27 | Bebida         | Tradicional Assado    | AB
- 1888608b-d71a-4219-8257-6fde1561d49c |     28 | Bebida         | Exótico Moqueca       | A
- f3b85bc2-df57-4977-b36b-0a091c0b9ded |     29 | Prato Padrão   | Cremoso Moqueca       | A
- c6ff6e19-dba7-4c09-ae9c-26905f602b0b |     30 | Bebida         | Defumado Assado       | B
- bcdc7ee3-014f-40c0-9af8-9c2f85f59c85 |     31 | Prato Especial | Cremoso Assado        | 
- 096f3998-7254-4cee-a194-b23c6dc65474 |     32 | Bebida         | Recheado Risoto       | A
- 9db54f23-6cc9-4125-9f42-08aa7d241f2f |     33 | Prato Especial | Defumado Feijoada     | 
- d23e05f8-22ba-466c-ae27-eeb755ad2808 |     34 | Prato Especial | Especial Assado       | 
- 1b94c4b0-f039-460c-9153-aed6a823ea80 |     35 | Prato Especial | Cremoso Tartar        | 
- 61f7f090-1d4e-405c-9e63-bc6ef132ea16 |     36 | Bebida         | Defumado Feijoada     | A
- 0f68f3c4-7373-44ad-b802-a1a4fdc4be17 |     37 | Bebida         | Exótico Feijoada      | B
- f7d81a80-ce88-418c-b545-9157ccd60523 |     38 | Prato Especial | Recheado Sopa         | 
- 4135fd6f-ac52-4e90-a0ad-cc18cfd6152e |     39 | Prato Padrão   | Cremoso Risoto        | A
- f832be3c-4e2f-46b2-8b28-dae61fe28f16 |     40 | Prato Padrão   | Tradicional Risoto    | O
- c878172f-044a-4ad7-bac4-23ec9430eec7 |     41 | Bebida         | Delicioso Carpaccio   | A
- d4576e58-ad8e-42ed-a083-f6b6c7c1ad51 |     42 | Bebida         | Exótico Assado        | O
- 267d288e-8b70-442c-a22f-b29faca42ffc |     43 | Prato Especial | Crocante Tartar       | 
- 98c53a0b-9e53-43db-9595-c73e8d321322 |     44 | Bebida         | Especial Assado       | O
- e0411129-b5eb-4998-8f68-8afad4c08899 |     45 | Prato Especial | Tradicional Assado    | 
- e6899ea5-048e-4ea3-bf39-9308ac7411cd |     46 | Bebida         | Delicioso Grelhado    | O
- 04f66028-3953-4dd0-bbd8-841a8510c83e |     47 | Prato Padrão   | Tradicional Ensopado  | AB
- b2244325-aafc-4e2a-baa7-850bfbe0f4a2 |     48 | Prato Padrão   | Crocante Feijoada     | O
- 4f294b50-8ef6-4eca-8909-c008307225b1 |     49 | Prato Especial | Exótico Carpaccio     | 
- 7ed7d757-f2f7-4875-98db-b631919b529a |     50 | Prato Padrão   | Apimentado Grelhado   | A
- bee47fdc-5e15-4482-8f85-8e24770de691 |     51 | Prato Especial | Defumado Grelhado     | 
- bcd4e921-a07a-4382-818e-dd7d2e84340e |     52 | Bebida         | Especial Carpaccio    | AB
- 5031cb1e-7616-4833-9a38-3532193aaf6f |     53 | Bebida         | Saboroso Grelhado     | A
- 77e2abac-2169-4ebd-b008-c2baf1f745c7 |     54 | Prato Padrão   | Saboroso Grelhado     | B
- 732de1b5-f497-45ed-85b3-900736b528af |     55 | Bebida         | Apimentado Risoto     | AB
- a8bf9d2d-04c2-4623-8854-86e4a6e206a7 |     56 | Prato Especial | Cremoso Carpaccio     | 
- ff8245e0-13a8-42f9-a4f3-76cc6c05f111 |     57 | Bebida         | Saboroso Assado       | O
- 3bbd992a-e0cc-49a2-b731-cbaa15c4fcfc |     58 | Prato Especial | Delicioso Carpaccio   | 
- e77a481b-d80f-4621-9d6e-76ab78e3b0c8 |     59 | Prato Especial | Crocante Moqueca      | 
- f44c68bb-84a5-4f7c-9f74-be8fde38019a |     60 | Prato Padrão   | Delicioso Ensopado    | O
- fd71f94f-c58d-4f68-862e-503259ee1702 |     61 | Bebida         | Exótico Ensopado      | B
- cb6b05f8-3317-4da5-a126-a7119bda50b2 |     62 | Bebida         | Saboroso Moqueca      | A
- 552c3c9e-d846-405d-bbf4-5da21aea1284 |     63 | Prato Especial | Defumado Carpaccio    | 
- ae46d3ff-31bf-4eac-81df-f297b1c75d68 |     64 | Bebida         | Apimentado Feijoada   | B
- 37c42f94-5b35-451d-aaa1-86d920864ba0 |     65 | Bebida         | Exótico Grelhado      | O
- 8627a27d-021f-4eda-830a-5a47cf0d2826 |     66 | Prato Padrão   | Defumado Estufado     | B
- 8c3b6e7c-0311-429f-b4d1-8d3a3ad218c4 |     67 | Bebida         | Tradicional Grelhado  | AB
- aa4bf7ec-93ee-4268-92d6-0998c5ad5e57 |     68 | Prato Padrão   | Especial Moqueca      | A
- c94f247b-4752-4b5c-b3b4-b1a9d286a42c |     69 | Prato Especial | Especial Assado       | 
- 24a0e2ba-5a20-4fe2-9271-fd64f1ef7b07 |     70 | Bebida         | Tradicional Moqueca   | O
- f2d09c77-802e-449d-a47c-c9e69b4fac5f |     71 | Prato Especial | Crocante Tartar       | 
- 406a3c30-3e53-4093-8242-3081ac3c1661 |     72 | Prato Padrão   | Cremoso Assado        | B
- 1bebe529-8727-4289-9b2e-12116502aa20 |     73 | Prato Especial | Apimentado Grelhado   | 
- 11bc0362-afe5-4936-8b3a-e2cc7fd53011 |     74 | Prato Padrão   | Especial Ensopado     | B
- 7fd08aa0-d0b5-4082-9d5a-676d2f120e2a |     75 | Bebida         | Especial Carpaccio    | A
- da01c4ff-9a75-4002-b8fb-1cd157e2f2d2 |     76 | Bebida         | Cremoso Ensopado      | AB
- 0590ed62-d8ed-44c1-a805-29dc903075e5 |     77 | Prato Especial | Cremoso Moqueca       | 
- baebb73a-f4f4-4896-b207-6523fd9935e9 |     78 | Bebida         | Saboroso Sopa         | AB
- 19adb00a-d244-419a-9598-fd44e9a68735 |     79 | Bebida         | Saboroso Risoto       | O
- 0449fccd-5197-4d87-835b-ec4baa34928f |     80 | Prato Especial | Delicioso Assado      | 
- 929ae6db-e4b4-4613-a5cf-eb3252d9df61 |     81 | Prato Especial | Defumado Grelhado     | 
- 1e2d1ea4-49cc-4cb6-be1f-dea9d6ba64b3 |     82 | Prato Especial | Exótico Assado        | 
- ca659807-d5cc-4429-9cbe-c3e04d8506e7 |     83 | Prato Padrão   | Delicioso Assado      | O
- b93d0891-7cb8-48b9-a2b8-18f333e58fea |     84 | Bebida         | Cremoso Carpaccio     | A
- 3d891982-251d-4c7d-b15b-b7400b9d358f |     85 | Bebida         | Especial Estufado     | A
- cd37872c-dc94-43b6-b666-ceaa60e594f2 |     86 | Prato Especial | Exótico Sopa          | 
- 90cb9967-6417-428c-ab8a-7f5729fc008f |     87 | Prato Especial | Cremoso Sopa          | 
- 502e8932-3d60-46a7-8058-d85d8992c372 |     88 | Bebida         | Recheado Sopa         | O
- 8d80353d-1c69-4fe0-8c1b-0d1e0d0399fb |     89 | Bebida         | Delicioso Estufado    | O
- 5d8b1556-9134-4c8b-a499-124277016d98 |     90 | Prato Especial | Defumado Assado       | 
- 8c3fcaef-e9eb-42e7-aeb4-6ae9f224de81 |     91 | Bebida         | Tradicional Tartar    | O
- 7f9ab7c8-7d5d-45fa-b3ce-150a2b42b3f0 |     92 | Prato Especial | Cremoso Feijoada      | 
- 8a00797a-41d9-4d97-9057-af436bea03d4 |     93 | Prato Padrão   | Defumado Tartar       | B
- 8d82e11d-6d3d-4365-bddf-e2436f21eaa7 |     94 | Prato Padrão   | Apimentado Assado     | A
- d92dfae9-5a53-4194-a5a3-dfdde3d4e3d0 |     95 | Prato Especial | Defumado Estufado     | 
- ec348ba6-b00e-4eb9-90f8-503c2d4ccb23 |     96 | Prato Padrão   | Defumado Sopa         | AB
- 7cc1b920-3825-4fea-b243-55b7c1960069 |     97 | Prato Especial | Cremoso Risoto        | 
- 892d1633-07d9-4eb1-b91a-f97f52526a4f |     98 | Prato Especial | Saboroso Assado       | 
- 7c4f4a12-8537-486b-97e3-09f2edb38a69 |     99 | Bebida         | Apimentado Sopa       | B
- 02765b75-21fd-4807-a69e-84e6e188cc4e |    100 | Prato Especial | Especial Estufado     | 
- 60274e62-d6fc-48c3-a214-baddb22f71dd |    101 | Bebida         | Saboroso Feijoada     | AB
- 7c826a84-5f78-476d-aa32-300614a3f2d4 |    102 | Prato Padrão   | Defumado Risoto       | B
- f1bee724-2864-4d20-880b-430c3af1d6dc |    103 | Bebida         | Tradicional Estufado  | AB
- 9edf8d03-06de-446d-adfd-2695d6bc2cf2 |    104 | Prato Padrão   | Delicioso Assado      | A
- 3769b571-8865-44e5-a734-beb406104ab6 |    105 | Prato Especial | Recheado Feijoada     | 
- a315c355-debc-427d-a168-97e59f8ffb40 |    106 | Bebida         | Cremoso Feijoada      | AB
- 5db803ed-1207-42ca-969c-19ad60c32fb7 |    107 | Bebida         | Saboroso Grelhado     | A
- 0aafc178-5b95-4120-a2c7-ee5076183054 |    108 | Prato Padrão   | Saboroso Sopa         | B
- ca8e1dfd-43ea-48f9-bec2-7da7e8d1b0ac |    109 | Bebida         | Delicioso Tartar      | A
- 28ac5c78-3b9b-4270-9334-1d53428f03a1 |    110 | Prato Especial | Recheado Grelhado     | 
- cf6e6593-ccc6-4abc-845e-d3895d77fcf6 |    111 | Bebida         | Exótico Assado        | O
- 14a417c8-af37-430e-8653-9a2a90c2a75d |    112 | Bebida         | Delicioso Feijoada    | B
- 4abf2b39-8bd7-44c2-982c-5987b6962f1f |    113 | Prato Padrão   | Defumado Feijoada     | O
- cd4b6894-6c66-4628-b232-f74ba42a2c27 |    114 | Prato Especial | Cremoso Risoto        | 
- c0b2317f-b495-4c14-9fed-6495a04bcd87 |    115 | Prato Padrão   | Especial Estufado     | AB
- 5f6e8b18-a989-49a8-baf2-1c4998447963 |    116 | Prato Especial | Especial Risoto       | 
- 92c2f56b-c879-4f59-8b0b-df503a55beab |    117 | Bebida         | Recheado Moqueca      | A
- 594f7a1a-e9ed-45e4-a776-0375a80b11d9 |    118 | Prato Especial | Apimentado Grelhado   | 
- f678fc80-d564-4b94-8a87-b8c870d0fd21 |    119 | Prato Padrão   | Exótico Tartar        | AB
- 775ec0e9-8189-4bd1-956b-580f5113fc7e |    120 | Prato Padrão   | Apimentado Moqueca    | O
- 074a83fc-5f49-4b6f-a956-87925856bb76 |    121 | Bebida         | Especial Grelhado     | B
- 11b9b495-c4a1-4312-bf04-fca6255565ab |    122 | Bebida         | Cremoso Sopa          | A
- 9ed6214b-70ee-40a2-a4e8-7c90ff0b18ca |    123 | Prato Especial | Especial Feijoada     | 
- d4e717db-31fd-4ca1-9908-170a757d7bc7 |    124 | Prato Especial | Delicioso Tartar      | 
- a4bc30e4-a76a-4b8f-97a2-847489cae17b |    125 | Prato Especial | Tradicional Moqueca   | 
- 48998683-ee5c-4ce9-b93d-f552bd34762a |    126 | Prato Especial | Defumado Carpaccio    | 
- 628317c4-f37a-46e8-8550-b42d91492479 |    127 | Prato Padrão   | Saboroso Tartar       | O
- 22d4611a-5305-4de4-8c1e-0ad82006e437 |    128 | Bebida         | Cremoso Tartar        | A
- 79c10e16-d5be-4323-8882-809407395dc6 |    129 | Prato Padrão   | Tradicional Tartar    | O
- 26a8a0fc-367c-4a46-a9b1-d4c2d9d4e83f |    130 | Bebida         | Apimentado Ensopado   | A
- 4c69adef-3ecf-4df3-a9da-00a69110141e |    131 | Prato Padrão   | Exótico Carpaccio     | A
- d3424ac0-8aba-4198-83ad-d6f59fdf8aca |    132 | Prato Especial | Cremoso Sopa          | 
- c1143f4d-8b30-49a3-97cf-6ca39d4ff438 |    133 | Prato Padrão   | Apimentado Risoto     | A
- ec4d1796-6d23-4d47-9cb3-d72b8a6b8c7b |    134 | Prato Padrão   | Cremoso Risoto        | B
- ba013d3c-2c0d-4be2-9798-1a86c7abb359 |    135 | Prato Padrão   | Defumado Estufado     | AB
- 983e7e79-102a-4de3-a055-44233bc4b16d |    136 | Bebida         | Saboroso Carpaccio    | AB
- ddb3264d-444d-47d6-b43d-5fe7b6f6cd99 |    137 | Prato Padrão   | Defumado Moqueca      | A
- b6eef472-f971-49b8-b48d-57f1b9e79cc3 |    138 | Bebida         | Delicioso Grelhado    | B
- c72a0d34-101d-4d22-8bdc-f64a339f6da9 |    139 | Prato Padrão   | Delicioso Assado      | B
- ce6452cf-aa12-4c53-82e0-bad1d4d82bc3 |    140 | Bebida         | Crocante Moqueca      | O
- 48ff866a-03c2-407f-8245-ccfafd0bc192 |    141 | Prato Especial | Cremoso Assado        | 
- 005b42ba-1246-4ded-b46a-7e26611ec2ea |    142 | Prato Especial | Crocante Assado       | 
- 1c9563da-67c7-47ed-8dec-7de2e5aed435 |    143 | Prato Especial | Crocante Moqueca      | 
- 0fce09df-7b63-47d9-94c5-b3c38269f855 |    144 | Bebida         | Defumado Risoto       | B
- 862f832a-4ac7-4f0d-b02c-7f3ca9ea0312 |    145 | Prato Especial | Crocante Tartar       | 
- fcc81521-c3ee-4b1d-972d-fac7b3098560 |    146 | Prato Especial | Recheado Moqueca      | 
- fb5dfa31-679e-4273-8167-93114ef21b9f |    147 | Prato Padrão   | Recheado Moqueca      | O
- 779ca1c8-488b-487e-bad8-dd3523fe557e |    148 | Prato Padrão   | Crocante Tartar       | AB
- 3e07f6d8-4e72-4454-8cfa-b5ebc199eda1 |    149 | Prato Padrão   | Crocante Sopa         | O
- 63716d03-ea0c-48b3-8f96-4c002384a3d2 |    150 | Prato Padrão   | Cremoso Sopa          | AB
- fae55aa4-54bc-4b5f-89aa-5904701b30ea |    151 | Bebida         | Especial Sopa         | A
- 76b3051d-445d-4870-9648-e92967c4ea25 |    152 | Prato Padrão   | Exótico Ensopado      | AB
- aec265f1-9e91-42cf-b052-94b61bea5bdb |    153 | Bebida         | Delicioso Carpaccio   | O
- 8fb06f28-f7e4-4b75-98e0-1c3c659ffa92 |    154 | Bebida         | Exótico Carpaccio     | AB
- 74f97004-b60b-4923-8975-5b8028dc0002 |    155 | Bebida         | Tradicional Risoto    | A
- 99fb8ade-792b-4a2c-895a-c8263107cbf4 |    156 | Prato Especial | Cremoso Tartar        | 
- db74d1b0-720b-4d1a-b8fe-2984b1e32de3 |    157 | Prato Padrão   | Apimentado Feijoada   | A
- db2a3940-40d8-46fa-a3d3-31c38f8ef9c9 |    158 | Prato Especial | Especial Assado       | 
- 49600bf6-d764-4322-a422-803b4ec91933 |    159 | Prato Especial | Tradicional Risoto    | 
- 28980cbe-e75b-4673-b2d3-186bf8904fe6 |    160 | Bebida         | Tradicional Assado    | B
- 14b6dcbf-7969-470d-af10-897d5ec57446 |    161 | Bebida         | Cremoso Ensopado      | B
- fcfdabba-2577-44e4-9b15-9b0b47754e41 |    162 | Prato Especial | Saboroso Estufado     | 
- 88cafe01-6f18-4a4a-b460-3e4456df0bc5 |    163 | Prato Padrão   | Exótico Sopa          | AB
- 010e60c6-15e3-460e-b5a6-ca84fb7b308b |    164 | Bebida         | Exótico Carpaccio     | B
- 7ad7e93f-a0ac-49fb-ac29-4dbd4d5a81ae |    165 | Prato Especial | Exótico Tartar        | 
- 27720e41-0320-4632-a5c1-e3fcbc3fdc48 |    166 | Bebida         | Apimentado Sopa       | B
- 5d8ff8ab-1b94-4f75-9ea0-b69bacce37e3 |    167 | Bebida         | Tradicional Feijoada  | B
- b911886a-8061-4d21-a6a1-7e78504c3ab7 |    168 | Prato Padrão   | Cremoso Estufado      | AB
- 92e7750b-4bec-499a-b3b8-d635001329c1 |    169 | Bebida         | Apimentado Estufado   | AB
- db6e57a5-bf57-4978-b130-8ef1c309acce |    170 | Bebida         | Delicioso Carpaccio   | B
- c283eeef-f15a-435a-8308-7ecc9d433cc9 |    171 | Bebida         | Saboroso Assado       | AB
- fc1a1b05-adb6-4e2d-a1dd-cb7d3326ea8f |    172 | Bebida         | Crocante Grelhado     | AB
- 1ce92297-0ae7-4609-b490-1e2edb959549 |    173 | Prato Especial | Crocante Estufado     | 
- 071eb476-bf04-4ad7-b369-6adddb609314 |    174 | Bebida         | Defumado Assado       | AB
- 7d246432-b7e4-4e62-8d60-0643c12e7175 |    175 | Bebida         | Especial Tartar       | AB
- 176b00c0-a978-4112-9fa7-6da92621f29f |    176 | Prato Padrão   | Recheado Sopa         | A
- 3213716c-9c6a-4db1-8521-9d145f7d1c2d |    177 | Bebida         | Cremoso Carpaccio     | A
- ff0ded93-d245-424b-bb70-d38aeceb756f |    178 | Prato Especial | Tradicional Feijoada  | 
- 1759f3f3-1222-434c-9c42-b2768b76c63d |    179 | Prato Especial | Exótico Carpaccio     | 
- b4a13c7b-9fc7-426d-915e-782efa6cc8e2 |    180 | Prato Padrão   | Cremoso Carpaccio     | AB
- 2a20199d-9314-4682-ae42-a2f5aa1c539c |    181 | Prato Especial | Crocante Tartar       | 
- 32b96fe8-c90a-4a42-beef-f6ae3ff5a05a |    182 | Prato Padrão   | Crocante Carpaccio    | AB
- 32d08292-2f35-46df-809a-a09af7fd1c19 |    183 | Prato Padrão   | Defumado Grelhado     | AB
- b7a8f8ea-d855-41d8-ae37-aad0b0f3415a |    184 | Prato Especial | Cremoso Grelhado      | 
- 3ff6c108-5a3c-47d2-b62c-bb17eaa9f65b |    185 | Bebida         | Delicioso Feijoada    | O
- ba8ebe78-946d-4ee7-ac48-ece9eeaefd9c |    186 | Prato Padrão   | Delicioso Ensopado    | O
- 8c01082e-05a9-4dc3-8110-ac434040dee2 |    187 | Prato Especial | Crocante Carpaccio    | 
- ca83076b-882f-46dd-8d1e-cf965d6f0ef7 |    188 | Bebida         | Exótico Moqueca       | B
- eba1c5fe-8f23-4986-aadf-e1609724bcdc |    189 | Prato Padrão   | Delicioso Tartar      | AB
- 0e110f3b-7ee5-4b08-a693-aff632e690fe |    190 | Prato Especial | Cremoso Estufado      | 
- 3c612972-6e1b-4340-b99b-84bde4a6adf1 |    191 | Bebida         | Apimentado Feijoada   | O
- 0b98ea1a-d91c-4e9e-85be-ae30aaed0508 |    192 | Prato Padrão   | Saboroso Moqueca      | B
- 667e4943-0794-4bdd-8e37-e82331417cf2 |    193 | Bebida         | Crocante Carpaccio    | O
- 9dcfbe21-0230-4e25-aa40-43e8219b87a0 |    194 | Prato Padrão   | Saboroso Sopa         | B
- 1f5b7730-770c-45ca-b033-2ef2bddb9edc |    195 | Prato Especial | Saboroso Carpaccio    | 
- d71b45ca-e051-4661-a050-42f411c662fb |    196 | Prato Especial | Apimentado Estufado   | 
- 7f773acd-7995-4bef-9ddb-2f6409ac7042 |    197 | Prato Padrão   | Delicioso Sopa        | B
- ced90ce6-a996-4fdf-81d2-e25b0230d431 |    198 | Prato Padrão   | Cremoso Feijoada      | B
- e3da4ea7-a908-483d-abc1-a242c6bfb6b1 |    199 | Prato Padrão   | Delicioso Grelhado    | AB
- 19cb673a-9f09-4ac3-835b-699db662adab |    200 | Prato Padrão   | Exótico Grelhado      | AB
- cff0ecba-af29-4231-89a6-9fc8c5861bca |    201 | Prato Padrão   | Apimentado Grelhado   | A
- 84644c2d-e3d9-4eaa-96be-a6ccbee34b83 |    202 | Prato Especial | Cremoso Sopa          | 
- 5a5adf4a-6fd3-455d-91fa-3860960d9e7a |    203 | Prato Especial | Defumado Tartar       | 
- 1926815c-7f0f-47c8-8106-c3228f111510 |    204 | Prato Padrão   | Delicioso Feijoada    | O
- e6645d12-7ad6-41fb-abef-30ac0cf1b985 |    205 | Prato Padrão   | Crocante Feijoada     | B
- e670f3fb-58ca-45cb-b35b-7f8793e08ebe |    206 | Prato Padrão   | Exótico Ensopado      | O
- d52c1b97-90e1-4115-aeff-baf874890f12 |    207 | Prato Padrão   | Crocante Tartar       | O
- fe22fc62-79f7-4893-be11-834bc4910218 |    208 | Prato Padrão   | Especial Risoto       | AB
- cfe4d880-c072-4c47-8b64-406858eab6ea |    209 | Bebida         | Defumado Grelhado     | B
- fb29e02e-21c6-483f-808c-15b3d8d409cc |    210 | Prato Padrão   | Delicioso Estufado    | AB
- 971a0a92-9d2a-4514-94b7-438663c5e6eb |    211 | Bebida         | Cremoso Estufado      | AB
- 6e9bde33-eaa1-41ec-a640-35bca96bdc10 |    212 | Prato Padrão   | Recheado Assado       | AB
- a35fcb2c-7263-4023-9ae3-30f5c01f6bfc |    213 | Prato Especial | Apimentado Grelhado   | 
- a8cd9559-2040-439a-a2a8-0146980ace1a |    214 | Prato Especial | Recheado Tartar       | 
- 0d9ee32f-1748-4de1-a792-59e9b840d504 |    215 | Prato Padrão   | Cremoso Feijoada      | A
- 9a3ba09c-0397-4543-8185-2a5b9f96c450 |    216 | Bebida         | Recheado Estufado     | O
- 575a4ba8-dfc5-4ab0-9270-ff1ed3e52635 |    217 | Bebida         | Exótico Carpaccio     | O
- 0507dbdc-bfd8-4680-8396-2b65a7b60c4e |    218 | Prato Padrão   | Cremoso Sopa          | A
- dbacd647-1da2-4a34-b220-891130bb2f8e |    219 | Bebida         | Delicioso Assado      | B
- b031607f-308c-4c03-b299-e6b5e51b6538 |    220 | Bebida         | Defumado Risoto       | A
- 387ef907-809a-4ab7-ac5c-f1fe890f19f8 |    221 | Bebida         | Delicioso Estufado    | O
- 27e42a64-81c9-48fe-bd7b-1675cc7c0d33 |    222 | Prato Especial | Recheado Ensopado     | 
- 92d588ac-4522-4243-8296-94ce0ad58831 |    223 | Prato Padrão   | Tradicional Moqueca   | B
- 6c072257-a4c0-4ad1-85cd-06327947f008 |    224 | Prato Padrão   | Tradicional Assado    | B
- 2f426c71-4ed1-4f31-8e0e-ddbf07686d1b |    225 | Prato Padrão   | Exótico Feijoada      | B
- dff18490-e20a-4237-90c7-8d29f049d1f3 |    226 | Prato Padrão   | Tradicional Risoto    | AB
- 3b2de220-6e31-4329-8da0-08fe9d2f8a02 |    227 | Prato Padrão   | Tradicional Grelhado  | AB
- 245953d1-cb13-4112-be85-b34618e79b73 |    228 | Bebida         | Crocante Grelhado     | A
- 42885e77-f7dd-454a-be2c-32edf541f279 |    229 | Prato Padrão   | Apimentado Assado     | A
- f280490b-04bd-4da4-807b-5d37d14c6985 |    230 | Bebida         | Saboroso Grelhado     | B
- f8fecd69-52c7-4a21-bacb-46f123bf13f9 |    231 | Prato Especial | Especial Grelhado     | 
- d2e77cbc-5fe8-450e-88eb-25e6c7be9682 |    232 | Bebida         | Recheado Sopa         | B
- fa9dc6ea-c325-41db-9458-95e2f49167a2 |    233 | Bebida         | Tradicional Feijoada  | O
- b8a79348-3c6c-473f-9226-7c1cdf61bc32 |    234 | Bebida         | Especial Sopa         | B
- 4d4294ec-5643-48bb-a8c3-05393c2cd60a |    235 | Prato Padrão   | Recheado Tartar       | A
- 64d8e464-294b-49cd-ba0b-2cff945c2741 |    236 | Bebida         | Apimentado Assado     | A
- ce120977-a1e0-4d2d-ad49-1882aab5076e |    237 | Prato Padrão   | Apimentado Estufado   | AB
- bc1872f3-1669-47bb-acd3-9a49187b0fb0 |    238 | Prato Especial | Defumado Risoto       | 
- 2800b1cb-bb72-4fff-a3d3-61341e7db832 |    239 | Bebida         | Delicioso Assado      | A
- 39280be8-67e9-477d-ac5e-6b0105e6a7ca |    240 | Bebida         | Exótico Moqueca       | A
- d7c77c22-f0e6-4fe4-9d37-eb0e47f25424 |    241 | Prato Especial | Saboroso Moqueca      | 
- 03deed72-ccc1-413b-9f17-338e36f37672 |    242 | Prato Padrão   | Apimentado Sopa       | AB
- 97088b75-3990-4c36-a937-36b69fd0042e |    243 | Prato Especial | Cremoso Sopa          | 
- 4ee60be3-f8dd-4e4c-897b-d2226753cfe0 |    244 | Bebida         | Crocante Sopa         | O
- b86abb08-0878-49c4-86b8-582cfb41ab50 |    245 | Bebida         | Cremoso Ensopado      | AB
- 1a77c932-1f89-4e45-8f58-41985e161bf3 |    246 | Prato Padrão   | Defumado Estufado     | AB
- e1a32eca-9ce1-4ecd-a21b-5082e98a6fcc |    247 | Bebida         | Defumado Carpaccio    | B
- 8b68929a-d7de-40ee-b505-1ade37b0ea66 |    248 | Prato Padrão   | Tradicional Feijoada  | AB
- 1b127fde-38aa-4195-a9c3-ced0686f6d49 |    249 | Prato Especial | Apimentado Risoto     | 
- f03ccca8-ea92-4ba7-a30a-46f5062cbe1a |    250 | Prato Especial | Recheado Estufado     | 
- e578b2ae-69ff-4769-b912-a97211ff5443 |    251 | Bebida         | Delicioso Carpaccio   | A
- 82a892c7-6355-4f5a-ad17-8ab2499ac1c5 |    252 | Bebida         | Saboroso Carpaccio    | B
- 7c4f0404-4fae-4a1f-8dba-7a4c62ac714c |    253 | Prato Padrão   | Especial Risoto       | A
- 66310023-a637-441b-929f-19dc1fbc97a2 |    254 | Prato Especial | Apimentado Moqueca    | 
- 1a438607-648f-48da-a59c-f47dcc4bfd46 |    255 | Prato Padrão   | Cremoso Risoto        | AB
- f289575b-04a9-4137-9551-4d5b8c4a9421 |    256 | Prato Padrão   | Crocante Assado       | AB
- 6f4d26e5-b694-4e41-8cd8-b4ac885948c0 |    257 | Prato Padrão   | Recheado Grelhado     | B
- 9c6122d0-3bc3-4128-9d2f-7c7ec0066dc9 |    258 | Prato Padrão   | Apimentado Moqueca    | B
- 140f43c9-fece-4358-b9a0-18030c9c036c |    259 | Prato Especial | Cremoso Sopa          | 
- 9966eafb-72df-4822-8281-45eb3d38ff99 |    260 | Bebida         | Delicioso Ensopado    | O
- e2c6a6d1-d75c-4758-9096-f0ff2c02907f |    261 | Prato Especial | Saboroso Assado       | 
- 242a96ca-80fa-4edc-8d3c-544b3fcdb406 |    262 | Prato Especial | Cremoso Sopa          | 
- 55201526-2fc7-4a0c-bb8b-75f013555d41 |    263 | Prato Especial | Apimentado Feijoada   | 
- db8b5391-3721-48ca-aa41-dfe3191f9463 |    264 | Prato Especial | Saboroso Moqueca      | 
- 2ff585c3-60ec-4f66-bd88-d7e2a59300e7 |    265 | Prato Padrão   | Delicioso Ensopado    | AB
- dabcb2cf-9ed6-4dea-b3c0-0c0db542324b |    266 | Bebida         | Especial Risoto       | B
- ac92e8e4-b39d-49ac-a648-88aef00deb04 |    267 | Prato Padrão   | Tradicional Moqueca   | AB
- 7614fd52-f502-410f-ac49-e0f33f401298 |    268 | Prato Especial | Tradicional Estufado  | 
- 73b85f25-9ab1-4749-8f90-f0d4bd3276a5 |    269 | Prato Especial | Apimentado Assado     | 
- 4b05d4c4-2d8d-4a17-baf2-9ac506065f7a |    270 | Prato Padrão   | Especial Sopa         | A
- 35a126e2-b018-4488-8abd-e181b5161115 |    271 | Bebida         | Saboroso Carpaccio    | A
- 2dab3545-587b-4267-99c8-ede2d2ddab3b |    272 | Bebida         | Especial Estufado     | AB
- bd0be4fb-0b39-4882-921b-a5d225f01c6d |    273 | Prato Especial | Apimentado Carpaccio  | 
- d2e1a7ca-bea4-42e1-a132-5fc5fac15f15 |    274 | Bebida         | Defumado Risoto       | B
- bfe650ca-b9c8-4147-942f-2485558a681f |    275 | Prato Padrão   | Recheado Feijoada     | B
- 901fc503-a950-4f92-8782-957f7b05560e |    276 | Bebida         | Tradicional Estufado  | A
- 5150421c-a94d-4aea-a68f-f07251ac3057 |    277 | Prato Padrão   | Apimentado Estufado   | AB
- 1f841d4f-6edc-4592-bbda-81b7c803713d |    278 | Bebida         | Especial Estufado     | AB
- 41bddd00-d691-4c86-8261-ae711663eea7 |    279 | Bebida         | Defumado Carpaccio    | O
- 3715f636-0c26-4638-9e16-8a5c6e5da73a |    280 | Prato Especial | Delicioso Assado      | 
- 6f620022-7be4-49a7-b5db-f0ec35511f39 |    281 | Prato Padrão   | Crocante Grelhado     | A
- 41f31327-457b-415b-a397-5e7af8adef0b |    282 | Prato Padrão   | Delicioso Tartar      | A
- 92529511-fbdd-4a64-beb3-f1ad089817f3 |    283 | Prato Especial | Delicioso Sopa        | 
- 304063d9-2ccd-48b3-a9c9-e786eadca780 |    284 | Prato Padrão   | Tradicional Ensopado  | O
- d2c11c90-396f-46b8-8aa0-4c07c2788a00 |    285 | Prato Especial | Defumado Estufado     | 
- a1c2ae25-0804-44b7-b362-c063154cd659 |    286 | Prato Padrão   | Tradicional Sopa      | A
- 18e5f0b0-1524-4c60-a800-185d25d0bbd7 |    287 | Bebida         | Especial Sopa         | AB
- 6d308442-3681-4a91-8b09-5c9d72d7b9d8 |    288 | Prato Padrão   | Especial Estufado     | O
- f3d6a34a-57eb-4462-8e36-e58b51939e45 |    289 | Prato Especial | Cremoso Carpaccio     | 
- dfa29417-dcfd-4c7c-a293-0df125a3941f |    290 | Prato Padrão   | Tradicional Moqueca   | O
- f0059071-9bf8-4956-a749-32779bb38b19 |    291 | Prato Especial | Especial Carpaccio    | 
- a62c7806-2d5b-4904-90dd-6a7890dc2456 |    292 | Bebida         | Exótico Risoto        | A
- 290af277-750d-4f89-b4d2-3019a39c7f5d |    293 | Bebida         | Especial Tartar       | AB
- 51810dad-29ad-42d9-a59e-d98d7296c2b4 |    294 | Prato Padrão   | Especial Ensopado     | A
- 459fe8eb-14da-475d-a979-1eaeca1e8842 |    295 | Bebida         | Recheado Feijoada     | A
- 2de802bf-b797-48a3-a39c-f42e1862bf2f |    296 | Prato Especial | Defumado Risoto       | 
- 26934fe9-71d3-476c-bd4d-5198871304ee |    297 | Bebida         | Especial Grelhado     | AB
- 171c4944-a700-4e3a-87dd-9664b82769d1 |    298 | Prato Especial | Apimentado Carpaccio  | 
- 47e8e880-747f-44c9-9c70-8e0086b4a5e6 |    299 | Bebida         | Especial Estufado     | AB
- 9fdc2ca2-f16a-4aea-8f16-3763b920b0de |    300 | Bebida         | Exótico Moqueca       | B
- 8b71f93a-954f-4a75-b5b0-5a3f87272a23 |    301 | Prato Especial | Crocante Risoto       | 
- aedf2f96-a4eb-46be-b0c3-05cf01ab0730 |    302 | Prato Padrão   | Crocante Carpaccio    | AB
- 7c29455f-6df9-40a6-8869-43f75ef06674 |    303 | Bebida         | Saboroso Assado       | AB
- f4d0f027-6bb0-496f-9c78-be6b3f0922a7 |    304 | Prato Especial | Crocante Moqueca      | 
- cd1729af-461e-4d51-96b9-f8938f76803e |    305 | Prato Especial | Apimentado Grelhado   | 
- 69163280-b99d-4e7f-bea8-60ee46e04e25 |    306 | Prato Especial | Defumado Assado       | 
- 3a00e244-d576-4c12-9240-d97176b4fdb4 |    307 | Prato Padrão   | Apimentado Risoto     | A
- bd9f1328-fec2-443b-911f-6d8cfc3fdfd8 |    308 | Bebida         | Defumado Carpaccio    | O
- 255a644e-e4cd-4130-9cf5-b2f3764811b2 |    309 | Prato Especial | Crocante Risoto       | 
- b11804a2-f2b5-4ba2-94ee-2452005f0f0c |    310 | Prato Especial | Defumado Assado       | 
- f6d82eb6-5e5e-4e1f-bef5-8d54bb6d885c |    311 | Prato Especial | Crocante Feijoada     | 
- 5f23cf53-06de-4c87-a27d-36b4bb6ab411 |    312 | Prato Especial | Crocante Carpaccio    | 
- d0fcf493-c53b-496b-bed6-4e412e340cfc |    313 | Prato Especial | Defumado Feijoada     | 
- 954fedfb-0e62-4532-819c-1ced66d43ef1 |    314 | Prato Padrão   | Cremoso Risoto        | B
- 615a9dbb-0432-4f8f-aff1-7e8b526ebd9d |    315 | Prato Especial | Defumado Estufado     | 
- b5b56592-4c8b-4f11-91b9-0050896b7bbb |    316 | Bebida         | Crocante Ensopado     | A
- b06156b8-d835-4bee-a355-33c1f4695418 |    317 | Prato Padrão   | Tradicional Estufado  | O
- 4aac9974-7297-4b07-8465-b770763432fa |    318 | Prato Especial | Saboroso Sopa         | 
- d6045a6f-1d3e-4029-b802-8b2b25d5dbc2 |    319 | Bebida         | Cremoso Estufado      | AB
- 1877f292-5746-4cee-8fdb-4867465b6116 |    320 | Prato Padrão   | Tradicional Ensopado  | AB
- 6bd14467-c50c-45fa-bb1e-5ad0cadf0268 |    321 | Prato Especial | Defumado Grelhado     | 
- 2fb87a82-fc0f-4469-b225-ad2562339f79 |    322 | Prato Especial | Cremoso Carpaccio     | 
- e8ab5aa0-2890-4f1e-8cad-f03be5f3e83a |    323 | Bebida         | Especial Ensopado     | O
- 4a690de7-ffea-4986-a9b1-9adadad7e8c2 |    324 | Prato Especial | Cremoso Assado        | 
- 3b0fa3a1-7513-442a-bd13-9a11f722611f |    325 | Bebida         | Recheado Carpaccio    | B
- 02c5f3fc-e4ba-4479-ade9-8a7c57f25dad |    326 | Prato Padrão   | Delicioso Ensopado    | AB
- 4ea01fe3-bf9e-44ee-9345-878efcab5607 |    327 | Prato Especial | Defumado Sopa         | 
- f2f0f4c3-5be7-463b-a442-023dc812995d |    328 | Prato Especial | Especial Carpaccio    | 
- ade06bf5-c343-4ce1-beee-cb22e98a3016 |    329 | Prato Especial | Especial Sopa         | 
- 605608bc-65e1-41a3-89ff-f252acabb448 |    330 | Bebida         | Crocante Estufado     | AB
- ebdf4f89-5c25-4f92-a689-1bd3e684b293 |    331 | Prato Especial | Recheado Sopa         | 
- 7700875e-42da-468e-9bc5-d598152847b9 |    332 | Prato Especial | Crocante Grelhado     | 
- 6e745ad5-41b9-4c33-bc48-d66fcf06a4ff |    333 | Prato Especial | Saboroso Assado       | 
- 57f7bbc2-ca61-430d-8af9-04871bb06283 |    334 | Bebida         | Apimentado Risoto     | AB
- 263a5eca-8c39-4fda-8720-1fbeff6e3da2 |    335 | Prato Padrão   | Cremoso Grelhado      | B
- 8b6edc1a-9495-4d3f-a65d-051141922bc2 |    336 | Bebida         | Cremoso Grelhado      | B
- e6fab8de-d031-4118-8671-e55767b7d51a |    337 | Prato Padrão   | Especial Assado       | O
- a0f0a2dd-fe1e-4733-8510-b1078e1a625e |    338 | Prato Padrão   | Exótico Grelhado      | A
- 7bec734b-a28e-448a-9d8c-fd75e50cb572 |    339 | Bebida         | Delicioso Moqueca     | O
- d451216c-ae1a-415b-90a5-8932ea9d7ea9 |    340 | Bebida         | Especial Feijoada     | B
- 27c16b24-fc27-4d4e-8d56-49b90bfdef44 |    341 | Prato Especial | Exótico Moqueca       | 
- 7539e3d8-39a8-4251-8c7a-6a27e62b4af2 |    342 | Bebida         | Crocante Moqueca      | AB
- 7d348953-c852-432c-bfd0-ee403676c6d7 |    343 | Bebida         | Recheado Grelhado     | B
- a2cf9dbf-f7ed-44d7-a96c-1deb5c54ee07 |    344 | Prato Especial | Recheado Grelhado     | 
- 65f39032-0d85-4b55-9996-4dc09778267c |    345 | Bebida         | Recheado Sopa         | AB
- e3ab785b-2ba4-450b-9760-4377733787bf |    346 | Bebida         | Defumado Moqueca      | A
- cb30eb85-5eb6-4754-8068-a3dd4c97de43 |    347 | Prato Especial | Saboroso Tartar       | 
- a4991fb2-54f9-464b-96a0-62069b28ffb8 |    348 | Bebida         | Especial Grelhado     | A
- c3b46b34-dbe0-46d6-95b4-84121e8ce596 |    349 | Bebida         | Tradicional Feijoada  | B
- 3a4415b4-6e9c-4884-84cc-a57326973089 |    350 | Prato Especial | Defumado Carpaccio    | 
- 5d648015-984a-4cb3-ba01-e9947b7925bd |    351 | Bebida         | Tradicional Estufado  | B
- 63f8cc1d-44f4-4054-b168-a6472cec41a2 |    352 | Prato Especial | Recheado Grelhado     | 
- 8f7d8c59-9508-4ebc-9485-e191011a7f56 |    353 | Prato Padrão   | Saboroso Sopa         | O
- 1ffcb58d-c0f0-468f-9f10-5899abb4d50c |    354 | Prato Padrão   | Exótico Feijoada      | AB
- 72c110ec-cb70-4a4c-bbde-3455f495ca1e |    355 | Bebida         | Recheado Assado       | O
- b51a7ee2-1a3f-4c14-b320-e1a351e2f234 |    356 | Bebida         | Tradicional Assado    | O
- d526ba1c-0b79-491e-b598-c5da4737c498 |    357 | Prato Padrão   | Cremoso Grelhado      | A
- be344077-f6c9-4a22-acd4-168fef458381 |    358 | Prato Especial | Exótico Assado        | 
- 1941b8c9-d1c1-4e80-8c78-fb7f2fb84a5a |    359 | Prato Padrão   | Recheado Carpaccio    | A
- 3c9f886c-01ff-4997-9bd9-84a786ae43e9 |    360 | Prato Especial | Cremoso Ensopado      | 
- 7dcc4710-c1d8-4abe-b64d-756c62af8be8 |    361 | Prato Especial | Exótico Carpaccio     | 
- 0d449edc-5475-4218-bc59-8ad147d648fe |    362 | Prato Especial | Tradicional Feijoada  | 
- ce8036f3-2670-4703-9a83-6b86f5720144 |    363 | Prato Padrão   | Especial Estufado     | A
- 106164ea-182c-498e-9144-92dab6c193f4 |    364 | Prato Padrão   | Tradicional Carpaccio | O
- 49f34d46-52f4-4889-bbc3-39f6ef563ee1 |    365 | Bebida         | Saboroso Sopa         | AB
- d397c4c6-07ee-4018-9b7a-42217ac5618f |    366 | Prato Padrão   | Saboroso Moqueca      | O
- 3745467f-3bcc-4e19-b4c0-4a70664488cf |    367 | Bebida         | Exótico Risoto        | B
- ab3b0ac0-2d8a-4b93-9d70-d2ddc2068ea9 |    368 | Bebida         | Crocante Tartar       | O
- faa85f54-2491-455d-9971-a93502357b8e |    369 | Prato Padrão   | Recheado Assado       | O
- ffc94448-a131-4e6c-a73c-0263797a098a |    370 | Prato Padrão   | Cremoso Tartar        | AB
- bde14e6a-fdfb-4e75-a78f-1d0b118ee843 |    371 | Bebida         | Cremoso Risoto        | B
- 4771363c-8ea4-4df9-8c38-a4d76f608e7e |    372 | Bebida         | Exótico Grelhado      | AB
- 55cc341e-fcbe-450b-acc9-67dab90c6a2c |    373 | Bebida         | Defumado Assado       | B
- 3c79e8d5-2956-41a7-810c-ec11e6797a71 |    374 | Prato Especial | Especial Ensopado     | 
- 52f84c37-6d59-4640-b20a-bfd1c2c40987 |    375 | Prato Padrão   | Defumado Moqueca      | O
- 3f757f71-0c4f-4af6-84fd-7be61ec234de |    376 | Prato Especial | Cremoso Grelhado      | 
- fa07faa9-d952-41e8-8953-bb449e3f033e |    377 | Prato Padrão   | Cremoso Estufado      | A
- 9916c9d4-69d1-4397-877f-6f658f6977de |    378 | Prato Especial | Apimentado Grelhado   | 
- cfde1320-69bf-4771-9e1e-24c54a9a633c |    379 | Prato Especial | Apimentado Sopa       | 
- cdfc8711-285d-442b-9362-7c5905d73f76 |    380 | Prato Padrão   | Especial Estufado     | A
- 8f8679c4-2b5f-47b8-b744-cbcf337aa044 |    381 | Prato Especial | Crocante Sopa         | 
- cee12d8f-ca44-48ff-a452-55f527dfe4f5 |    382 | Prato Padrão   | Crocante Moqueca      | O
- 52d51e68-35f8-4e48-8283-5080d59e338b |    383 | Prato Padrão   | Cremoso Estufado      | O
- caf8db68-200f-4747-9e13-bb09fd5a4794 |    384 | Bebida         | Delicioso Carpaccio   | AB
- 930e63b2-8428-4268-9741-95559c9a5fbf |    385 | Bebida         | Crocante Carpaccio    | AB
- 9620b52e-ac05-4cca-a468-01c689750761 |    386 | Bebida         | Delicioso Ensopado    | O
- b2f35154-ccab-4c0b-a3bf-63885eeb2f8b |    387 | Prato Padrão   | Saboroso Estufado     | O
- ae62caba-8f00-4b4a-b0ed-dce649261bd0 |    388 | Prato Padrão   | Delicioso Feijoada    | B
- d8789e4f-86c2-4fd6-a5b0-eef59732caa6 |    389 | Prato Padrão   | Exótico Assado        | B
- 91ca0f56-6cc2-4eef-921b-653e808e9e5d |    390 | Prato Especial | Cremoso Estufado      | 
- 0fe2f5be-3c51-4dc9-b2ed-fdae7c409865 |    391 | Prato Especial | Delicioso Grelhado    | 
- 25ebdb52-821a-4044-8062-65218c742fb8 |    392 | Prato Padrão   | Especial Carpaccio    | O
- 86d52fa3-e051-4008-80c4-026990a744cf |    393 | Prato Padrão   | Delicioso Grelhado    | A
- 2d8ebb32-bd32-456b-88d2-00f00abe63b0 |    394 | Prato Especial | Apimentado Moqueca    | 
- 8bbd10c3-0072-469d-8591-8586fd28bfd5 |    395 | Bebida         | Apimentado Ensopado   | B
- a5e6cb67-6caf-42d5-9957-78eb9d864061 |    396 | Prato Padrão   | Exótico Assado        | A
- a821af4c-d9e9-4db1-85f2-368b730f07b9 |    397 | Prato Padrão   | Especial Risoto       | AB
- 4ef32dad-a316-4f27-a984-15472b093574 |    398 | Bebida         | Especial Grelhado     | A
- a46bef55-7b79-4c0b-9ba0-4dc32c4299b0 |    399 | Prato Padrão   | Crocante Carpaccio    | O
- a38db6ea-0087-42f9-b77a-04689f9394e7 |    400 | Prato Padrão   | Delicioso Estufado    | O
+ 2f0eab21-defa-4889-aa7e-ebcea20f9438 |      1 | Bebida         | Cremoso Tartar        | O
+ 5726444a-59ce-46da-8b05-0671a86cd700 |      2 | Bebida         | Crocante Grelhado     | O
+ 7249a0e7-0675-44b2-b019-d683d3bfaabf |      3 | Prato Padrão   | Delicioso Moqueca     | O
+ 30957683-f04a-4a53-a04b-5b3a221275c5 |      4 | Prato Especial | Defumado Moqueca      | 
+ f24235d5-cb9b-44be-9aab-d07d0abecfd5 |      5 | Prato Especial | Defumado Sopa         | 
+ 36ffa2cb-072a-4420-b6f4-aabe86c15747 |      6 | Prato Especial | Crocante Risoto       | 
+ 88554711-0f7d-4cb6-891c-fd58ad4081b0 |      7 | Prato Especial | Defumado Carpaccio    | 
+ 59dcedc9-ff94-40a9-b183-baef0120ddc6 |      8 | Prato Especial | Recheado Sopa         | 
+ 54bb28ab-9234-4038-a00a-f7433c96d88f |      9 | Prato Especial | Cremoso Assado        | 
+ 5614fcd5-2426-4468-a37f-3e334365ea32 |     10 | Prato Especial | Apimentado Ensopado   | 
+ e7e8c0f8-498c-4d6f-a04a-2475a2444ff7 |     11 | Prato Padrão   | Recheado Tartar       | AB
+ 9a9fcb9f-9650-40cd-ae62-02871b8de86a |     12 | Bebida         | Apimentado Estufado   | A
+ 0a6f14d0-3af8-4292-9eaf-978b40deb88a |     13 | Bebida         | Crocante Grelhado     | B
+ 2c3e9b82-30bd-43c5-84c1-88c9c9ac6655 |     14 | Prato Especial | Apimentado Feijoada   | 
+ 04d5cf8b-0fb5-4416-be6e-057f580c6ca4 |     15 | Prato Padrão   | Cremoso Sopa          | A
+ 14f826bb-7b3e-4459-9810-6cc0ed6750fb |     16 | Prato Padrão   | Cremoso Moqueca       | B
+ 42b26cb0-8250-4e14-a975-7048ee6a0860 |     17 | Prato Padrão   | Tradicional Tartar    | A
+ 499b715d-9fb7-410d-8b87-0828b824c276 |     18 | Prato Especial | Cremoso Feijoada      | 
+ a1f88e25-78ae-48f9-9e5e-83b1672d5793 |     19 | Prato Padrão   | Especial Grelhado     | A
+ 8de6f75c-5cd6-41eb-8d52-4f5adcdf05b9 |     20 | Bebida         | Defumado Tartar       | A
+ 2efb42ff-2b08-4128-96fd-386d954ccf95 |     21 | Prato Padrão   | Saboroso Moqueca      | O
+ e60b1678-9749-43e4-bfd1-65e0beecc397 |     22 | Prato Especial | Exótico Moqueca       | 
+ 50eb8065-4fad-4fa4-a5a2-18a827149d01 |     23 | Prato Padrão   | Defumado Risoto       | AB
+ 465ccca5-2b4d-4510-9719-7fa7982d697c |     24 | Prato Especial | Crocante Tartar       | 
+ 82a3d987-4d84-498c-9b86-7f3febfda3fd |     25 | Prato Especial | Crocante Carpaccio    | 
+ 8f3f0c03-b70f-4c01-8dbf-87f710e9b93c |     26 | Prato Especial | Cremoso Ensopado      | 
+ 981ff75e-f7e0-4a78-ab7a-dfd2418971b8 |     27 | Bebida         | Tradicional Assado    | AB
+ e825132f-32ec-42e1-a550-47018d7a0945 |     28 | Bebida         | Exótico Moqueca       | A
+ 9ecee9a0-6f5b-48c3-b403-75746524eca4 |     29 | Prato Padrão   | Cremoso Moqueca       | A
+ f080dae6-1e4b-4754-8108-4f7de961154d |     30 | Bebida         | Defumado Assado       | B
+ 4d882453-4c0f-49f8-91dc-db205209fcd0 |     31 | Prato Especial | Cremoso Assado        | 
+ fa30dcf2-172a-4cb8-acbb-84865a4257d2 |     32 | Bebida         | Recheado Risoto       | A
+ 88e76bd6-f364-4e0e-9ccf-697f6dc5a8d9 |     33 | Prato Especial | Defumado Feijoada     | 
+ 18f4ba89-98b3-4efd-9a68-ee59d7802380 |     34 | Prato Especial | Especial Assado       | 
+ 2e85780e-3049-40da-babb-f8f0500b35f0 |     35 | Prato Especial | Cremoso Tartar        | 
+ 6c91c97c-54bf-4a6b-97af-98a169ac14a9 |     36 | Bebida         | Defumado Feijoada     | A
+ 9ea859c8-72d4-40e0-95fd-b80cde23d359 |     37 | Bebida         | Exótico Feijoada      | B
+ c19020f7-8575-4014-8983-608e0f8d1a0e |     38 | Prato Especial | Recheado Sopa         | 
+ 2d5e1ff5-86b3-4fd3-b4f4-6e25fe23de95 |     39 | Prato Padrão   | Cremoso Risoto        | A
+ 62b392fc-11ad-4748-afe8-72c4b2ab2bc6 |     40 | Prato Padrão   | Tradicional Risoto    | O
+ 88656db5-b24c-4172-a53d-b0293f56721e |     41 | Bebida         | Delicioso Carpaccio   | A
+ 46b6351e-bbaf-4494-849f-d143e8bd34cd |     42 | Bebida         | Exótico Assado        | O
+ a74fd3d1-10b8-4857-8561-4dacc50e6f72 |     43 | Prato Especial | Crocante Tartar       | 
+ ad3ec76a-c719-4dc1-8357-077887f115ae |     44 | Bebida         | Especial Assado       | O
+ 8f0d03dc-0fb0-47e8-8beb-100f15b3f9f5 |     45 | Prato Especial | Tradicional Assado    | 
+ ee00636e-9537-4252-8704-4036e14774ac |     46 | Bebida         | Delicioso Grelhado    | O
+ d769e344-fd19-44e0-9ef0-0bc0518390a5 |     47 | Prato Padrão   | Tradicional Ensopado  | AB
+ 38bc1fa3-727e-47d8-8e42-76f526174c19 |     48 | Prato Padrão   | Crocante Feijoada     | O
+ d54f28f4-2b6c-484f-902a-f43fe1059394 |     49 | Prato Especial | Exótico Carpaccio     | 
+ 00fddc23-cc78-42c2-8b84-822b35d396a5 |     50 | Prato Padrão   | Apimentado Grelhado   | A
+ 4e6ce9e4-d8aa-43ef-9d88-69334a32ffcc |     51 | Prato Especial | Defumado Grelhado     | 
+ 7fa8b1ed-acec-4cf9-aca2-ee3efdb98af8 |     52 | Bebida         | Especial Carpaccio    | AB
+ 4b29139e-8423-4dda-b5e0-f8e605724484 |     53 | Bebida         | Saboroso Grelhado     | A
+ eb228376-b9f8-44bd-9793-80cba5f8bc6b |     54 | Prato Padrão   | Saboroso Grelhado     | B
+ d97f843c-ba06-43d5-ac78-4200005d1e19 |     55 | Bebida         | Apimentado Risoto     | AB
+ 8d0c3e86-997b-4692-8266-32e8eea8cc57 |     56 | Prato Especial | Cremoso Carpaccio     | 
+ cb56d894-2cc6-4478-9da5-4c059e777d34 |     57 | Bebida         | Saboroso Assado       | O
+ 431193b1-f8ae-453c-9613-18c5797e4105 |     58 | Prato Especial | Delicioso Carpaccio   | 
+ 623d369d-2142-4b46-8054-5628d600210c |     59 | Prato Especial | Crocante Moqueca      | 
+ f8b31d8c-f067-4b4a-895a-322230744bbe |     60 | Prato Padrão   | Delicioso Ensopado    | O
+ 6ea95820-5082-435d-a85d-01b71e34abe3 |     61 | Bebida         | Exótico Ensopado      | B
+ f49d933c-274f-4498-89f6-8636f908545d |     62 | Bebida         | Saboroso Moqueca      | A
+ a0fc5980-144a-4fd5-9ccd-85ee42b5312e |     63 | Prato Especial | Defumado Carpaccio    | 
+ c12fc1f3-c68b-4478-98df-ef81c12c3f66 |     64 | Bebida         | Apimentado Feijoada   | B
+ b44ff29c-f385-4b1f-9817-0678e53cd82c |     65 | Bebida         | Exótico Grelhado      | O
+ a1f58a2d-2015-4701-bbd2-41dbd95a7942 |     66 | Prato Padrão   | Defumado Estufado     | B
+ b4eb032b-be0e-4dc8-981b-0d5ced789d4a |     67 | Bebida         | Tradicional Grelhado  | AB
+ 1c41045e-5f67-4cc5-9256-df95e2a08e5e |     68 | Prato Padrão   | Especial Moqueca      | A
+ 50d0d432-7373-4ea1-b74e-69059c367ad8 |     69 | Prato Especial | Especial Assado       | 
+ 3a1d4dfb-929b-4f2c-80b9-9a383641b8cd |     70 | Bebida         | Tradicional Moqueca   | O
+ 570a6c4e-a802-441d-b1c8-d0c4d4d89b0c |     71 | Prato Especial | Crocante Tartar       | 
+ a2a3241c-452e-4dc9-84dd-6812eb37ee28 |     72 | Prato Padrão   | Cremoso Assado        | B
+ 4bf47582-70b4-4a49-88fb-f7deadf9afc7 |     73 | Prato Especial | Apimentado Grelhado   | 
+ 1c6f134d-ea1b-4f8d-bda4-ff1b92e68517 |     74 | Prato Padrão   | Especial Ensopado     | B
+ 34fabe4f-8ffe-480c-a643-647e549dd926 |     75 | Bebida         | Especial Carpaccio    | A
+ 3095180d-f6db-4da5-9d4e-05629c4f1f61 |     76 | Bebida         | Cremoso Ensopado      | AB
+ 613260eb-f4c8-4070-8c10-660112ad45fa |     77 | Prato Especial | Cremoso Moqueca       | 
+ 2a8ceb93-6f68-4638-8aac-e0f4faee0745 |     78 | Bebida         | Saboroso Sopa         | AB
+ 093012e7-20d6-41a6-b6e8-472c7dc63398 |     79 | Bebida         | Saboroso Risoto       | O
+ 3483b4b9-7325-4c51-b615-db001dd553a1 |     80 | Prato Especial | Delicioso Assado      | 
+ 4c6e6cef-2dd5-4681-91e4-2b4462fa9987 |     81 | Prato Especial | Defumado Grelhado     | 
+ 404d3f60-7f84-4d5d-9ec1-0b9341a47594 |     82 | Prato Especial | Exótico Assado        | 
+ 4d3b413e-0bb1-4670-87ce-8b06d48d5930 |     83 | Prato Padrão   | Delicioso Assado      | O
+ 15bf395b-a450-4217-ba71-969cc3ce5343 |     84 | Bebida         | Cremoso Carpaccio     | A
+ cf63e040-b844-42b5-ac38-1b151f588015 |     85 | Bebida         | Especial Estufado     | A
+ 8f8f427d-afb5-4117-88bf-d7edc84132f4 |     86 | Prato Especial | Exótico Sopa          | 
+ f2a63da7-9200-4838-a0f0-567b47863a67 |     87 | Prato Especial | Cremoso Sopa          | 
+ 51726e0b-4de1-4ba6-a5f4-ef200d635e76 |     88 | Bebida         | Recheado Sopa         | O
+ ea60f53e-7a4f-4b0b-8409-ba9700aef3e0 |     89 | Bebida         | Delicioso Estufado    | O
+ 4d01200b-d4b3-48ee-914a-b8f6819950fe |     90 | Prato Especial | Defumado Assado       | 
+ 96efdbf4-7a87-43be-afcf-4ba44e86bffc |     91 | Bebida         | Tradicional Tartar    | O
+ 340d9012-8321-42bc-ac76-b4416e54855f |     92 | Prato Especial | Cremoso Feijoada      | 
+ 9c1f5e03-a079-4f6f-bd80-5ddefd20b558 |     93 | Prato Padrão   | Defumado Tartar       | B
+ 035c2e09-b274-4991-b0c2-7ec67d3dad6d |     94 | Prato Padrão   | Apimentado Assado     | A
+ 02d8898a-f30c-4d72-9ffa-f1deba85dd75 |     95 | Prato Especial | Defumado Estufado     | 
+ 100bf261-fb00-40cc-a877-69b28bbea102 |     96 | Prato Padrão   | Defumado Sopa         | AB
+ 5e183002-1e84-42c2-9b46-902575628d6f |     97 | Prato Especial | Cremoso Risoto        | 
+ 8d410228-f572-4413-b2e6-63462601c144 |     98 | Prato Especial | Saboroso Assado       | 
+ 3ccf500c-d019-4d8a-883e-4b06a00d872a |     99 | Bebida         | Apimentado Sopa       | B
+ e96ae17d-1069-45a1-8bf4-fe90c1cbdf21 |    100 | Prato Especial | Especial Estufado     | 
+ 4691e700-c267-496b-a2e9-f24dd9a24d85 |    101 | Bebida         | Saboroso Feijoada     | AB
+ 671a2798-9c95-4dc4-accc-2644d5b378a6 |    102 | Prato Padrão   | Defumado Risoto       | B
+ 4191977e-736e-4159-a0b6-54cb2e1c5b58 |    103 | Bebida         | Tradicional Estufado  | AB
+ d85aed85-9fbf-448a-ae05-d2fc96c35b06 |    104 | Prato Padrão   | Delicioso Assado      | A
+ f0247e05-c2eb-4042-a316-19174ba7178c |    105 | Prato Especial | Recheado Feijoada     | 
+ 5cca2b7c-6360-44f8-bfdb-1a5429c90388 |    106 | Bebida         | Cremoso Feijoada      | AB
+ 5487311d-51e5-47b7-b267-b38ba8e22246 |    107 | Bebida         | Saboroso Grelhado     | A
+ 4514e093-88a8-4357-8d78-713d3a94e5ff |    108 | Prato Padrão   | Saboroso Sopa         | B
+ 82c5c158-c0dc-4d99-ae07-1bbef9b15848 |    109 | Bebida         | Delicioso Tartar      | A
+ 6821a52b-f670-49fa-8120-5e3e629fa7f8 |    110 | Prato Especial | Recheado Grelhado     | 
+ aa1dc1f9-6ed8-4035-a8c7-8caa737bbed2 |    111 | Bebida         | Exótico Assado        | O
+ 77640a2b-eedc-45aa-aff9-3587ca116ed3 |    112 | Bebida         | Delicioso Feijoada    | B
+ 5f768fc4-6e67-454c-9cd4-22db24b50706 |    113 | Prato Padrão   | Defumado Feijoada     | O
+ 725d15fa-2fb8-45c1-a489-d161307d1cbc |    114 | Prato Especial | Cremoso Risoto        | 
+ 85592f0f-94e1-411d-bb13-44cce08fbf1c |    115 | Prato Padrão   | Especial Estufado     | AB
+ 95bb4bab-dda0-44c8-983d-821ff59f9fc8 |    116 | Prato Especial | Especial Risoto       | 
+ 014453c6-855f-45c3-8b74-097e045fcf41 |    117 | Bebida         | Recheado Moqueca      | A
+ b78302a1-ddfb-4861-8b32-64c8569ac0b2 |    118 | Prato Especial | Apimentado Grelhado   | 
+ da05c94e-6c48-4d6e-91f1-7b16d0548cee |    119 | Prato Padrão   | Exótico Tartar        | AB
+ c83dcca5-9bd6-4d57-9602-2fcf233e5b18 |    120 | Prato Padrão   | Apimentado Moqueca    | O
+ 608536a4-0a06-462a-b183-beb4d3e51feb |    121 | Bebida         | Especial Grelhado     | B
+ 4d8bbad7-2ee5-4b3a-a267-99a637096943 |    122 | Bebida         | Cremoso Sopa          | A
+ 81168184-e57d-4e62-b080-66eba13d2aaa |    123 | Prato Especial | Especial Feijoada     | 
+ 63fb9ffe-5e03-46a2-be13-6318abcda160 |    124 | Prato Especial | Delicioso Tartar      | 
+ e4b719de-d1fc-45ed-854c-456468a9f82d |    125 | Prato Especial | Tradicional Moqueca   | 
+ c3d88662-fab0-411e-9145-df04dc260cfa |    126 | Prato Especial | Defumado Carpaccio    | 
+ ecafc0e8-6f56-459f-8b96-9f840b621c49 |    127 | Prato Padrão   | Saboroso Tartar       | O
+ 2bafc7fe-6580-470a-b259-10e4f2fe865e |    128 | Bebida         | Cremoso Tartar        | A
+ 77c14763-cec3-463e-8363-fbdbbace9597 |    129 | Prato Padrão   | Tradicional Tartar    | O
+ 2a7428a5-3ccb-49a5-8efe-eb1156bbcfdb |    130 | Bebida         | Apimentado Ensopado   | A
+ 5a12f89c-2ac2-42fc-b401-cda98b4e2f5e |    131 | Prato Padrão   | Exótico Carpaccio     | A
+ 1e05a968-342c-40b3-9094-bd7dfa825f1a |    132 | Prato Especial | Cremoso Sopa          | 
+ 6596e770-609d-4b03-b973-69264b613bd1 |    133 | Prato Padrão   | Apimentado Risoto     | A
+ ab6f6485-9b5c-44ef-a68b-9edcd11dceaf |    134 | Prato Padrão   | Cremoso Risoto        | B
+ dd36b600-971f-490b-88b2-c8d9c6c5eef7 |    135 | Prato Padrão   | Defumado Estufado     | AB
+ 3cafcb72-c251-468a-b3b7-c4f798fa743b |    136 | Bebida         | Saboroso Carpaccio    | AB
+ 6fda8d4d-c9da-433d-8cba-58cd732e1bd6 |    137 | Prato Padrão   | Defumado Moqueca      | A
+ 7cb410f9-e7ef-4a55-8ec1-57902c5bb07a |    138 | Bebida         | Delicioso Grelhado    | B
+ 4c4e5597-7925-49c9-95cf-67138ef57d2e |    139 | Prato Padrão   | Delicioso Assado      | B
+ 20fc8bd0-80c5-420d-a969-359b6d378a66 |    140 | Bebida         | Crocante Moqueca      | O
+ 6e8d1a50-b99c-4e35-8390-c0e5c79bd99c |    141 | Prato Especial | Cremoso Assado        | 
+ 49b2228f-a5a8-4a07-bef8-abdeb004d140 |    142 | Prato Especial | Crocante Assado       | 
+ 6f9b9a02-4530-4697-a809-c5391bf6d123 |    143 | Prato Especial | Crocante Moqueca      | 
+ 38ed65f6-3cd0-48fe-821f-e5e276f9a1ab |    144 | Bebida         | Defumado Risoto       | B
+ efb15a95-be09-4a39-981d-a3fb4978fa25 |    145 | Prato Especial | Crocante Tartar       | 
+ 41fd7a96-612b-4c54-8822-2043f55302dd |    146 | Prato Especial | Recheado Moqueca      | 
+ b41f02f4-9641-4caa-9e28-f8edf29d824e |    147 | Prato Padrão   | Recheado Moqueca      | O
+ 31a3ebcb-464b-4d26-8ef5-4bea96e53f81 |    148 | Prato Padrão   | Crocante Tartar       | AB
+ c5ee8abe-ab9e-4f28-8590-a6d998ea8cc5 |    149 | Prato Padrão   | Crocante Sopa         | O
+ 47968a2f-23a1-43ae-b153-baaeb6a63cc8 |    150 | Prato Padrão   | Cremoso Sopa          | AB
+ 2f6bc35a-edbe-49ae-85bd-666124b57bd5 |    151 | Bebida         | Especial Sopa         | A
+ daf85979-492b-4c25-992f-063738a4ba62 |    152 | Prato Padrão   | Exótico Ensopado      | AB
+ 00045678-00b3-4db1-b9df-7e47b7fd6aac |    153 | Bebida         | Delicioso Carpaccio   | O
+ d6294203-f007-4346-b103-e46ba1143a0b |    154 | Bebida         | Exótico Carpaccio     | AB
+ 6d6aa17a-693a-4cc9-9c1d-2e42732ff368 |    155 | Bebida         | Tradicional Risoto    | A
+ c924b729-aeb0-4325-9825-6d380f410659 |    156 | Prato Especial | Cremoso Tartar        | 
+ 2bb54e75-1eb1-41a9-83db-d1899c5d36f6 |    157 | Prato Padrão   | Apimentado Feijoada   | A
+ 17d6ffe2-74f2-4149-9392-3971e0b5ca8f |    158 | Prato Especial | Especial Assado       | 
+ 7a7790c5-da1f-45ad-83fc-3f51aa7bfa7a |    159 | Prato Especial | Tradicional Risoto    | 
+ 5feb5c49-3f44-4862-907a-ce186135d9d0 |    160 | Bebida         | Tradicional Assado    | B
+ 264647eb-16f2-4dce-8597-fb3092beda5b |    161 | Bebida         | Cremoso Ensopado      | B
+ ed3b55e3-c344-49a5-88eb-79b43daa129d |    162 | Prato Especial | Saboroso Estufado     | 
+ 4f982efd-b6e3-41e8-a7a6-9b33920df5ac |    163 | Prato Padrão   | Exótico Sopa          | AB
+ 2a3abaad-5898-41e1-a7f2-f6eb56316d24 |    164 | Bebida         | Exótico Carpaccio     | B
+ 60ec3a6f-e668-41e4-8df2-fb4da3f23274 |    165 | Prato Especial | Exótico Tartar        | 
+ d6327bba-2163-47e1-9faf-72d04f81866c |    166 | Bebida         | Apimentado Sopa       | B
+ a142f6fe-92a8-41a0-9178-c1f8c5800b5c |    167 | Bebida         | Tradicional Feijoada  | B
+ ad2535c7-7026-4e0a-866a-3d5f19fbc748 |    168 | Prato Padrão   | Cremoso Estufado      | AB
+ bb170bfe-0d92-468b-adbc-d327432e0e19 |    169 | Bebida         | Apimentado Estufado   | AB
+ 2f8d45c2-7fbd-46e0-8038-5cc20b83cd9a |    170 | Bebida         | Delicioso Carpaccio   | B
+ 60fa88bc-7859-4ad7-808f-17d87643a82f |    171 | Bebida         | Saboroso Assado       | AB
+ 76ebbb6b-d84d-4c44-8e34-6aea33ee0e4b |    172 | Bebida         | Crocante Grelhado     | AB
+ 9be83fcc-f823-4506-b1aa-aa2b62ee5136 |    173 | Prato Especial | Crocante Estufado     | 
+ 362b0e5e-430e-4203-bad9-b87803c6c492 |    174 | Bebida         | Defumado Assado       | AB
+ b33e7d35-567c-4892-ae2c-ab17d7af269e |    175 | Bebida         | Especial Tartar       | AB
+ f0d38dd5-8737-4efb-9d7b-2882597e3153 |    176 | Prato Padrão   | Recheado Sopa         | A
+ 29ca23c1-5f88-4c3d-b6a6-0ebf1b15b67c |    177 | Bebida         | Cremoso Carpaccio     | A
+ aca5cec5-6b72-4bf1-bf3a-4e5f80941f8b |    178 | Prato Especial | Tradicional Feijoada  | 
+ 3da6b059-c01a-4280-b07d-265001e95451 |    179 | Prato Especial | Exótico Carpaccio     | 
+ e4769ddf-fb71-4877-b0b0-a40e6f269b4a |    180 | Prato Padrão   | Cremoso Carpaccio     | AB
+ d8e54ca2-54d1-41b6-8b40-50c149884ee8 |    181 | Prato Especial | Crocante Tartar       | 
+ 41d0f488-68dd-469f-9aaf-b4d515e6c987 |    182 | Prato Padrão   | Crocante Carpaccio    | AB
+ 4fc91c87-ad65-4dd8-a6d4-82e75f9731c3 |    183 | Prato Padrão   | Defumado Grelhado     | AB
+ 7e8d84ea-2fb9-4f16-bb70-b00401b45cb7 |    184 | Prato Especial | Cremoso Grelhado      | 
+ 9dba3284-d4c9-4685-b8ec-bc61c12632c7 |    185 | Bebida         | Delicioso Feijoada    | O
+ 1e2c7f44-ccc4-474d-a55b-03c192658e3f |    186 | Prato Padrão   | Delicioso Ensopado    | O
+ 27ec6150-c61d-45a7-a25f-862cc052fd1a |    187 | Prato Especial | Crocante Carpaccio    | 
+ c52067bd-8e0c-4148-a967-d66534bae504 |    188 | Bebida         | Exótico Moqueca       | B
+ eea0c54b-128a-4492-adb7-40c81c586ec7 |    189 | Prato Padrão   | Delicioso Tartar      | AB
+ ca1c6906-8fd0-4e70-b73f-8704ad0df7e4 |    190 | Prato Especial | Cremoso Estufado      | 
+ 6493861d-04f0-4192-844f-6bae57c08ea4 |    191 | Bebida         | Apimentado Feijoada   | O
+ 893a2f21-1500-44eb-9a09-d8ca31a0f4a6 |    192 | Prato Padrão   | Saboroso Moqueca      | B
+ 71dcbf7f-5d14-46ac-bb3c-209617d33ca9 |    193 | Bebida         | Crocante Carpaccio    | O
+ f4a446d4-a93a-4e89-b2e5-f201fbce8d16 |    194 | Prato Padrão   | Saboroso Sopa         | B
+ 0f5c7fd9-3721-4cd9-8666-9652df05488d |    195 | Prato Especial | Saboroso Carpaccio    | 
+ c6bb36c5-5813-4947-b531-62bd55186105 |    196 | Prato Especial | Apimentado Estufado   | 
+ 7b1a9fff-acb1-4a89-bb39-0332577ec12e |    197 | Prato Padrão   | Delicioso Sopa        | B
+ a0688739-4084-4899-a6fb-14ed0d487a24 |    198 | Prato Padrão   | Cremoso Feijoada      | B
+ d2e5dc76-2828-4854-846f-22517750a846 |    199 | Prato Padrão   | Delicioso Grelhado    | AB
+ 094dbb6f-b84a-4ba6-a500-e324c63795c8 |    200 | Prato Padrão   | Exótico Grelhado      | AB
+ eb86ffe0-ffe6-4abb-90d1-c1080502b780 |    201 | Prato Padrão   | Apimentado Grelhado   | A
+ 3a4a9ae0-00e3-49b2-97d6-dd0442bbcd38 |    202 | Prato Especial | Cremoso Sopa          | 
+ 85c159dd-983f-48d9-bd8b-17879a3b3d41 |    203 | Prato Especial | Defumado Tartar       | 
+ ed8b619a-b598-4da8-b4f9-ac899069fdb5 |    204 | Prato Padrão   | Delicioso Feijoada    | O
+ afc6153f-a181-48c7-b302-d9c562a3fac3 |    205 | Prato Padrão   | Crocante Feijoada     | B
+ 9524b892-c9b2-4be9-b9d1-0c0533032678 |    206 | Prato Padrão   | Exótico Ensopado      | O
+ 62f9aae2-1ee2-4836-8c7c-dae50cf78e43 |    207 | Prato Padrão   | Crocante Tartar       | O
+ e9fa5970-389b-4049-a9e9-5dbb336b5893 |    208 | Prato Padrão   | Especial Risoto       | AB
+ aa2637e6-5230-46ef-93fb-501b345758f2 |    209 | Bebida         | Defumado Grelhado     | B
+ 4c7a8dd6-5113-4461-8a5d-73652cfbcdc6 |    210 | Prato Padrão   | Delicioso Estufado    | AB
+ 3b98163e-c35d-4b17-8d72-d0b4248bdcb1 |    211 | Bebida         | Cremoso Estufado      | AB
+ 774a3eb1-9261-4e63-ac98-0c962c4cac9d |    212 | Prato Padrão   | Recheado Assado       | AB
+ f196341c-39ae-4a80-8d1c-b613cc47cf03 |    213 | Prato Especial | Apimentado Grelhado   | 
+ 438c3c3f-7d09-4350-9c0d-d8491cdf14fa |    214 | Prato Especial | Recheado Tartar       | 
+ c9a9140d-c43b-40e1-9927-377517d3ad9e |    215 | Prato Padrão   | Cremoso Feijoada      | A
+ 03715255-935a-41a8-a0b0-af5a784b924a |    216 | Bebida         | Recheado Estufado     | O
+ 737fb1d7-e336-482b-8966-9c8a050f243f |    217 | Bebida         | Exótico Carpaccio     | O
+ 9e01a1ba-494c-4d05-8775-c2124f28f9a7 |    218 | Prato Padrão   | Cremoso Sopa          | A
+ c3dbf0d2-1894-411d-b4cd-541722550557 |    219 | Bebida         | Delicioso Assado      | B
+ ceaee955-4b4b-4c01-9e94-197ddb895803 |    220 | Bebida         | Defumado Risoto       | A
+ 256a1b2f-1ca5-4a95-8649-d42d37ea08b3 |    221 | Bebida         | Delicioso Estufado    | O
+ 4f275c0a-c908-41b3-9e84-e644199ec59d |    222 | Prato Especial | Recheado Ensopado     | 
+ dbca5319-a4a5-4668-bbc1-c5ba4bdef6ff |    223 | Prato Padrão   | Tradicional Moqueca   | B
+ fd9c3558-3c62-4f0c-a003-50641b6ad997 |    224 | Prato Padrão   | Tradicional Assado    | B
+ c624aba4-35e4-469d-beb4-827a350bdf6a |    225 | Prato Padrão   | Exótico Feijoada      | B
+ 58f0d7e1-148b-4db7-9318-22c13cb91504 |    226 | Prato Padrão   | Tradicional Risoto    | AB
+ 1da8cd20-dfbb-426d-ac10-04d901ae6f75 |    227 | Prato Padrão   | Tradicional Grelhado  | AB
+ 1a047f0c-e9ee-4c60-9374-19621f68e8d0 |    228 | Bebida         | Crocante Grelhado     | A
+ c4d85121-612a-453d-b0bd-1c77eec44004 |    229 | Prato Padrão   | Apimentado Assado     | A
+ fb382f16-536d-4aa2-baed-34b372546009 |    230 | Bebida         | Saboroso Grelhado     | B
+ 78b05da2-0961-472c-aeb0-89615546c32c |    231 | Prato Especial | Especial Grelhado     | 
+ 4cc0a6c2-2c9b-427e-ac17-8385b2973f6d |    232 | Bebida         | Recheado Sopa         | B
+ 9309404c-89ad-4fd7-ade9-543283245c07 |    233 | Bebida         | Tradicional Feijoada  | O
+ 44e987b5-8d4d-4edb-8e05-52d14ae7b763 |    234 | Bebida         | Especial Sopa         | B
+ 86d2005e-9fdc-4c9f-a54d-8624c230f24c |    235 | Prato Padrão   | Recheado Tartar       | A
+ df1ead9f-9192-4002-8e94-4f57f6efca86 |    236 | Bebida         | Apimentado Assado     | A
+ 8350112f-042b-4e0c-ae23-f5c91f9640ce |    237 | Prato Padrão   | Apimentado Estufado   | AB
+ 722f653e-c6f0-4b82-ad28-8884a9cb0753 |    238 | Prato Especial | Defumado Risoto       | 
+ d821aacf-b265-48fd-a090-78b7a7e1c510 |    239 | Bebida         | Delicioso Assado      | A
+ 9ae7ff23-5341-4cef-a8c3-be90c0701237 |    240 | Bebida         | Exótico Moqueca       | A
+ ebdb5e20-10ff-4e2b-8ba5-1119cd370d64 |    241 | Prato Especial | Saboroso Moqueca      | 
+ 548d9c2c-71f0-4832-b4a2-dfb9c564864d |    242 | Prato Padrão   | Apimentado Sopa       | AB
+ 10d84bad-fe4b-4bbd-9637-6607b9d9c01d |    243 | Prato Especial | Cremoso Sopa          | 
+ 6c834670-5ff3-4081-ad96-2838fb445ef8 |    244 | Bebida         | Crocante Sopa         | O
+ 30ce7b24-5d0f-4420-9c9a-5037726b64ba |    245 | Bebida         | Cremoso Ensopado      | AB
+ 03e844c8-07bd-411f-b8c0-7ff6a65bbf27 |    246 | Prato Padrão   | Defumado Estufado     | AB
+ 4abfc3c6-5987-4f40-afdf-14e192493b1c |    247 | Bebida         | Defumado Carpaccio    | B
+ 6545df06-cea5-419a-b9e8-7cf8ccbd21c5 |    248 | Prato Padrão   | Tradicional Feijoada  | AB
+ abb635ba-1114-485e-a1ff-9ecf699deabb |    249 | Prato Especial | Apimentado Risoto     | 
+ 87a4da8b-2880-42d1-95e8-c8145465f2a9 |    250 | Prato Especial | Recheado Estufado     | 
+ 9b5e26d9-023a-4f5e-842c-292d28aefd42 |    251 | Bebida         | Delicioso Carpaccio   | A
+ a586a0e0-f56c-4a74-8372-2ae65c0d1dae |    252 | Bebida         | Saboroso Carpaccio    | B
+ d80298e1-4982-495e-973c-2db992f81c08 |    253 | Prato Padrão   | Especial Risoto       | A
+ bfb155b3-8986-4e70-9914-c2a84cac911d |    254 | Prato Especial | Apimentado Moqueca    | 
+ 85c2fdaf-49b6-4bcb-ba04-f31294781cc8 |    255 | Prato Padrão   | Cremoso Risoto        | AB
+ 063803e0-035e-4069-a98e-df4d31c97199 |    256 | Prato Padrão   | Crocante Assado       | AB
+ 3bb39c4e-a3ca-45a8-aa66-9c1128f73f56 |    257 | Prato Padrão   | Recheado Grelhado     | B
+ f0e87f3f-2b4a-4347-8246-0afe5eb4c06b |    258 | Prato Padrão   | Apimentado Moqueca    | B
+ 2db1bf40-6adc-44cb-9243-d8cc1e628213 |    259 | Prato Especial | Cremoso Sopa          | 
+ e086ed86-3d1b-487f-82ff-48cb084d477f |    260 | Bebida         | Delicioso Ensopado    | O
+ fa5eb0ad-0fcc-4eed-84fb-de6bed98a13c |    261 | Prato Especial | Saboroso Assado       | 
+ faf8b1a3-e546-4937-9418-8ecbba2b0111 |    262 | Prato Especial | Cremoso Sopa          | 
+ 6d84940c-28d8-4e8e-bcde-0a95e3cbaf78 |    263 | Prato Especial | Apimentado Feijoada   | 
+ 8952595c-01e8-4681-8f55-d51a4dd2e492 |    264 | Prato Especial | Saboroso Moqueca      | 
+ e7f0a121-bce7-4aaa-acee-8df928e517e7 |    265 | Prato Padrão   | Delicioso Ensopado    | AB
+ 820231ac-67c7-44a3-b540-a6b3799f9474 |    266 | Bebida         | Especial Risoto       | B
+ 4377e3c2-7d23-4054-8183-a345907b1af0 |    267 | Prato Padrão   | Tradicional Moqueca   | AB
+ 291ffd84-7f73-406f-ba5b-e8702630eac0 |    268 | Prato Especial | Tradicional Estufado  | 
+ 3f768cc4-6865-42a5-8dda-2b5756dff833 |    269 | Prato Especial | Apimentado Assado     | 
+ 428d9977-da7b-4911-8fdf-ec6de6f2ce05 |    270 | Prato Padrão   | Especial Sopa         | A
+ 82c927ec-6aaf-49f5-acb7-6736fb0c6773 |    271 | Bebida         | Saboroso Carpaccio    | A
+ 93c7aff7-48d1-4b3f-9860-7e2c229ba8c2 |    272 | Bebida         | Especial Estufado     | AB
+ 6ed42cef-a5ba-4754-a172-014e1ca0428c |    273 | Prato Especial | Apimentado Carpaccio  | 
+ 0a99e418-f904-494d-8087-56f65de6da08 |    274 | Bebida         | Defumado Risoto       | B
+ 5561e372-007d-48a6-8b3a-68c866c45842 |    275 | Prato Padrão   | Recheado Feijoada     | B
+ fbd0bd7e-4889-44e2-9b46-efbafeec8bc5 |    276 | Bebida         | Tradicional Estufado  | A
+ a1f5dc5b-bf2c-40b5-ac64-f0612e427b10 |    277 | Prato Padrão   | Apimentado Estufado   | AB
+ 18847d94-1405-4e46-bd12-e6d907b74fc7 |    278 | Bebida         | Especial Estufado     | AB
+ c77fd7ee-ecd6-48dc-8987-0362a22479e7 |    279 | Bebida         | Defumado Carpaccio    | O
+ a57ae09c-5149-4400-9b7e-5fda4c30caf9 |    280 | Prato Especial | Delicioso Assado      | 
+ 839b4287-6df9-499e-8531-2e4162f1da3c |    281 | Prato Padrão   | Crocante Grelhado     | A
+ 90d6a00b-69b9-42d1-bab0-d7e76b5b5c53 |    282 | Prato Padrão   | Delicioso Tartar      | A
+ b83c73e5-7c45-471e-8e7f-b59b4237c4da |    283 | Prato Especial | Delicioso Sopa        | 
+ 6e84a1ee-a050-41ec-b64f-c83fa48ff03d |    284 | Prato Padrão   | Tradicional Ensopado  | O
+ e0d9c60b-440a-4810-b5bb-899c8f106b7b |    285 | Prato Especial | Defumado Estufado     | 
+ 4a528f1b-8c9e-4b90-b0ed-7d54d98586dc |    286 | Prato Padrão   | Tradicional Sopa      | A
+ 93675f13-7c12-4ba3-a0e2-8e3f0976bd9e |    287 | Bebida         | Especial Sopa         | AB
+ 942bd34f-a1dd-427f-b390-069422e337d4 |    288 | Prato Padrão   | Especial Estufado     | O
+ 2430faff-48cf-4f08-9c73-16741504f9b0 |    289 | Prato Especial | Cremoso Carpaccio     | 
+ aa0ad322-80ef-4e4e-8616-68e44f48db00 |    290 | Prato Padrão   | Tradicional Moqueca   | O
+ b0b1096a-a5fc-472c-a731-d07f2de89dde |    291 | Prato Especial | Especial Carpaccio    | 
+ 3e5e1c37-8813-4b07-ac82-6a633e2dc6e8 |    292 | Bebida         | Exótico Risoto        | A
+ 44794f87-8fae-4944-b307-bcccff20913f |    293 | Bebida         | Especial Tartar       | AB
+ b8790844-6879-4a2e-9c3a-3f6cae97f4f3 |    294 | Prato Padrão   | Especial Ensopado     | A
+ 584593c3-44eb-4aaf-867b-80e4998fd7a5 |    295 | Bebida         | Recheado Feijoada     | A
+ 6cf8303f-34e8-450d-aa9a-666d8f0a2d92 |    296 | Prato Especial | Defumado Risoto       | 
+ 42a6d2d8-1d7b-4168-8ed5-6ac8f6a353a9 |    297 | Bebida         | Especial Grelhado     | AB
+ 9e130ea3-946b-4b24-87c1-eaedfa6e3918 |    298 | Prato Especial | Apimentado Carpaccio  | 
+ 60b0ee3e-37cb-4a37-8a1d-884d61ccd0bf |    299 | Bebida         | Especial Estufado     | AB
+ 3b9beb0c-2e47-49b9-b232-d3d52c78bc6c |    300 | Bebida         | Exótico Moqueca       | B
+ 15c75caf-1bf1-4c31-a351-eeeca36dd65f |    301 | Prato Especial | Crocante Risoto       | 
+ 7af12917-1b0e-4cfd-a96d-dfe37cd1a956 |    302 | Prato Padrão   | Crocante Carpaccio    | AB
+ 5e6d2f34-bde8-448b-801b-6296b5de80c2 |    303 | Bebida         | Saboroso Assado       | AB
+ c5293ae5-995b-4c39-a42e-b22e77199213 |    304 | Prato Especial | Crocante Moqueca      | 
+ 3bc7216a-6ab3-42f3-993d-e34dd13eeca2 |    305 | Prato Especial | Apimentado Grelhado   | 
+ 59b58965-4c5d-47e6-a84a-df65a31a2db2 |    306 | Prato Especial | Defumado Assado       | 
+ 41ec9fae-6d86-4e18-a378-ec9a20df1677 |    307 | Prato Padrão   | Apimentado Risoto     | A
+ 3e527b1b-e0cb-42af-ae09-80b1eb073cb5 |    308 | Bebida         | Defumado Carpaccio    | O
+ 18fa5ad6-0dd7-4a48-a7cd-c6856cf99413 |    309 | Prato Especial | Crocante Risoto       | 
+ 7e525312-b835-4084-ab5e-23c4e4e25dcc |    310 | Prato Especial | Defumado Assado       | 
+ 181b0914-696b-4101-81a5-1cc974599260 |    311 | Prato Especial | Crocante Feijoada     | 
+ d61f18d3-bb3d-4f8b-ae9d-16bdbff05a0e |    312 | Prato Especial | Crocante Carpaccio    | 
+ 7bb9a049-851e-4920-a3d7-e17d4866bd38 |    313 | Prato Especial | Defumado Feijoada     | 
+ a6c6cda5-743f-4694-8ac3-c0394f562a15 |    314 | Prato Padrão   | Cremoso Risoto        | B
+ dd97b183-1bdd-4ae6-ab22-a5ec9c5db25a |    315 | Prato Especial | Defumado Estufado     | 
+ 3503fe1c-6a92-43c2-9906-4dd189959a2d |    316 | Bebida         | Crocante Ensopado     | A
+ f5422551-a8f9-434b-b87f-a631bfaec8a0 |    317 | Prato Padrão   | Tradicional Estufado  | O
+ 9c0d3431-7ade-480a-ad4e-07ca80151dda |    318 | Prato Especial | Saboroso Sopa         | 
+ bcc4c7f0-7c51-4c31-9bfb-c58c09826640 |    319 | Bebida         | Cremoso Estufado      | AB
+ 18e56c98-d979-45b5-b733-a478b60b6ea4 |    320 | Prato Padrão   | Tradicional Ensopado  | AB
+ 941384f1-739e-4607-aef0-1a2af3b66f5d |    321 | Prato Especial | Defumado Grelhado     | 
+ 65aa10e5-5426-474a-a1dd-68fbf6fe09ed |    322 | Prato Especial | Cremoso Carpaccio     | 
+ 102fd3e9-854c-48f9-87b7-1190cf119883 |    323 | Bebida         | Especial Ensopado     | O
+ 2fadd9f8-b97a-4291-ac59-85e00436c28b |    324 | Prato Especial | Cremoso Assado        | 
+ d061f121-3bbd-4e04-b5ee-172e706ee964 |    325 | Bebida         | Recheado Carpaccio    | B
+ a4e15b48-7979-4f00-8e01-5ab64e64e9ac |    326 | Prato Padrão   | Delicioso Ensopado    | AB
+ 7069023c-37e7-4f48-924b-2f6070ca16a1 |    327 | Prato Especial | Defumado Sopa         | 
+ 25093093-ce86-47e2-a908-dd227217a095 |    328 | Prato Especial | Especial Carpaccio    | 
+ 012a3b5f-54de-44a2-8192-7d306136a701 |    329 | Prato Especial | Especial Sopa         | 
+ feede67f-bb26-46a4-8938-3b15d8079c25 |    330 | Bebida         | Crocante Estufado     | AB
+ d2ca13be-3c36-4f84-b15e-2d383d84ccec |    331 | Prato Especial | Recheado Sopa         | 
+ 83cad858-444d-426f-88ff-2ed37f90f425 |    332 | Prato Especial | Crocante Grelhado     | 
+ 2786752b-73b1-4f83-9f09-e1d23c328d58 |    333 | Prato Especial | Saboroso Assado       | 
+ 3a5ccd9b-2802-44e0-81e4-0ca410b08585 |    334 | Bebida         | Apimentado Risoto     | AB
+ 3fe98b86-7169-49c2-bad7-7c5b471114c7 |    335 | Prato Padrão   | Cremoso Grelhado      | B
+ 1033788d-d9fc-4c72-88ba-3982af851f14 |    336 | Bebida         | Cremoso Grelhado      | B
+ c0cd8bc2-84fb-4a29-b8b1-339af22f1d92 |    337 | Prato Padrão   | Especial Assado       | O
+ d273209a-6849-4aab-aa0c-fb0f7cb4182d |    338 | Prato Padrão   | Exótico Grelhado      | A
+ 66c8ddde-0779-4315-89f8-84045d120215 |    339 | Bebida         | Delicioso Moqueca     | O
+ 4968055d-ada6-4353-a743-cec9fdfc2cc5 |    340 | Bebida         | Especial Feijoada     | B
+ 5db50d13-981c-4261-80a4-d210c5127243 |    341 | Prato Especial | Exótico Moqueca       | 
+ 401ea7ea-7d89-4dfb-ade3-d1c61b283783 |    342 | Bebida         | Crocante Moqueca      | AB
+ 196d518d-a1fc-4cd5-bed3-76d0a62ab05f |    343 | Bebida         | Recheado Grelhado     | B
+ eb02e3fb-1251-46dc-934a-df220c47fab0 |    344 | Prato Especial | Recheado Grelhado     | 
+ 8f310252-9a3a-4960-9e0c-7803d1ab634e |    345 | Bebida         | Recheado Sopa         | AB
+ c6f93abd-695e-4fd7-9dd8-705fec43710a |    346 | Bebida         | Defumado Moqueca      | A
+ 3b1e4a8d-7f4f-4605-8989-3e365de5b322 |    347 | Prato Especial | Saboroso Tartar       | 
+ 20704fc5-b260-4261-b02b-d737617407c2 |    348 | Bebida         | Especial Grelhado     | A
+ 5cf7d417-a74c-4e78-8f8e-6ef0ade36fbe |    349 | Bebida         | Tradicional Feijoada  | B
+ f2f91961-b426-4e21-8310-2eda3abf3b2f |    350 | Prato Especial | Defumado Carpaccio    | 
+ f1c8c8f6-6352-4787-8856-b06d29bc6b36 |    351 | Bebida         | Tradicional Estufado  | B
+ 2654823f-f0b9-44af-ba2f-905abdfc160e |    352 | Prato Especial | Recheado Grelhado     | 
+ 4a630889-a6be-4914-8f1f-044dba6691f1 |    353 | Prato Padrão   | Saboroso Sopa         | O
+ 72e7dd31-9a56-41c4-915b-5546e3a0a35c |    354 | Prato Padrão   | Exótico Feijoada      | AB
+ cca11a32-22b7-4e54-ac63-2ba991f4d926 |    355 | Bebida         | Recheado Assado       | O
+ bddf1f65-8257-40b1-bd1f-e5c9405da1a6 |    356 | Bebida         | Tradicional Assado    | O
+ 57a8a31f-3d3b-42b2-a36b-11c373d7d8e9 |    357 | Prato Padrão   | Cremoso Grelhado      | A
+ 18b17f09-27b5-4cd1-bcd2-fd95abc401b5 |    358 | Prato Especial | Exótico Assado        | 
+ dccad464-bfa1-4b9d-a155-012c643b2d17 |    359 | Prato Padrão   | Recheado Carpaccio    | A
+ 2b347312-b580-4d27-aa42-a6ace6a3df71 |    360 | Prato Especial | Cremoso Ensopado      | 
+ cb11fcff-cd61-4509-b2ef-3c5fc7b75f2e |    361 | Prato Especial | Exótico Carpaccio     | 
+ 2c3654c3-9351-4768-b011-741a863781c7 |    362 | Prato Especial | Tradicional Feijoada  | 
+ 9d6a1d8e-3ac3-4f5c-8aed-e30edb09221f |    363 | Prato Padrão   | Especial Estufado     | A
+ 62356094-2bda-4b6b-8187-451ee05621b5 |    364 | Prato Padrão   | Tradicional Carpaccio | O
+ 11ea285f-59cb-4c50-9dd4-ca5916ba1703 |    365 | Bebida         | Saboroso Sopa         | AB
+ 3c19c91d-5703-471f-8fcb-7d6c1009237f |    366 | Prato Padrão   | Saboroso Moqueca      | O
+ 5dd2e96f-e523-41e1-b665-7a40d12fc43d |    367 | Bebida         | Exótico Risoto        | B
+ 52b05b0a-481c-4fe6-9ccb-9f2b216f0d46 |    368 | Bebida         | Crocante Tartar       | O
+ 552a9b0a-325b-4d8d-bf49-f5cacade49ff |    369 | Prato Padrão   | Recheado Assado       | O
+ f2c5b5b8-ccf5-4b51-8172-2f47ea2692fd |    370 | Prato Padrão   | Cremoso Tartar        | AB
+ 957b3867-8d9f-43fd-9518-6270fbed2bc3 |    371 | Bebida         | Cremoso Risoto        | B
+ 2f48192c-542d-4da4-8619-1a8ec540f7c1 |    372 | Bebida         | Exótico Grelhado      | AB
+ 1697f577-86df-4719-83f9-b86514a5b0cc |    373 | Bebida         | Defumado Assado       | B
+ d329d1ce-2c92-45c3-90ea-6d46dea0b1c4 |    374 | Prato Especial | Especial Ensopado     | 
+ 020b343f-fc83-4670-8529-12d51f640658 |    375 | Prato Padrão   | Defumado Moqueca      | O
+ ce61a347-7a08-4b03-81c2-4e27afa1f2ab |    376 | Prato Especial | Cremoso Grelhado      | 
+ 67d97908-c83d-442f-805a-77b1ef8b5ab0 |    377 | Prato Padrão   | Cremoso Estufado      | A
+ 0f6c523d-02d0-4f24-abeb-090bf48130cb |    378 | Prato Especial | Apimentado Grelhado   | 
+ c43c100b-2d4f-47ab-bfa7-aae976a6dc63 |    379 | Prato Especial | Apimentado Sopa       | 
+ 53e38902-9dc6-4beb-8ad0-f96d951b2895 |    380 | Prato Padrão   | Especial Estufado     | A
+ f704e2cc-1cb9-4f5a-afc0-0933088d2236 |    381 | Prato Especial | Crocante Sopa         | 
+ df127e0a-01c4-4896-ba54-29d53a551d45 |    382 | Prato Padrão   | Crocante Moqueca      | O
+ b2358230-bfa3-4134-8e87-b087af776914 |    383 | Prato Padrão   | Cremoso Estufado      | O
+ 2b6e194e-00dd-4181-8003-16eca16ebc06 |    384 | Bebida         | Delicioso Carpaccio   | AB
+ 3ce9b133-a116-4292-afe4-17eb4ba39d86 |    385 | Bebida         | Crocante Carpaccio    | AB
+ 1dc8cff6-33da-4c0c-8b7e-8c696a13d0b2 |    386 | Bebida         | Delicioso Ensopado    | O
+ ccc8866b-c837-410f-8f4d-92eb37ecae34 |    387 | Prato Padrão   | Saboroso Estufado     | O
+ 99c05756-7e67-443e-8b62-d0e7c906130d |    388 | Prato Padrão   | Delicioso Feijoada    | B
+ c1111cd9-782b-49b0-a7f6-55adc2ef8f95 |    389 | Prato Padrão   | Exótico Assado        | B
+ 17a2fa83-7e14-49f5-8846-9afad032c22f |    390 | Prato Especial | Cremoso Estufado      | 
+ c4b19ad7-bcb1-47c6-a91f-5145e08fbbba |    391 | Prato Especial | Delicioso Grelhado    | 
+ a0551837-9e94-48f0-b67c-bcefe95bcf94 |    392 | Prato Padrão   | Especial Carpaccio    | O
+ aaac3da1-178d-4677-bc86-295e77fb8273 |    393 | Prato Padrão   | Delicioso Grelhado    | A
+ 2a34a6d8-d3ae-4c78-99e1-a0e06b98384b |    394 | Prato Especial | Apimentado Moqueca    | 
+ 41c1ce1f-efce-433b-8f8d-23e674962216 |    395 | Bebida         | Apimentado Ensopado   | B
+ 15d5cb62-ba2e-4821-9540-9ec8429c02b8 |    396 | Prato Padrão   | Exótico Assado        | A
+ adb08b55-466f-4f2e-beb7-cfe192005d28 |    397 | Prato Padrão   | Especial Risoto       | AB
+ 448aecfc-baf1-4264-9edd-9f7303be673c |    398 | Bebida         | Especial Grelhado     | A
+ b550e5c5-ae52-4838-86ef-608f8054b1d9 |    399 | Prato Padrão   | Crocante Carpaccio    | O
+ 9d8d9ad2-a8ba-46d9-aac2-2d71d1fc5550 |    400 | Prato Padrão   | Delicioso Estufado    | O
 (400 rows)
 
