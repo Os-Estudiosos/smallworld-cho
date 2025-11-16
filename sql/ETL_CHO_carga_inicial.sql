@@ -1,14 +1,30 @@
 \c cho
 
 -- Inserindo as Filiais
-INSERT INTO dw_cho.FilialDimension SELECT
-    gen_random_uuid(),
-    f.FilialID,
-    f.FilialRua,
-    f.FilialBairro,
-    f.FilialMunicipio,
-    f.FilialEstado
-FROM cho.Filiais f;
+INSERT INTO dw_cho.FilialDimension (SELECT
+        gen_random_uuid(),
+        f.FilialID,
+        f.FilialRua,
+        f.FilialBairro,
+        f.FilialMunicipio,
+        f.FilialEstado,
+        p.PaisNome,
+        bt.APorcentagem,
+        bt.BPorcentagem,
+        bt.ABPorcentagem,
+        bt.OPorcentagem 
+FROM cho.Filiais f
+        LEFT JOIN cho.Pais p ON p.PaisID = f.PaisID
+        LEFT JOIN (
+                SELECT
+                        country,
+                        "O+"+"O-" as OPorcentagem,
+                        "A+"+"A-" as APorcentagem,
+                        "B+"+"B-" as BPorcentagem,
+                        "AB+"+"AB-" as ABPorcentagem
+                FROM fontes.bloodtypes_per_country
+        ) bt ON bt.country = p.PaisNome
+);
 
 -- Inserindo os Clientes
 INSERT INTO dw_cho.ClienteDimension SELECT
@@ -26,12 +42,16 @@ INSERT INTO dw_cho.ClienteDimension SELECT
 FROM cho.Clientes c LEFT JOIN cho.ClienteClienteEnfermidade cce ON c.ClienteCPF=cce.ClienteCPF;
 
 -- Inserindo os ItensMenu
-INSERT INTO dw_cho.ItemMenuDimension SELECT
-    gen_random_uuid(),
-    i.ItemID,
-    i.ItemCategoria,
-    i.ItemNome
-FROM cho.ItensMenu i;
+INSERT INTO dw_cho.ItemMenuDimension (SELECT
+        gen_random_uuid(),
+        i.ItemID,
+        i.ItemCategoria,
+        i.ItemNome,
+        TRIM(COALESCE(pp.PratoTipoSang, b.BebTipoSangue)) as TipSang
+FROM cho.ItensMenu i
+        LEFT JOIN cho.PratoPadrao pp ON pp.ItemID  = i.ItemID
+        LEFT JOIN cho.Bebida b ON b.ItemID = i.ItemID
+);
 
 -- Inserindo o Calendário
 INSERT INTO dw_cho.CalendarDimension SELECT

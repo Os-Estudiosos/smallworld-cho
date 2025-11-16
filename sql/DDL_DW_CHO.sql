@@ -21,6 +21,7 @@ CREATE TABLE dw_cho.ItemMenuDimension
   ItemID INT NOT NULL,
   ItemCategoria VARCHAR(100) NOT NULL,
   ItemNome VARCHAR(100) NOT NULL,
+  TipSang VARCHAR(2),
   PRIMARY KEY (ItemKey)
 );
 
@@ -31,7 +32,12 @@ CREATE TABLE dw_cho.FilialDimension
   FilialRua VARCHAR(100) NOT NULL,
   FilialBairro VARCHAR(100) NOT NULL,
   FilialMunicipio VARCHAR(100) NOT NULL,
-  FilialEstado CHAR(2) NOT NULL,
+  FilialEstado CHAR(50) NOT NULL,
+  PaisNome VARCHAR(38) NOT NULL,
+  APorcentagem REAL NOT NULL,
+  BPorcentagem REAL NOT NULL,
+  OPorcentagem REAL NOT NULL,
+  ABPorcentagem REAL NOT NULL,
   PRIMARY KEY (FilialKey)
 );
 
@@ -45,7 +51,7 @@ CREATE TABLE dw_cho.ClienteDimension
   ClienteRua VARCHAR(100) NOT NULL,
   ClienteBairro VARCHAR(100) NOT NULL,
   ClienteMunicipio VARCHAR(100) NOT NULL,
-  ClienteEstado CHAR(2) NOT NULL,
+  ClienteEstado CHAR(50) NOT NULL,
   ClienteDataNasc DATE NOT NULL,
   ClienteEnfermidade VARCHAR(100),
   PRIMARY KEY (ClienteKey),
@@ -63,7 +69,7 @@ CREATE TABLE dw_cho.ReceitaFato
   ClienteKey TEXT NOT NULL,
   PRIMARY KEY (IDPedido, CalendarKey, ItemKey, FilialKey, ClienteKey),
   FOREIGN KEY (CalendarKey) REFERENCES dw_cho.CalendarDimension(CalendarKey),
-  FOREIGN KEY (ItemKey) REFERENCES dw_cho.ItemDimension(ItemKey),
+  FOREIGN KEY (ItemKey) REFERENCES dw_cho.ItemMenuDimension(ItemKey),
   FOREIGN KEY (FilialKey) REFERENCES dw_cho.FilialDimension(FilialKey),
   FOREIGN KEY (ClienteKey) REFERENCES dw_cho.ClienteDimension(ClienteKey)
 );
