@@ -16,7 +16,7 @@ select * from dw_cho.FilialDimension;
 \a
 \pset fieldsep ','
 \o itemdimension.csv
-select * from dw_cho.ItemDimension;
+select * from dw_cho.ItemMenuDimension;
 
 \a
 \pset fieldsep ','
