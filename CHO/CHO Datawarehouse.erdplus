@@ -175,6 +175,12 @@
               "type": "CHAR(n)",
               "position": 0,
               "size": "2"
+            },
+            {
+              "id": "02995562-2c51-4c11-aee0-67418cc1a4d6",
+              "name": "PaisNome",
+              "type": "CHAR(n)",
+              "position": 0
             }
           ],
           "numberOfGroups": 0,
@@ -182,7 +188,7 @@
         },
         "measured": {
           "width": 240,
-          "height": 176
+          "height": 201
         },
         "selected": false,
         "dragging": false
@@ -191,7 +197,7 @@
         "id": "23e969b5-5f95-41e8-af22-93e95628974a",
         "type": "Table",
         "position": {
-          "x": -950.4452132484066,
+          "x": -954.7499945454186,
           "y": -82.87748669808272
         },
         "data": {
@@ -401,16 +407,23 @@
               "name": "ItemID",
               "type": "INT",
               "position": 0
+            },
+            {
+              "id": "b9bfa703-0fc4-481a-9efd-0ec3579b7de9",
+              "name": "TipSang",
+              "type": "CHAR(n)",
+              "position": 0,
+              "size": "2"
             }
           ],
           "numberOfGroups": 0,
-          "isSelected": true
+          "isSelected": false
         },
         "measured": {
           "width": 240,
-          "height": 126
+          "height": 151
         },
-        "selected": true,
+        "selected": false,
         "dragging": false
       }
     ],
@@ -509,9 +522,9 @@
       }
     ],
     "viewport": {
-      "x": 1476.987550703794,
-      "y": 482.004602173445,
-      "zoom": 1
+      "x": 1139.9589771591739,
+      "y": 287.92716331688325,
+      "zoom": 0.9291993539315058
     }
   },
   "name": "CHO Datawarehouse",
@@ -519,8 +532,8 @@
     "name": "Diagrams",
     "folderType": 1,
     "depth": 0,
-    "id": 13143
+    "id": 13153
   },
-  "id": 69237,
-  "updatedAtTimestamp": 1759149210
+  "id": 163502,
+  "updatedAtTimestamp": 1763229391
 }

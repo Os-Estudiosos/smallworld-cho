@@ -279,6 +279,23 @@
               "isOptional": false,
               "isUnique": false,
               "size": "2"
+            },
+            {
+              "id": "fk_a5111a7f-5151-4f8b-bdd2-175932f398e4",
+              "name": "fk_País",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "7b17a175-51b4-4f89-b510-7c92051d812f",
+                "sourceTableId": "7a3a39b5-b97f-4545-b0a2-91c674d55558",
+                "columns": [
+                  {
+                    "id": "fk_8736de6f-3200-4fc0-a874-6127af7b6154",
+                    "name": "PaisID",
+                    "type": "INT"
+                  }
+                ]
+              }
             }
           ],
           "numberOfGroups": 0,
@@ -286,7 +303,7 @@
         },
         "measured": {
           "width": 240,
-          "height": 151
+          "height": 177
         },
         "selected": false,
         "dragging": false
@@ -898,6 +915,41 @@
         },
         "selected": false,
         "dragging": false
+      },
+      {
+        "id": "7a3a39b5-b97f-4545-b0a2-91c674d55558",
+        "type": "Table",
+        "position": {
+          "x": 377.93050017935343,
+          "y": 443.1640382188874
+        },
+        "data": {
+          "label": "País",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "8736de6f-3200-4fc0-a874-6127af7b6154",
+              "name": "PaisID",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "88d02ea5-2264-454d-920b-8ebed238b5d0",
+              "name": "PaisNome",
+              "type": "CHAR(n)",
+              "position": 0
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 76
+        },
+        "selected": true,
+        "dragging": false
       }
     ],
     "edges": [
@@ -1200,12 +1252,35 @@
             ]
           }
         }
+      },
+      {
+        "id": "7a3a39b5-b97f-4545-b0a2-91c674d55558->5287260d-c77b-4ce1-a356-6405d166bc2e_7b17a175-51b4-4f89-b510-7c92051d812f",
+        "type": "Relational",
+        "source": "7a3a39b5-b97f-4545-b0a2-91c674d55558",
+        "targetHandle": "foreign-key-handle-7b17a175-51b4-4f89-b510-7c92051d812f",
+        "target": "5287260d-c77b-4ce1-a356-6405d166bc2e",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "7b17a175-51b4-4f89-b510-7c92051d812f",
+            "sourceTableId": "7a3a39b5-b97f-4545-b0a2-91c674d55558",
+            "columns": [
+              {
+                "id": "fk_8736de6f-3200-4fc0-a874-6127af7b6154",
+                "name": "PaisID",
+                "type": "INT"
+              }
+            ]
+          }
+        }
       }
     ],
     "viewport": {
-      "x": 115.92511887260105,
-      "y": 181.83984301945216,
-      "zoom": 0.7214163001261169
+      "x": -44.29242735036428,
+      "y": 30.622080361018504,
+      "zoom": 0.6386778790579903
     }
   },
   "name": "CHO Esquema Relacional",
@@ -1213,8 +1288,8 @@
     "name": "Diagrams",
     "folderType": 1,
     "depth": 0,
-    "id": 13143
+    "id": 13153
   },
-  "id": 69240,
-  "updatedAtTimestamp": 1759149177
+  "id": 163531,
+  "updatedAtTimestamp": 1763228650
 }

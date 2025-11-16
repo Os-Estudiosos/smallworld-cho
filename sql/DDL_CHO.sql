@@ -4,9 +4,16 @@ CREATE DATABASE cho;
 CREATE SCHEMA cho;
 SET search_path=cho; 
 
+CREATE TABLE Pais
+(
+  PaisID SERIAL NOT NULL,
+  PaisNome VARCHAR(38),
+  PRIMARY KEY (PaisID)
+);
+
 CREATE TABLE ItensMenu
 (
-  ItemID INT NOT NULL,
+  ItemID SERIAL NOT NULL,
   ItemNome VARCHAR(255) NOT NULL,
   ItemCategoria VARCHAR(255) NOT NULL,
   ItemPrecoVenda FLOAT NOT NULL,
@@ -45,7 +52,7 @@ CREATE TABLE Clientes
   ClienteRua VARCHAR(255) NOT NULL,
   ClienteBairro VARCHAR(255) NOT NULL,
   ClienteMunicipio VARCHAR(255) NOT NULL,
-  ClienteEstado VARCHAR(2) NOT NULL,
+  ClienteEstado VARCHAR(40) NOT NULL,
   ClienteCPF VARCHAR(11) NOT NULL,
   ClienteDataNasc DATE NOT NULL,
   PRIMARY KEY (ClienteCPF)
@@ -70,7 +77,7 @@ CREATE TABLE ClienteClienteEnfermidade
 CREATE TABLE Ingredientes
 (
   IngredNome VARCHAR(255) NOT NULL,
-  IngredID INT NOT NULL,
+  IngredID SERIAL NOT NULL,
   IngredPrecoCompra FLOAT NOT NULL,
   IngredCal INT NOT NULL,
   PRIMARY KEY (IngredID)
@@ -78,12 +85,14 @@ CREATE TABLE Ingredientes
 
 CREATE TABLE Filiais
 (
-  FilialID INT NOT NULL,
+  FilialID SERIAL NOT NULL,
   FilialRua VARCHAR(255) NOT NULL,
   FilialBairro VARCHAR(255) NOT NULL,
   FilialMunicipio VARCHAR(255) NOT NULL,
-  FilialEstado VARCHAR(2) NOT NULL,
-  PRIMARY KEY (FilialID)
+  FilialEstado VARCHAR(40) NOT NULL,
+  PaisID INT NOT NULL,
+  PRIMARY KEY (FilialID),
+  FOREIGN KEY (PaisID) REFERENCES Pais(PaisID)
 );
 
 CREATE TABLE Fornecedores
@@ -127,7 +136,7 @@ CREATE TABLE FuncionarioFuncTelefone
 
 CREATE TABLE Reservas
 (
-  ReservaID INT NOT NULL,
+  ReservaID SERIAL NOT NULL,
   ReservaData DATE NOT NULL,
   FilialID INT NOT NULL,
   NumeroMesa INT NOT NULL,
@@ -140,7 +149,7 @@ CREATE TABLE Reservas
 
 CREATE TABLE Pedidos
 (
-  PedidoID INT NOT NULL,
+  PedidoID SERIAL NOT NULL,
   PedidoData DATE NOT NULL,
   ClienteCPF VARCHAR(11) NOT NULL,
   FilialID INT NOT NULL,
