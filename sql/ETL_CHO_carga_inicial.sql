@@ -32,11 +32,11 @@ INSERT INTO dw_cho.ClienteDimension SELECT
     c.ClienteCPF,
     c.ClienteNome,
     c.ClienteSobrenome,
-    c.ClienteTipoSang,
-    c.ClienteRua,
-    c.ClienteBairro,
-    c.ClienteMunicipio,
-    c.ClienteEstado,
+    TRIM(c.ClienteTipoSang),
+    TRIM(c.ClienteRua),
+    TRIM(c.ClienteBairro),
+    TRIM(c.ClienteMunicipio),
+    TRIM(c.ClienteEstado),
     c.ClienteDataNasc,
     cce.ClienteEnfermidade
 FROM cho.Clientes c LEFT JOIN cho.ClienteClienteEnfermidade cce ON c.ClienteCPF=cce.ClienteCPF;

@@ -1,24 +1,24 @@
 \a
-\pset fieldsep ','
+\pset fieldsep ';'
 \o receitafato.csv
 select * from dw_cho.ReceitaFato;
 
 \a
-\pset fieldsep ','
+\pset fieldsep ';'
 \o clientedimension.csv
 select * from dw_cho.ClienteDimension;
 
 \a
-\pset fieldsep ','
+\pset fieldsep ';'
 \o filialdimension.csv
 select * from dw_cho.FilialDimension;
 
 \a
-\pset fieldsep ','
+\pset fieldsep ';'
 \o itemdimension.csv
 select * from dw_cho.ItemMenuDimension;
 
 \a
-\pset fieldsep ','
+\pset fieldsep ';'
 \o calendardimension.csv
 select * from dw_cho.CalendarDimension;
