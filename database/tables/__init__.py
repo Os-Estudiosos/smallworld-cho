@@ -2,15 +2,17 @@ import random
 from faker import Faker
 from datetime import timedelta, datetime
 from database import Connection
+from config.database import *
 import pandas as pd
 
 
 class GenerateData(Connection):
     
     # Super init com a classe de conexão
-    def __init__(self, db_name, path, user, host, password, port):
+    def __init__(self, locale, db_name, path, user, host, password, port):
         super().__init__(db_name, path, user, host, password, port)
-        self.fake = Faker("pt_BR")
+        self.pais_id = None
+        self.fake = Faker(locale)
         self.tipos_sangue = ["A", "B", "AB", "O"]
         self.categorias = ["Prato Padrão", "Prato Especial", "Bebida"]
         self.tabelas =  [
@@ -31,6 +33,54 @@ class GenerateData(Connection):
                         "Pedidos",
                         "PedidoItemMenu"
                     ]
+    
+    # Funções auxiliares de endereço
+    def get_rua(self):
+        if hasattr(self.fake, "street_address"):
+            return self.fake.street_address()
+        if hasattr(self.fake, "street_name"):
+            return self.fake.street_name()
+        return f"{self.fake.word().title()} Street"
+
+
+    def get_bairro(self):
+        if hasattr(self.fake, "bairro"):                 # Brasil (faker-br)
+            return self.fake.bairro()
+        if hasattr(self.fake, "neighborhood"):           # EUA (alguns locais)
+            return self.fake.neighborhood()
+        # Universal fallback
+        return f"District {self.fake.word().title()}"
+
+
+    def get_municipio(self):
+        if hasattr(self.fake, "city"):
+            return self.fake.city()
+        if hasattr(self.fake, "town"):
+            return self.fake.town()
+        return f"{self.fake.word().title()} City"
+
+
+    def get_estado(self):
+        if hasattr(self.fake, "estado_sigla"):           # Brasil
+            return self.fake.estado_sigla()
+        if hasattr(self.fake, "state_abbr"):             # EUA
+            return self.fake.state_abbr()
+        if hasattr(self.fake, "province_abbr"):
+            return self.fake.province_abbr()
+        if hasattr(self.fake, "state"):
+            return self.fake.state()
+        return self.fake.country_code()
+
+
+    # Função auxiliar para pegar o ID do país pelo nome
+    def get_country_id(self, country_name):
+        with self.conn.cursor() as cur:
+            cur.execute(
+                "SELECT PaisID FROM cho.Pais WHERE PaisNome = %s",
+                (country_name,)
+            )
+            row = cur.fetchone()
+            self.pais_id = row[0] if row else None
 
     # Função auxiliar para gerar um cpf aleatório (sem verificar as regras do cpf)
     def gerar_cpf(self):
@@ -83,8 +133,9 @@ class GenerateData(Connection):
         return horario_resultado.time()
 
     # Função para popular as tabelas Menu, PRATOPADRAO, PRATOESPECIAL e BEBIDA
-    def generate_Menu(self, num_itens):
+    def generate_Menu(self, num_itens, last_item_id):
         self.num_itens = num_itens
+        item_id = last_item_id
         for i in range(1, num_itens+1): 
             nome = self.gerar_prato()
             categoria = random.choice(self.categorias)
@@ -92,21 +143,20 @@ class GenerateData(Connection):
             enfermidade = self.gerar_doenca_falsa()
             preco = round(random.uniform(5, 80), 2)
             with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO ItensMenu (ItemID, ItemNome, ItemCategoria, ItemPrecoVenda) VALUES (%s, %s, %s, %s)",
-                            (i, nome, categoria, preco))
-            if categoria == "Prato Padrão":
-                with self.conn.cursor() as cur:
+                cur.execute("INSERT INTO ItensMenu (ItemNome, ItemCategoria, ItemPrecoVenda) VALUES (%s, %s, %s)",
+                            (nome, categoria, preco))
+                item_id += 1
+                if categoria == "Prato Padrão":
                     cur.execute("INSERT INTO PratoPadrao (PratoTipoSang, ItemID) VALUES (%s, %s)", 
-                                (sangue, i))
-            elif categoria == "Prato Especial":
-                with self.conn.cursor() as cur:
+                                (sangue, item_id))
+                elif categoria == "Prato Especial":
                     cur.execute("INSERT INTO PratoEspecial (PratoEnfermidade, ItemID) VALUES (%s, %s)", 
-                                (enfermidade, i))
-            else:
-                with self.conn.cursor() as cur:
+                                (enfermidade, item_id))
+                else:
                     cur.execute("INSERT INTO Bebida (BebTipoSangue, ItemID) VALUES (%s, %s)",
-                                (sangue, i))
+                                (sangue, item_id))
         self.commit()
+        return item_id
         
     # Função para popular as tabelas CLIENTES, CLIENTECLIENTETELEFONE CLIENTECLIENTEENFERMIDADE
     def generate_clientes(self, num_clientes, max_num_telefone, prob_enfermidade):
@@ -116,10 +166,10 @@ class GenerateData(Connection):
             nome = self.fake.first_name()
             sobrenome = self.fake.last_name()
             sangue = random.choice(self.tipos_sangue)
-            rua = self.fake.street_address()
-            bairro = self.fake.bairro()
-            municipio = self.fake.city()
-            estado = self.fake.estado_sigla()
+            rua = self.get_rua()
+            bairro = self.get_bairro()
+            municipio = self.get_municipio()
+            estado = self.get_estado()
             cpf = self.gerar_cpf()
             self.cliente_cpf_nome.append((cpf, nome))
             self.cliente_cpf.append(cpf)
@@ -147,21 +197,21 @@ class GenerateData(Connection):
             preco = round(random.uniform(1, 30), 2)
             cal = random.randint(1, 1000)
             with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO Ingredientes (IngredNome, IngredID, IngredPrecoCompra, IngredCal) VALUES (%s, %s, %s, %s)", 
-                            (nome, i, preco, cal))
+                cur.execute("INSERT INTO Ingredientes (IngredNome, IngredPrecoCompra, IngredCal) VALUES (%s, %s, %s)", 
+                            (nome, preco, cal))
         self.commit()
 
     # Função para popular a tabela FILIAIS
     def generate_filiais(self, num_filiais):
         self.num_filiais = num_filiais
         for i in range(1, num_filiais+1):
-            rua = self.fake.street_address()
-            bairro = self.fake.bairro()
-            cidade = self.fake.city()
-            estado = self.fake.estado_sigla()
+            rua = self.get_rua()
+            bairro = self.get_bairro()
+            cidade = self.get_municipio()
+            estado = self.get_estado()
             with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO Filiais (FilialID, FilialRua, FilialBairro, FilialMunicipio, FilialEstado) VALUES (%s, %s, %s, %s, %s)", 
-                            (i, rua, bairro, cidade, estado))
+                cur.execute("INSERT INTO Filiais (FilialRua, FilialBairro, FilialMunicipio, FilialEstado, PaisID) VALUES (%s, %s, %s, %s, %s)", 
+                            (rua, bairro, cidade, estado, self.pais_id))
         self.commit()
         
     # Função para popular a tabela FORNECEDORES    
@@ -170,7 +220,7 @@ class GenerateData(Connection):
         for _ in range(num_fornecedores):
             fornecedor_cnpj = self.gerar_cnpj()
             fornecedor_nome = self.fake.name()
-            fornecedor_regiao = self.fake.neighborhood()
+            fornecedor_regiao = self.get_bairro()
             self.fornecedores_cnpjs.append(fornecedor_cnpj)
             with self.conn.cursor() as cur:
                 cur.execute("INSERT INTO Fornecedores (FornecedorCNPJ, FornecedorNome, FornecedorRegiao) VALUES (%s, %s, %s)", 
@@ -231,12 +281,13 @@ class GenerateData(Connection):
             nome = str(nome)
             self.reserva_datas.append(data)
             with self.conn.cursor() as cur:
-                cur.execute("INSERT INTO Reservas (ReservaID, ReservaData, FilialID, NumeroMesa, ClienteCPF, ClienteNome) VALUES (%s, %s, %s, %s, %s, %s)", 
-                            (i, data, filial, mesa, cpf, nome))
+                cur.execute("INSERT INTO Reservas (ReservaData, FilialID, NumeroMesa, ClienteCPF, ClienteNome) VALUES (%s, %s, %s, %s, %s)", 
+                            (data, filial, mesa, cpf, nome))
         self.commit()
         
     # Função para popular as tabelas PEDIDOS e PEDIDOITEMMENU
-    def generate_pedidos(self, num_pedidos, max_qtd, max_itens):
+    def generate_pedidos(self, num_pedidos, max_qtd, max_itens, last_pedido_id):
+        pedido_id = last_pedido_id
         for i in range(1, num_pedidos+1):
             data = random.choice(self.reserva_datas)
             cpf = str(random.choice(self.cliente_cpf))
@@ -244,9 +295,10 @@ class GenerateData(Connection):
             horario = self.gerar_horario()
             with self.conn.cursor() as cur:
                 cur.execute("""
-                    INSERT INTO Pedidos (PedidoID, PedidoData, ClienteCPF, FilialID, PedidoHorario)
-                    VALUES (%s, %s, %s, %s, %s)
-                """, (i, data, cpf, filial, horario))
+                    INSERT INTO Pedidos (PedidoData, ClienteCPF, FilialID, PedidoHorario)
+                    VALUES (%s, %s, %s, %s)
+                """, (data, cpf, filial, horario))
+                pedido_id += 1
             itens = random.randint(1, max_itens)
             itens_unicos = random.sample(range(1, self.num_itens + 1), itens)
             for item_id in itens_unicos:
@@ -255,8 +307,9 @@ class GenerateData(Connection):
                     cur.execute("""
                         INSERT INTO PedidoItemMenu (Quantidade, PedidoID, ItemID, FilialID)
                         VALUES (%s, %s, %s, %s)
-                    """, (qtd, i, item_id, filial))
+                    """, (qtd, pedido_id, item_id, filial))
             self.conn.commit()
+        return pedido_id
 
     # Função par gerar um excel com o DML
     def generate_excel(self, nome_arquivo="database/DML_CHO"):
