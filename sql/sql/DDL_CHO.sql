@@ -6,14 +6,14 @@ SET search_path=cho;
 
 CREATE TABLE Pais
 (
-  PaisID SERIAL NOT NULL,
+  PaisID INT NOT NULL,
   PaisNome VARCHAR(38),
   PRIMARY KEY (PaisID)
 );
 
 CREATE TABLE ItensMenu
 (
-  ItemID SERIAL NOT NULL,
+  ItemID INT NOT NULL,
   ItemNome VARCHAR(255) NOT NULL,
   ItemCategoria VARCHAR(255) NOT NULL,
   ItemPrecoVenda FLOAT NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE Clientes
   ClienteRua VARCHAR(255) NOT NULL,
   ClienteBairro VARCHAR(255) NOT NULL,
   ClienteMunicipio VARCHAR(255) NOT NULL,
-  ClienteEstado VARCHAR(40) NOT NULL,
+  ClienteEstado VARCHAR(2) NOT NULL,
   ClienteCPF VARCHAR(11) NOT NULL,
   ClienteDataNasc DATE NOT NULL,
   PRIMARY KEY (ClienteCPF)
@@ -77,7 +77,7 @@ CREATE TABLE ClienteClienteEnfermidade
 CREATE TABLE Ingredientes
 (
   IngredNome VARCHAR(255) NOT NULL,
-  IngredID SERIAL NOT NULL,
+  IngredID INT NOT NULL,
   IngredPrecoCompra FLOAT NOT NULL,
   IngredCal INT NOT NULL,
   PRIMARY KEY (IngredID)
@@ -85,11 +85,11 @@ CREATE TABLE Ingredientes
 
 CREATE TABLE Filiais
 (
-  FilialID SERIAL NOT NULL,
+  FilialID INT NOT NULL,
   FilialRua VARCHAR(255) NOT NULL,
   FilialBairro VARCHAR(255) NOT NULL,
   FilialMunicipio VARCHAR(255) NOT NULL,
-  FilialEstado VARCHAR(40) NOT NULL,
+  FilialEstado VARCHAR(2) NOT NULL,
   PaisID INT NOT NULL,
   PRIMARY KEY (FilialID),
   FOREIGN KEY (PaisID) REFERENCES Pais(PaisID)
@@ -136,7 +136,7 @@ CREATE TABLE FuncionarioFuncTelefone
 
 CREATE TABLE Reservas
 (
-  ReservaID SERIAL NOT NULL,
+  ReservaID INT NOT NULL,
   ReservaData DATE NOT NULL,
   FilialID INT NOT NULL,
   NumeroMesa INT NOT NULL,
@@ -149,7 +149,7 @@ CREATE TABLE Reservas
 
 CREATE TABLE Pedidos
 (
-  PedidoID SERIAL NOT NULL,
+  PedidoID INT NOT NULL,
   PedidoData DATE NOT NULL,
   ClienteCPF VARCHAR(11) NOT NULL,
   FilialID INT NOT NULL,

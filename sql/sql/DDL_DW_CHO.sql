@@ -21,6 +21,7 @@ CREATE TABLE dw_cho.ItemMenuDimension
   ItemID INT NOT NULL,
   ItemCategoria VARCHAR(100) NOT NULL,
   ItemNome VARCHAR(100) NOT NULL,
+  TipSang VARCHAR(2) NOT NULL,
   PRIMARY KEY (ItemKey)
 );
 
@@ -32,6 +33,11 @@ CREATE TABLE dw_cho.FilialDimension
   FilialBairro VARCHAR(100) NOT NULL,
   FilialMunicipio VARCHAR(100) NOT NULL,
   FilialEstado CHAR(2) NOT NULL,
+  PaisNome VARCHAR(33) NOT NULL,
+  APorcentagem REAL NOT NULL,
+  BPorcentagem REAL NOT NULL,
+  OPorcentagem REAL NOT NULL,
+  ABPorcentagem REAL NOT NULL,
   PRIMARY KEY (FilialKey)
 );
 
